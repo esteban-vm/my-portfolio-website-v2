@@ -1,0 +1,31 @@
+{
+  "HomePage": {
+    "title": {
+      "default": "My portfolio | Home",
+      "template": "My portfolio | %s"
+    },
+    "description": "My portfolio website",
+    "keywords": {
+      "1": "Front-End Developer",
+      "2": "Web Design",
+      "3": "Next.js",
+      "4": "React"
+    }
+  },
+  "AboutPage": {
+    "title": "About me"
+  },
+  "ContactPage": {
+    "title": "Contact"
+  },
+  "ProjectsPage": {
+    "title": "Projects"
+  },
+  "Footer": {
+    "AudioButton": {
+      "on": "Turn on music",
+      "off": "Turn off music"
+    },
+    "LanguageButton": "Switch to Spanish"
+  }
+}

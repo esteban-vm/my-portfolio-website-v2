@@ -1,0 +1,31 @@
+{
+  "HomePage": {
+    "title": {
+      "default": "Mi portafolio | Inicio",
+      "template": "Mi portafolio | %s"
+    },
+    "description": "Mi portafolio web",
+    "keywords": {
+      "1": "Desarrollador Front-End",
+      "2": "Diseño Web",
+      "3": "Next.js",
+      "4": "React"
+    }
+  },
+  "AboutPage": {
+    "title": "Sobre mí"
+  },
+  "ContactPage": {
+    "title": "Contacto"
+  },
+  "ProjectsPage": {
+    "title": "Proyectos"
+  },
+  "Footer": {
+    "AudioButton": {
+      "on": "Encender música",
+      "off": "Apagar música"
+    },
+    "LanguageButton": "Cambiar a inglés"
+  }
+}
