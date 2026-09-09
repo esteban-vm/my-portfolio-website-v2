@@ -8,3 +8,22 @@
 }
 
 @source "../../node_modules/rsc-daisyui/dist";
+
+@theme {
+  --font-balsamiq: var(--balsamiq);
+}
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+  }
+
+  html {
+    @apply font-balsamiq;
+  }
+
+  a,
+  button {
+    @apply select-none;
+  }
+}
