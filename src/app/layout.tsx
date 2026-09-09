@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { balsamiq } from '@/lib/fonts'
-import './globals.css'
+import '@/styles/globals.css'
 
 export type Props = LayoutProps<'/'>
 
