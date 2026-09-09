@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from 'next'
+import { ThemeProvider } from '@teispace/next-themes'
+import { getTheme, getThemeScript } from '@teispace/next-themes/server'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
+import { THEME_COOKIE, THEME_MAP, THEMES } from '@/lib/constants'
 import { balsamiq } from '@/lib/fonts'
 import '@/styles/globals.css'
 
@@ -30,10 +33,27 @@ export const viewport: Viewport = {
 }
 
 export default async function RootLayout({ children }: Props) {
+  const locale = await getLocale()
+  const initialTheme = (await getTheme()) ?? undefined
+  const themeScript = getThemeScript({ initialTheme })
+
   return (
-    <html className={`${balsamiq.variable} h-full antialiased`} dir='ltr' lang={await getLocale()}>
-      <body className='flex min-h-full flex-col'>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+    <html className={`${balsamiq.variable} h-full antialiased`} dir='ltr' lang={locale} suppressHydrationWarning>
+      <head>
+        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: anti-FOUC */}
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className='flex min-h-full flex-col bg-primary'>
+        <ThemeProvider
+          cookieOptions={{ name: THEME_COOKIE }}
+          defaultTheme={THEMES[1]}
+          disableTransitionOnChange
+          initialTheme={initialTheme}
+          themes={THEMES}
+          value={THEME_MAP}
+        >
+          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
