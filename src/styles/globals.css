@@ -4,7 +4,7 @@
 
 @plugin "daisyui" {
   logs: false;
-  themes: black;
+  themes: wireframe, night;
 }
 
 @source "../../node_modules/rsc-daisyui/dist";
