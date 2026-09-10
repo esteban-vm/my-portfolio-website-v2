@@ -8,9 +8,9 @@ export default async function HeroPage() {
   await new Promise((r) => setTimeout(r, 3_000))
 
   return (
-    <Hero.Content className='flex-col md:flex-row-reverse'>
-      <div className='hover-3d aspect-9/16 w-full max-w-xs'>
-        <div className='relative size-full overflow-hidden rounded-lg shadow-2xl'>
+    <Hero.Content className='flex-col gap-8 md:flex-row-reverse'>
+      <div className='motion-safe:pointer-fine:hover-3d aspect-9/16 w-full max-w-70'>
+        <figure className='relative size-full overflow-hidden rounded-lg shadow-2xl'>
           <Image
             alt=''
             blurDataURL={await getPlaceholder(imageSrc)}
@@ -19,7 +19,15 @@ export default async function HeroPage() {
             placeholder='blur'
             src={imageSrc}
           />
-        </div>
+        </figure>
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
       </div>
       <div>
         <h1 className='fl-text-3xl/5xl font-bold'>Box Office News!</h1>
