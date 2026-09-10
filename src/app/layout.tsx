@@ -7,8 +7,6 @@ import { THEME_COOKIE, THEME_MAP, THEMES } from '@/lib/constants'
 import { balsamiq } from '@/lib/fonts'
 import '@/styles/globals.css'
 
-export type Props = LayoutProps<'/'>
-
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('HomePage')
 
@@ -29,12 +27,13 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
+  viewportFit: 'cover',
   interactiveWidget: 'overlays-content',
 }
 
-export default async function RootLayout({ children }: Props) {
+export default async function RootLayout({ hero, dock }: LayoutProps<'/'>) {
   const locale = await getLocale()
-  const initialTheme = (await getTheme()) ?? undefined
+  const initialTheme = (await getTheme()) ?? ''
   const themeScript = getThemeScript({ initialTheme })
 
   return (
@@ -43,17 +42,22 @@ export default async function RootLayout({ children }: Props) {
         {/* biome-ignore lint/security/noDangerouslySetInnerHtml: anti-FOUC */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className='flex min-h-full flex-col bg-primary'>
-        <ThemeProvider
-          cookieOptions={{ name: THEME_COOKIE }}
-          defaultTheme={THEMES[1]}
-          disableTransitionOnChange
-          initialTheme={initialTheme}
-          themes={THEMES}
-          value={THEME_MAP}
-        >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
-        </ThemeProvider>
+      <body className='h-full'>
+        <NextIntlClientProvider locale={locale}>
+          <ThemeProvider
+            cookieOptions={{ name: THEME_COOKIE }}
+            defaultTheme={THEMES[0]}
+            disableTransitionOnChange
+            initialTheme={initialTheme}
+            themes={THEMES}
+            value={THEME_MAP}
+          >
+            <div className='flex min-h-224 w-full flex-col lg:min-h-screen'>
+              {hero}
+              {dock}
+            </div>
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )
