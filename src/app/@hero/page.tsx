@@ -2,20 +2,22 @@ import Image from 'next/image'
 import { Button, Hero } from 'rsc-daisyui'
 import { getPlaceholder } from '@/actions'
 
+const imageSrc = '/images/test-image.jpg'
+
 export default async function HeroPage() {
   await new Promise((r) => setTimeout(r, 3_000))
 
   return (
     <Hero.Content className='flex-col md:flex-row-reverse'>
-      <div className='aspect-9/16 w-full max-w-xs'>
+      <div className='hover-3d aspect-9/16 w-full max-w-xs'>
         <div className='relative size-full overflow-hidden rounded-lg shadow-2xl'>
           <Image
             alt=''
-            blurDataURL={await getPlaceholder('/images/test-image.jpg')}
-            className='object-cover'
+            blurDataURL={await getPlaceholder(imageSrc)}
+            className='object-cover object-center'
             fill
             placeholder='blur'
-            src='/images/test-image.jpg'
+            src={imageSrc}
           />
         </div>
       </div>
