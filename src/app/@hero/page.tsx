@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Button, Hero } from 'rsc-daisyui'
 import { getPlaceholder } from '@/actions'
 
-const imageSrc = '/images/test-image.jpg'
+const imageSrc = '/images/hero-image.jpg'
 
 export default async function HeroPage() {
   await new Promise((r) => setTimeout(r, 3_000))
