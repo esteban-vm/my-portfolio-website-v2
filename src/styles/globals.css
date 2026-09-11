@@ -25,7 +25,8 @@
   }
 
   a,
-  button {
+  button,
+  img {
     @apply select-none;
   }
 
