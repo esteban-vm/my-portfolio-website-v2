@@ -5,8 +5,6 @@ import { getPlaceholder } from '@/actions'
 const imageSrc = '/images/hero-image.jpg'
 
 export default async function HomePage() {
-  await new Promise((r) => setTimeout(r, 3_000))
-
   return (
     <Hero as='main' className='grow rounded'>
       <Hero.Content className='flex-col gap-8 md:flex-row-reverse'>
