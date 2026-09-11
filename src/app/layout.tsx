@@ -28,7 +28,7 @@ export const viewport: Viewport = {
   interactiveWidget: 'overlays-content',
 }
 
-export default async function RootLayout({ children, dock }: LayoutProps<'/'>) {
+export default async function RootLayout({ children, fab, dock }: LayoutProps<'/'>) {
   const locale = await getLocale()
   const initialTheme = (await getTheme()) ?? ''
   const themeScript = getThemeScript({ initialTheme })
@@ -51,6 +51,7 @@ export default async function RootLayout({ children, dock }: LayoutProps<'/'>) {
           >
             <div className='flex size-full min-h-screen flex-col items-center'>
               {children}
+              {fab}
               {dock}
             </div>
           </ThemeProvider>
