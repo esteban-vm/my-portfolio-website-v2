@@ -52,7 +52,7 @@ export default async function RootLayout({ children, dock }: LayoutProps<'/'>) {
             themes={THEMES}
             value={THEME_MAP}
           >
-            <div className='flex min-h-224 w-full flex-col items-center bg-base-200 lg:min-h-screen'>
+            <div className='flex min-h-224 w-full flex-col items-center bg-base-200 xl:min-h-screen'>
               {children}
               {dock}
             </div>
