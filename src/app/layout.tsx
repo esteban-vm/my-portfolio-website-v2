@@ -31,7 +31,7 @@ export const viewport: Viewport = {
   interactiveWidget: 'overlays-content',
 }
 
-export default async function RootLayout({ hero, dock }: LayoutProps<'/'>) {
+export default async function RootLayout({ children, dock }: LayoutProps<'/'>) {
   const locale = await getLocale()
   const initialTheme = (await getTheme()) ?? ''
   const themeScript = getThemeScript({ initialTheme })
@@ -52,8 +52,8 @@ export default async function RootLayout({ hero, dock }: LayoutProps<'/'>) {
             themes={THEMES}
             value={THEME_MAP}
           >
-            <div className='flex min-h-224 w-full flex-col lg:min-h-screen'>
-              {hero}
+            <div className='flex min-h-224 w-full flex-col items-center bg-base-200 lg:min-h-screen'>
+              {children}
               {dock}
             </div>
           </ThemeProvider>
