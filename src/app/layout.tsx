@@ -24,9 +24,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export const viewport: Viewport = {
   width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
   viewportFit: 'cover',
   interactiveWidget: 'overlays-content',
 }
@@ -37,12 +34,12 @@ export default async function RootLayout({ children, dock }: LayoutProps<'/'>) {
   const themeScript = getThemeScript({ initialTheme })
 
   return (
-    <html className={`${balsamiq.variable} h-full antialiased`} dir='ltr' lang={locale} suppressHydrationWarning>
+    <html className={`${balsamiq.variable} antialiased`} dir='ltr' lang={locale} suppressHydrationWarning>
       <head>
         {/* biome-ignore lint/security/noDangerouslySetInnerHtml: anti-FOUC */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className='h-full'>
+      <body>
         <NextIntlClientProvider locale={locale}>
           <ThemeProvider
             cookieOptions={{ name: THEME_COOKIE }}
@@ -52,7 +49,7 @@ export default async function RootLayout({ children, dock }: LayoutProps<'/'>) {
             themes={THEMES}
             value={THEME_MAP}
           >
-            <div className='flex min-h-224 w-full flex-col items-center bg-base-200 xl:min-h-screen'>
+            <div className='flex size-full min-h-screen flex-col items-center'>
               {children}
               {dock}
             </div>
