@@ -1,20 +1,39 @@
-import { FolderOpenDot, Info, Mail } from 'lucide-react'
-import { Dock } from 'rsc-daisyui'
+'use client'
 
-export default async function DockPage() {
-  await new Promise((r) => setTimeout(r, 5_000))
+import type { DockItemProps } from '@/components/dock'
+import { FolderOpenDot, Info, Mail } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { Dock } from 'rsc-daisyui'
+import { DockItem } from '@/components/dock'
+
+export default function DockPage() {
+  const t = useTranslations()
+
+  const items: DockItemProps[] = [
+    {
+      label: t('AboutPage.title'),
+      href: '/about',
+      icon: Info,
+    },
+    {
+      label: t('ProjectsPage.title'),
+      href: '/projects',
+      icon: FolderOpenDot,
+    },
+    {
+      label: t('ContactPage.title'),
+      href: '/contact',
+      icon: Mail,
+    },
+  ]
 
   return (
-    <Dock as='nav' className='relative border border-base-300'>
-      <Dock.Item label='Sobre mí'>
-        <Info />
-      </Dock.Item>
-      <Dock.Item label='Proyectos'>
-        <FolderOpenDot />
-      </Dock.Item>
-      <Dock.Item label='Contacto'>
-        <Mail />
-      </Dock.Item>
-    </Dock>
+    <footer className='w-full shrink-0 grow-0'>
+      <Dock as='nav' className='relative border border-base-300'>
+        {items.map((item) => (
+          <DockItem key={item.href} {...item} />
+        ))}
+      </Dock>
+    </footer>
   )
 }
