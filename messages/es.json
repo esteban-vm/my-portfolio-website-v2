@@ -22,11 +22,11 @@
   "ProjectsPage": {
     "title": "Proyectos"
   },
-  "Footer": {
-    "AudioButton": {
-      "on": "Encender música",
-      "off": "Apagar música"
-    },
-    "LanguageButton": "Cambiar a inglés"
+  "FabSlot": {
+    "LanguageButton": "Cambiar a inglés",
+    "ThemeButton": {
+      "dark": "Cambiar a tema oscuro",
+      "light": "Cambiar a tema claro"
+    }
   }
 }
