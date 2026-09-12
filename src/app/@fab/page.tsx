@@ -4,7 +4,8 @@ import { useTheme } from '@teispace/next-themes'
 import { Languages, MoonStar, Settings, Sun, X } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
 import { useEffect, useState, useTransition } from 'react'
-import { Button, Tooltip } from 'rsc-daisyui'
+import { Badge, Button, Tooltip } from 'rsc-daisyui'
+import tw from 'tailwind-styled-components'
 import { changeLanguage } from '@/actions'
 
 export default function FabPage() {
@@ -34,8 +35,10 @@ export default function FabPage() {
     })
   }
 
+  const themeMsg = theme === 'dark' ? t('ThemeButton.light') : t('ThemeButton.dark')
+
   return (
-    <div className='fab fab-flower translate-y-[calc(-100%-(--spacing(4)))]'>
+    <Wrapper>
       <Button as='div' color='primary' shape='circle' size='lg' tabIndex={0}>
         <Settings />
       </Button>
@@ -44,17 +47,29 @@ export default function FabPage() {
         <X />
       </Button>
 
-      <Tooltip position='left' tip={t('LanguageButton')}>
-        <Button disabled={isPending} onClick={onLanguageChange} shape='circle' size='lg' type='button'>
-          <Languages />
-        </Button>
+      <Tooltip className='pointer-fine:tooltip' color='info' disabled position='left' tip={t('LanguageButton')}>
+        <div>
+          <Badge className='mr-1 pointer-fine:hidden' color='info'>
+            {t('LanguageButton')}&nbsp;
+          </Badge>
+          <Button disabled={isPending} onClick={onLanguageChange} shape='circle' size='lg' type='button'>
+            <Languages />
+          </Button>
+        </div>
       </Tooltip>
 
-      <Tooltip position='left' tip={theme === 'dark' ? t('ThemeButton.light') : t('ThemeButton.dark')}>
-        <Button onClick={onThemeChange} shape='circle' size='lg' type='button'>
-          {theme === 'dark' ? <Sun /> : <MoonStar />}
-        </Button>
+      <Tooltip className='pointer-fine:tooltip' color='info' disabled position='left' tip={themeMsg}>
+        <div>
+          <Badge className='mr-1 pointer-fine:hidden' color='info'>
+            {themeMsg}&nbsp;
+          </Badge>
+          <Button onClick={onThemeChange} shape='circle' size='lg' type='button'>
+            {theme === 'dark' ? <Sun /> : <MoonStar />}
+          </Button>
+        </div>
       </Tooltip>
-    </div>
+    </Wrapper>
   )
 }
+
+const Wrapper = tw.div`fab pointer-fine:fab-flower -translate-y-1/3 pointer-fine:translate-y-[calc(-100%-(--spacing(4)))]`
