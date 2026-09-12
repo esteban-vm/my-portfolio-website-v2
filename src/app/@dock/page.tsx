@@ -2,7 +2,7 @@
 
 import type { LucideIcon } from 'lucide-react'
 import type { Route } from 'next'
-import { FolderOpenDot, Info, Mail } from 'lucide-react'
+import { FolderOpenDot, House, Info, Mail } from 'lucide-react'
 import { usePathname, useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { Dock } from 'rsc-daisyui'
@@ -14,11 +14,16 @@ interface DockItem {
 }
 
 export default function DockPage() {
-  const t = useTranslations()
   const router = useRouter()
+  const t = useTranslations()
   const pathname = usePathname()
 
   const items: DockItem[] = [
+    {
+      label: t('HomePage.title2'),
+      href: '/',
+      Icon: House,
+    },
     {
       label: t('AboutPage.title'),
       href: '/about',
