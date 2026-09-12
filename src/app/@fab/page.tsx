@@ -40,7 +40,7 @@ export default function FabPage() {
         <Settings />
       </Button>
 
-      <Button className='fab-close' shape='circle' size='lg' type='button'>
+      <Button as='span' className='fab-close' color='error' shape='circle' size='lg'>
         <X />
       </Button>
 
