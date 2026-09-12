@@ -1,6 +1,7 @@
 {
   "HomePage": {
     "title": {
+      "value": "Home",
       "default": "My portfolio | Home",
       "template": "My portfolio | %s"
     },
@@ -10,8 +11,7 @@
       "2": "Web Design",
       "3": "Next.js",
       "4": "React"
-    },
-    "title2": "Home"
+    }
   },
   "AboutPage": {
     "title": "About me"
