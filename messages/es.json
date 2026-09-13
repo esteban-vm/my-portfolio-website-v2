@@ -1,7 +1,6 @@
 {
-  "HomePage": {
+  "RootLayout": {
     "title": {
-      "value": "Inicio",
       "default": "Mi portafolio | Inicio",
       "template": "Mi portafolio | %s"
     },
@@ -12,6 +11,9 @@
       "3": "Next.js",
       "4": "React"
     }
+  },
+  "HomePage": {
+    "title": "Inicio"
   },
   "AboutPage": {
     "title": "Sobre mí"
