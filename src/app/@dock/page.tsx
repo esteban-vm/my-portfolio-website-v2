@@ -20,7 +20,7 @@ export default function DockPage() {
 
   const items: DockItem[] = [
     {
-      label: t('HomePage.title.value'),
+      label: t('HomePage.title'),
       href: '/',
       Icon: House,
     },
