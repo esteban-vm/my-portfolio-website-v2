@@ -29,8 +29,4 @@
   img {
     @apply select-none;
   }
-
-  p {
-    @apply fl-text-sm/base;
-  }
 }
