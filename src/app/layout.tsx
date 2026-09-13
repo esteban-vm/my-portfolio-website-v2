@@ -8,7 +8,7 @@ import { balsamiq } from '@/lib/fonts'
 import '@/styles/globals.css'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('HomePage')
+  const t = await getTranslations('RootLayout')
 
   return {
     title: {
