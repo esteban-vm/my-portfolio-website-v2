@@ -5,8 +5,14 @@ const nextConfig: NextConfig = {
   typedRoutes: true,
   devIndicators: false,
   reactCompiler: true,
+  experimental: {
+    typedEnv: true,
+  },
   images: {
     unoptimized: true,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
 }
 
