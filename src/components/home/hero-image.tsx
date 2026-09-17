@@ -5,7 +5,7 @@ const imageSrc = '/images/hero-image.jpg'
 
 export async function HeroImage() {
   return (
-    <div className='motion-safe:pointer-fine:hover-3d aspect-9/16 w-full max-w-70'>
+    <div className='aspect-9/16 w-full max-w-70'>
       <figure className='relative size-full overflow-hidden rounded-lg shadow-2xl'>
         <Image
           alt=''
@@ -16,14 +16,14 @@ export async function HeroImage() {
           src={imageSrc}
         />
       </figure>
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
+      {/* <div /> */}
+      {/* <div /> */}
+      {/* <div /> */}
+      {/* <div /> */}
+      {/* <div /> */}
+      {/* <div /> */}
+      {/* <div /> */}
+      {/* <div /> */}
     </div>
   )
 }
