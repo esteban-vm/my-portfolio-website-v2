@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { THEME_COOKIE, THEME_MAP, THEMES } from '@/lib/constants'
 import { balsamiq } from '@/lib/fonts'
+import { IconProvider } from './icon-provider'
 import '@/styles/globals.css'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -43,22 +44,24 @@ export default async function RootLayout({ children, fab, dock }: LayoutProps<'/
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
-        <NextIntlClientProvider locale={locale}>
-          <ThemeProvider
-            cookieOptions={{ name: THEME_COOKIE }}
-            defaultTheme={THEMES[0]}
-            disableTransitionOnChange
-            initialTheme={initialTheme}
-            themes={THEMES}
-            value={THEME_MAP}
-          >
-            <div className='flex size-full min-h-screen flex-col items-center'>
-              {children}
-              {fab}
-              {dock}
-            </div>
-          </ThemeProvider>
-        </NextIntlClientProvider>
+        <ThemeProvider
+          cookieOptions={{ name: THEME_COOKIE }}
+          defaultTheme={THEMES[0]}
+          disableTransitionOnChange
+          initialTheme={initialTheme}
+          themes={THEMES}
+          value={THEME_MAP}
+        >
+          <NextIntlClientProvider>
+            <IconProvider>
+              <div className='flex size-full min-h-screen flex-col items-center'>
+                {children}
+                {fab}
+                {dock}
+              </div>
+            </IconProvider>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
