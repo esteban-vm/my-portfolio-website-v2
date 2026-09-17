@@ -1,9 +1,9 @@
 'use client'
 
 import { useTheme } from '@teispace/next-themes'
-import { Languages, MoonStar, Settings, Sun, X } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
 import { useEffect, useState, useTransition } from 'react'
+import { LuLanguages, LuMoonStar, LuSettings, LuSun, LuX } from 'react-icons/lu'
 import { Badge, Button, Tooltip } from 'rsc-daisyui'
 import tw from 'tailwind-styled-components'
 import { changeLanguage } from '@/actions'
@@ -40,11 +40,11 @@ export default function FabPage() {
   return (
     <Wrapper>
       <Button as='div' color='primary' shape='circle' size='lg' tabIndex={0}>
-        <Settings />
+        <LuSettings />
       </Button>
 
       <Button as='span' className='fab-close' color='error' shape='circle' size='lg'>
-        <X />
+        <LuX />
       </Button>
 
       <Tooltip className='pointer-fine:tooltip' color='info' disabled position='left' tip={t('LanguageButton')}>
@@ -53,7 +53,7 @@ export default function FabPage() {
             {t('LanguageButton')}&nbsp;
           </Badge>
           <Button disabled={isPending} onClick={onLanguageChange} shape='circle' size='lg' type='button'>
-            <Languages />
+            <LuLanguages />
           </Button>
         </div>
       </Tooltip>
@@ -64,7 +64,7 @@ export default function FabPage() {
             {themeMsg}&nbsp;
           </Badge>
           <Button onClick={onThemeChange} shape='circle' size='lg' type='button'>
-            {theme === 'dark' ? <Sun /> : <MoonStar />}
+            {theme === 'dark' ? <LuSun /> : <LuMoonStar />}
           </Button>
         </div>
       </Tooltip>
