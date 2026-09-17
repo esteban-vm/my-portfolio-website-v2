@@ -46,7 +46,6 @@ export default async function RootLayout({ children, fab, dock }: LayoutProps<'/
       <body>
         <ThemeProvider
           cookieOptions={{ name: THEME_COOKIE }}
-          defaultTheme={THEMES[0]}
           disableTransitionOnChange
           initialTheme={initialTheme}
           themes={THEMES}
