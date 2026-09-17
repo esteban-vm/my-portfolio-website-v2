@@ -9,6 +9,6 @@ export const THEME_COOKIE = 'NEXT_THEME'
 export const THEMES = ['light', 'dark'] as const satisfies string[]
 
 export const THEME_MAP = {
-  light: 'wireframe',
-  dark: 'night',
+  light: 'emerald',
+  dark: 'synthwave',
 } as const satisfies Record<(typeof THEMES)[number], Theme>

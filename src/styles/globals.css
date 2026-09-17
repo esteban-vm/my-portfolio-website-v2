@@ -6,7 +6,7 @@
 
 @plugin "daisyui" {
   logs: false;
-  themes: wireframe, night;
+  themes: emerald, synthwave;
 }
 
 @source "../../node_modules/rsc-daisyui/dist";
