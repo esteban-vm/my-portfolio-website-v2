@@ -1,16 +1,16 @@
 'use client'
 
-import type { LucideIcon } from 'lucide-react'
 import type { Route } from 'next'
-import { FolderOpenDot, House, Info, Mail } from 'lucide-react'
+import type { IconType } from 'react-icons'
 import { usePathname, useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
+import { LuFolderOpenDot, LuHouse, LuInfo, LuMail } from 'react-icons/lu'
 import { Dock } from 'rsc-daisyui'
 
 interface DockItem {
   label: string
   href: Route
-  Icon: LucideIcon
+  Icon: IconType
 }
 
 export default function DockPage() {
@@ -22,22 +22,22 @@ export default function DockPage() {
     {
       label: t('HomePage.title'),
       href: '/',
-      Icon: House,
+      Icon: LuHouse,
     },
     {
       label: t('AboutPage.title'),
       href: '/about',
-      Icon: Info,
+      Icon: LuInfo,
     },
     {
       label: t('ProjectsPage.title'),
       href: '/projects',
-      Icon: FolderOpenDot,
+      Icon: LuFolderOpenDot,
     },
     {
       label: t('ContactPage.title'),
       href: '/contact',
-      Icon: Mail,
+      Icon: LuMail,
     },
   ]
 
