@@ -11,6 +11,8 @@
 
 @source "../../node_modules/rsc-daisyui/dist";
 
+@custom-variant dark (&:where([data-theme="synthwave"], [data-theme="synthwave"] *, .synthwave, .synthwave *));
+
 @theme {
   --font-balsamiq: var(--balsamiq);
 }
