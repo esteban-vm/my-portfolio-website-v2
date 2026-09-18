@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { FaGithub, FaLinkedin, FaPaperPlane, FaWhatsapp } from 'react-icons/fa'
+import { FaAt, FaGithub, FaLinkedin, FaPaperPlane, FaPencilAlt, FaWhatsapp } from 'react-icons/fa'
 import { Button, Divider, Fieldset } from 'rsc-daisyui'
 import { useContactForm } from '@/hooks'
 import { FormInput } from './form-input'
@@ -21,21 +21,25 @@ export function ContactForm() {
   return (
     <form className='my-3 w-full max-w-lg lg:max-w-3xl' noValidate onSubmit={handleSubmitWithAction}>
       <Fieldset disabled={isSubmitting}>
-        <Fieldset.Legend className='fl-text-4xl/5xl'>{t('legend')}</Fieldset.Legend>
+        <Fieldset.Legend className='fl-text-3xl/4xl'>{t('legend')}</Fieldset.Legend>
 
         <FormInput
           control={control}
+          icon={FaPencilAlt}
           label={t('labels.name')}
           name='name'
           placeholder={t('placeholders.name')}
+          required
           type='text'
         />
 
         <FormInput
           control={control}
+          icon={FaAt}
           label={t('labels.email')}
           name='email'
           placeholder={t('placeholders.email')}
+          required
           type='email'
         />
 
@@ -44,6 +48,7 @@ export function ContactForm() {
           label={t('labels.message')}
           name='message'
           placeholder={t('placeholders.message')}
+          required
         />
 
         <Button className='mt-1.5' color='primary' disabled={!isValid} type='submit'>
