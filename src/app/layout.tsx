@@ -3,6 +3,8 @@ import { ThemeProvider } from '@teispace/next-themes'
 import { getTheme, getThemeScript } from '@teispace/next-themes/server'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
+import { Suspense } from 'react'
+import { RootDock, RootFab } from '@/components/root'
 import { THEME_COOKIE, THEME_MAP, THEMES } from '@/lib/constants'
 import { Geist, Montserrat } from '@/lib/fonts'
 import { IconProvider } from './icon-provider'
@@ -32,7 +34,7 @@ export const viewport: Viewport = {
   interactiveWidget: 'overlays-content',
 }
 
-export default async function RootLayout({ children, fab, dock }: LayoutProps<'/'>) {
+export default async function RootLayout({ children }: LayoutProps<'/'>) {
   const locale = await getLocale()
   const initialTheme = (await getTheme()) ?? ''
   const themeScript = getThemeScript({ initialTheme })
@@ -60,8 +62,10 @@ export default async function RootLayout({ children, fab, dock }: LayoutProps<'/
             <IconProvider>
               <div className='flex size-full min-h-screen flex-col items-center'>
                 {children}
-                {fab}
-                {dock}
+                <Suspense fallback={null}>
+                  <RootFab />
+                </Suspense>
+                <RootDock />
               </div>
             </IconProvider>
           </NextIntlClientProvider>
