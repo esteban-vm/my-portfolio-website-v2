@@ -27,6 +27,8 @@ export function ContactForm() {
           control={control}
           icon={FaPencilAlt}
           label={t('labels.name')}
+          maxLength={50}
+          minLength={5}
           name='name'
           placeholder={t('placeholders.name')}
           required
@@ -46,6 +48,8 @@ export function ContactForm() {
         <FormTextbox
           control={control}
           label={t('labels.message')}
+          maxLength={255}
+          minLength={5}
           name='message'
           placeholder={t('placeholders.message')}
           required
