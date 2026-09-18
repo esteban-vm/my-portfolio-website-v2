@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { getPlaceholder } from '@/actions'
 
 const imageSrc = '/images/hero-image.jpg'
 
@@ -9,10 +8,10 @@ export async function HeroImage() {
       <figure className='relative size-full overflow-hidden rounded-lg shadow-2xl'>
         <Image
           alt=''
-          blurDataURL={await getPlaceholder(imageSrc)}
+          // blurDataURL={await getPlaceholder(imageSrc)}
           className='object-cover object-center'
           fill
-          placeholder='blur'
+          // placeholder='blur'
           src={imageSrc}
         />
       </figure>
