@@ -30,5 +30,32 @@
       "dark": "Switch to dark theme",
       "light": "Switch to light theme"
     }
+  },
+  "ContactForm": {
+    "legend": "Get in touch",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "errors": {
+      "name": {
+        "nonempty": "Name must not be empty",
+        "min": "Enter at least 5 characters",
+        "max": "Enter at most 50 characters"
+      },
+      "email": "Email must be valid",
+      "message": {
+        "nonempty": "Message must not be empty",
+        "min": "Enter at least 5 characters",
+        "max": "Enter at most 255 characters"
+      }
+    },
+    "placeholders": {
+      "name": "Your name…",
+      "email": "your_email@example.com",
+      "message": "Your message…"
+    },
+    "button": "Send Message"
   }
 }

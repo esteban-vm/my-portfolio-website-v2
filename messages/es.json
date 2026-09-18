@@ -30,5 +30,32 @@
       "dark": "Cambiar a tema oscuro",
       "light": "Cambiar a tema claro"
     }
+  },
+  "ContactForm": {
+    "legend": "Contactemos",
+    "labels": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje"
+    },
+    "errors": {
+      "name": {
+        "nonempty": "El nombre no puede estar vacío",
+        "min": "Ingresa al menos 5 caracteres",
+        "max": "Ingresa como máximo 50 caracteres"
+      },
+      "email": "El correo electrónico debe ser válido",
+      "message": {
+        "nonempty": "El mensaje no puede estar vacío",
+        "min": "Ingresa al menos 5 caracteres",
+        "max": "Ingresa como máximo 255 caracteres"
+      }
+    },
+    "placeholders": {
+      "name": "Tu nombre…",
+      "email": "tu_correo@ejemplo.com",
+      "message": "Tu mensaje…"
+    },
+    "button": "Enviar mensaje"
   }
 }
