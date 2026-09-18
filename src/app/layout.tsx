@@ -7,7 +7,6 @@ import { Suspense } from 'react'
 import { RootDock, RootFab } from '@/components/root'
 import { THEME_COOKIE, THEME_MAP, THEMES } from '@/lib/constants'
 import { Geist, Montserrat } from '@/lib/fonts'
-import { IconProvider } from './icon-provider'
 import '@/styles/globals.css'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -59,15 +58,13 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
           value={THEME_MAP}
         >
           <NextIntlClientProvider>
-            <IconProvider>
-              <div className='flex size-full min-h-screen flex-col items-center'>
-                {children}
-                <Suspense fallback={null}>
-                  <RootFab />
-                </Suspense>
-                <RootDock />
-              </div>
-            </IconProvider>
+            <div className='flex size-full min-h-screen flex-col items-center'>
+              {children}
+              <Suspense fallback={null}>
+                <RootFab />
+              </Suspense>
+              <RootDock />
+            </div>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
