@@ -13,13 +13,7 @@ export interface FormTextboxProps<T extends FieldValues> extends BaseFormTextbox
   label: string
 }
 
-export function FormTextbox<T extends FieldValues>({
-  control,
-  name,
-  label,
-  required = true,
-  ...rest
-}: FormTextboxProps<T>) {
+export function FormTextbox<T extends FieldValues>({ control, name, label, ...rest }: FormTextboxProps<T>) {
   const fieldId = useId()
   const errorId = useId()
 
@@ -30,7 +24,7 @@ export function FormTextbox<T extends FieldValues>({
       render={({ field, fieldState: { error, invalid } }) => {
         return (
           <div>
-            <Label as='label' className='mb-1.5 cursor-pointer text-sm' htmlFor={fieldId}>
+            <Label as='label' className='mb-1.5 cursor-pointer font-semibold text-sm' htmlFor={fieldId}>
               {label}:
             </Label>
             <Textarea
@@ -39,7 +33,6 @@ export function FormTextbox<T extends FieldValues>({
               aria-invalid={invalid}
               className='field-sizing-content w-full resize-none'
               id={fieldId}
-              required={required}
               validator
               {...field}
             />
