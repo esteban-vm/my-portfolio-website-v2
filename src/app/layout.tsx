@@ -4,7 +4,7 @@ import { getTheme, getThemeScript } from '@teispace/next-themes/server'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { THEME_COOKIE, THEME_MAP, THEMES } from '@/lib/constants'
-import { balsamiq } from '@/lib/fonts'
+import { Geist, Montserrat } from '@/lib/fonts'
 import { IconProvider } from './icon-provider'
 import '@/styles/globals.css'
 
@@ -38,7 +38,12 @@ export default async function RootLayout({ children, fab, dock }: LayoutProps<'/
   const themeScript = getThemeScript({ initialTheme })
 
   return (
-    <html className={`${balsamiq.variable} antialiased`} dir='ltr' lang={locale} suppressHydrationWarning>
+    <html
+      className={`${Montserrat.variable} ${Geist.variable} antialiased`}
+      dir='ltr'
+      lang={locale}
+      suppressHydrationWarning
+    >
       <head>
         {/* biome-ignore lint/security/noDangerouslySetInnerHtml: anti-FOUC */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />

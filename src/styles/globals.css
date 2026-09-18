@@ -14,7 +14,8 @@
 @custom-variant dark (&:where([data-theme="synthwave"], [data-theme="synthwave"] *, .synthwave, .synthwave *));
 
 @theme {
-  --font-balsamiq: var(--balsamiq);
+  --font-geist: var(--geist-variable);
+  --font-montserrat: var(--montserrat-alternates);
 }
 
 @layer base {
@@ -23,7 +24,7 @@
   }
 
   html {
-    @apply font-balsamiq;
+    @apply font-geist;
   }
 
   a,

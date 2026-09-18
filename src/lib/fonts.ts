@@ -1,12 +1,15 @@
 import localFont from 'next/font/local'
 
-export const balsamiq = localFont({
-  variable: '--balsamiq',
-  display: 'swap',
-  fallback: ['sans-serif'],
+export const Montserrat = localFont({
+  variable: '--montserrat-alternates',
   src: [
-    { path: '../../public/fonts/Balsamiq-regular.woff2', weight: '400', style: 'normal' },
-    { path: '../../public/fonts/Balsamiq-italic.woff2', weight: '400', style: 'italic' },
-    { path: '../../public/fonts/Balsamiq-bold.woff2', weight: '700', style: 'bold' },
+    { path: '../../public/fonts/montserrat-alternates-regular.ttf', weight: '400', style: 'normal' },
+    { path: '../../public/fonts/montserrat-alternates-semibold.ttf', weight: '600', style: 'normal' },
+    { path: '../../public/fonts/montserrat-alternates-bold.ttf', weight: '700', style: 'normal' },
   ],
+})
+
+export const Geist = localFont({
+  src: '../../public/fonts/geist-variable.ttf',
+  variable: '--geist-variable',
 })
