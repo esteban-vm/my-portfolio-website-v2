@@ -51,7 +51,7 @@ export function RootDock() {
 
           return (
             <Dock.Item active={isACtive} key={href} label={label} onClick={onNavigate}>
-              <Icon />
+              <Icon className='size-5.5' />
             </Dock.Item>
           )
         })}
