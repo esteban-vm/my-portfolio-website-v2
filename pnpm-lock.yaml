@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@emailjs/nodejs':
+        specifier: ^5.0.2
+        version: 5.0.2
       '@hookform/resolvers':
         specifier: ^5.9.1
         version: 5.9.1(react-hook-form@7.87.0(react@19.2.8))(zod@4.5.4)
+      '@next-safe-action/adapter-react-hook-form':
+        specifier: ^2.1.0
+        version: 2.1.0(@hookform/resolvers@5.9.1(react-hook-form@7.87.0(react@19.2.8))(zod@4.5.4))(next-safe-action@8.7.3(next@16.3.4(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(next@16.3.4(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react-hook-form@7.87.0(react@19.2.8))(react@19.2.8)
       '@teispace/next-themes':
         specifier: ^3.0.2
         version: 3.0.2(next@16.3.4(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -20,6 +26,9 @@ importers:
       next-intl:
         specifier: ^4.14.2
         version: 4.14.2(@swc/helpers@0.5.23)(next@16.3.4(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react@19.2.8)
+      next-safe-action:
+        specifier: ^8.7.3
+        version: 8.7.3(next@16.3.4(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       react:
         specifier: 19.2.8
         version: 19.2.8
@@ -171,6 +180,10 @@ packages:
 
   '@eloqnt/format-po@0.1.0':
     resolution: {integrity: sha512-odgtuICWs67GdkNqY51/d2vaIukuOdlGalKASUGkI5c4cyWOmv/WIVyk5gZyn3xr614RzwWp57s9WB40lRLlBw==}
+
+  '@emailjs/nodejs@5.0.2':
+    resolution: {integrity: sha512-+BrO5rF0msaoEeSKxoa64weUkczd3fTXRCB8/EnKaIRzC8B1EyLDZfr9vYK5TNG/U3Eco9cpjMNnA1IlUBkmOw==}
+    engines: {node: '>=18.0.0'}
 
   '@emnapi/runtime@1.11.3':
     resolution: {integrity: sha512-Xz4Tpyki7XyrpbUK1jR1AhdAdaXyhhY4lZ3neLodmhpuWfy2PAQN5B46sAiU4liOXGLkHypn/qU+jvfWSCYYLA==}
@@ -442,6 +455,17 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@next-safe-action/adapter-react-hook-form@2.1.0':
+    resolution: {integrity: sha512-mnLPinCDh83nY0GUJK32IFHyHMTOMpV9bjKXlv/btqlUzp0w/VsY5k+yLYnFNhxj5OC7Cv7xnt3tLpCa7YOK0Q==}
+    engines: {node: '>=18.17'}
+    peerDependencies:
+      '@hookform/resolvers': '>= 5.0.0'
+      next: '>= 14.0.0'
+      next-safe-action: '>=8.1.10'
+      react: '>= 18.2.0'
+      react-dom: '>= 18.2.0'
+      react-hook-form: '>= 7.0.0'
 
   '@next/env@16.3.4':
     resolution: {integrity: sha512-cjWZnUUa6jZq2kFaNe/ZyJdZonOZ/QoN0Zka2nz/FLOrfx14pQuM9c5RaSVkWMqgdt4ksgPAMWPyHSs/CyV48Q==}
@@ -965,6 +989,14 @@ packages:
       next: ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
 
+  next-safe-action@8.7.3:
+    resolution: {integrity: sha512-tz6wMMBOSGyEclSDChpj5izLLErUbwqcufXN4a6lyD83pgPni9GWVniLH0zEzPWcKIkkyEiQyrjOhWcqxBKy6A==}
+    engines: {node: '>=18.17'}
+    peerDependencies:
+      next: '>= 14.0.0'
+      react: '>= 18.2.0'
+      react-dom: '>= 18.2.0'
+
   next@16.3.4:
     resolution: {integrity: sha512-/Ztf6CeRH+ejEXUrYtqI4gkS66eFIHuSwqi60RgcpWKodxFZx2/dqVCMKBwILfAHXQ+F1b1vAudgj3mnxqtoIA==}
     engines: {node: '>=20.9.0'}
@@ -1184,6 +1216,8 @@ snapshots:
       '@eloqnt/config': 0.1.0
       po-parser: 2.2.0
 
+  '@emailjs/nodejs@5.0.2': {}
+
   '@emnapi/runtime@1.11.3':
     dependencies:
       tslib: 2.8.1
@@ -1332,6 +1366,15 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
+
+  '@next-safe-action/adapter-react-hook-form@2.1.0(@hookform/resolvers@5.9.1(react-hook-form@7.87.0(react@19.2.8))(zod@4.5.4))(next-safe-action@8.7.3(next@16.3.4(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(next@16.3.4(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react-hook-form@7.87.0(react@19.2.8))(react@19.2.8)':
+    dependencies:
+      '@hookform/resolvers': 5.9.1(react-hook-form@7.87.0(react@19.2.8))(zod@4.5.4)
+      next: 16.3.4(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      next-safe-action: 8.7.3(next@16.3.4(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
+      react-hook-form: 7.87.0(react@19.2.8)
 
   '@next/env@16.3.4': {}
 
@@ -1710,6 +1753,12 @@ snapshots:
       use-intl: 4.14.2(react@19.2.8)
     transitivePeerDependencies:
       - '@swc/helpers'
+
+  next-safe-action@8.7.3(next@16.3.4(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+    dependencies:
+      next: 16.3.4(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
 
   next@16.3.4(@types/node@20.19.43)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
     dependencies:
