@@ -1,41 +1,58 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import { FaGithub, FaLinkedin, FaPaperPlane, FaWhatsapp } from 'react-icons/fa'
-import { Button, Divider, Fieldset, Input, Label, Textarea, Validator } from 'rsc-daisyui'
+import { Button, Divider, Fieldset } from 'rsc-daisyui'
+import { useContactForm } from '@/hooks'
+import { FormInput } from './form-input'
+import { FormTextbox } from './form-textbox'
 
 export function ContactForm() {
+  const t = useTranslations('ContactForm')
+
+  const {
+    handleSubmitWithAction,
+    form: {
+      control,
+      formState: { isSubmitting, isValid },
+    },
+  } = useContactForm()
+
   return (
-    <form className='my-3 w-full max-w-lg lg:max-w-3xl' noValidate>
-      <Fieldset>
-        <Fieldset.Legend className='fl-text-4xl/5xl'>Get in touch</Fieldset.Legend>
-        <div>
-          <Label as='label' className='mb-1.5 cursor-pointer text-sm'>
-            Name:
-          </Label>
-          <Input as='label' className='w-full' validator>
-            <input type='text' />
-          </Input>
-          <Validator.Hint as='small' className='empty:hidden' role='alert'></Validator.Hint>
-        </div>
-        <div>
-          <Label as='label' className='mb-1.5 cursor-pointer text-sm'>
-            Email:
-          </Label>
-          <Input as='label' className='w-full' validator>
-            <input type='text' />
-          </Input>
-          <Validator.Hint as='small' className='empty:hidden' role='alert'></Validator.Hint>
-        </div>
-        <div>
-          <Label as='label' className='mb-1.5 cursor-pointer text-sm'>
-            Message:
-          </Label>
-          <Textarea className='field-sizing-content w-full resize-none' validator />
-          <Validator.Hint as='small' className='empty:hidden' role='alert'></Validator.Hint>
-        </div>
-        <Button className='mt-1.5' color='primary'>
+    <form className='my-3 w-full max-w-lg lg:max-w-3xl' noValidate onSubmit={handleSubmitWithAction}>
+      <Fieldset disabled={isSubmitting}>
+        <Fieldset.Legend className='fl-text-4xl/5xl'>{t('legend')}</Fieldset.Legend>
+
+        <FormInput
+          control={control}
+          label={t('labels.name')}
+          name='name'
+          placeholder={t('placeholders.name')}
+          type='text'
+        />
+
+        <FormInput
+          control={control}
+          label={t('labels.email')}
+          name='email'
+          placeholder={t('placeholders.email')}
+          type='email'
+        />
+
+        <FormTextbox
+          control={control}
+          label={t('labels.message')}
+          name='message'
+          placeholder={t('placeholders.message')}
+        />
+
+        <Button className='mt-1.5' color='primary' disabled={!isValid} type='submit'>
           Send message&nbsp;
           <FaPaperPlane />
         </Button>
+
         <Divider className='my-0' />
+
         <div className='flex justify-center gap-1.5'>
           <Button
             className='border-black bg-black text-white hover:opacity-75 dark:border-white'
