@@ -3,7 +3,7 @@ import { Button, Divider, Fieldset, Input, Label, Textarea, Validator } from 'rs
 
 export function ContactForm() {
   return (
-    <form className='w-full max-w-3xl' noValidate>
+    <form className='my-3 w-full max-w-lg lg:max-w-3xl' noValidate>
       <Fieldset>
         <Fieldset.Legend className='fl-text-4xl/5xl'>Get in touch</Fieldset.Legend>
         <div>
