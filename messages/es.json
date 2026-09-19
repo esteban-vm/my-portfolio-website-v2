@@ -56,6 +56,9 @@
       "email": "tu-correo@ejemplo.com",
       "message": "Tu mensaje…"
     },
-    "button": "Enviar mensaje"
+    "button": {
+      "idle": "Enviar mensaje",
+      "sending": "Enviando mensaje"
+    }
   }
 }
