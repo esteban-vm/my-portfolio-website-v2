@@ -59,6 +59,10 @@
     "button": {
       "idle": "Send message",
       "sending": "Sending message"
+    },
+    "toasts": {
+      "success": "Message sent successfully",
+      "error": "An error has occurred"
     }
   }
 }
