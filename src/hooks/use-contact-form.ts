@@ -3,6 +3,7 @@ import { useHookFormAction } from '@next-safe-action/adapter-react-hook-form/hoo
 import { useTranslations } from 'next-intl'
 import { z } from 'zod'
 import { sendEmail } from '@/actions'
+import { isProfane } from '@/lib/helpers'
 
 export function useContactForm() {
   const t = useTranslations('ContactForm.errors')
@@ -13,7 +14,20 @@ export function useContactForm() {
       z.object({
         name: z.string().trim().nonempty(t('name.nonempty')).min(5, t('name.min')).max(50, t('name.max')),
         email: z.email(t('email')).trim().lowercase(),
-        message: z.string().trim().nonempty(t('message.nonempty')).min(5, t('message.min')).max(255, t('message.max')),
+        message: z
+          .string()
+          .trim()
+          .nonempty(t('message.nonempty'))
+          .min(5, t('message.min'))
+          .max(255, t('message.max'))
+          .superRefine((value, ctx) => {
+            if (isProfane(value)) {
+              ctx.addIssue({
+                code: 'custom',
+                message: t('message.profane'),
+              })
+            }
+          }),
       })
     ),
     {

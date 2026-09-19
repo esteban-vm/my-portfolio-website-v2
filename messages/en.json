@@ -48,7 +48,8 @@
       "message": {
         "nonempty": "Message must not be empty",
         "min": "Enter at least 5 characters",
-        "max": "Enter at most 255 characters"
+        "max": "Enter at most 255 characters",
+        "profane": "Please, don't use bad words"
       }
     },
     "placeholders": {

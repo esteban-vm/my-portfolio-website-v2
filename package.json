@@ -14,6 +14,7 @@
     "@hookform/resolvers": "^5.9.1",
     "@next-safe-action/adapter-react-hook-form": "^2.1.0",
     "@teispace/next-themes": "^3.0.2",
+    "bad-words-next": "^3.2.0",
     "next": "16.3.4",
     "next-intl": "^4.14.2",
     "next-safe-action": "^8.7.3",

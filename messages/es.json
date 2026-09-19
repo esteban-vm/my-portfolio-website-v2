@@ -48,7 +48,8 @@
       "message": {
         "nonempty": "El mensaje no puede estar vacío",
         "min": "Ingresa al menos 5 caracteres",
-        "max": "Ingresa como máximo 255 caracteres"
+        "max": "Ingresa como máximo 255 caracteres",
+        "profane": "Por favor, no uses malas palabras"
       }
     },
     "placeholders": {
