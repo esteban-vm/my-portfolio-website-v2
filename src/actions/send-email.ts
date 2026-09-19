@@ -17,8 +17,6 @@ export const sendEmail = safeClient
   })
   .outputSchema(z.object({ ok: z.boolean(), message: z.string() }))
   .action(async ({ parsedInput }) => {
-    await new Promise((r) => setTimeout(r, 5_000))
-
     if (process.env.NODE_ENV === 'production') {
       const { name, email, message } = parsedInput
 
@@ -37,6 +35,8 @@ export const sendEmail = safeClient
           privateKey: process.env.EMAILJS_PRIVATE_KEY,
         }
       )
+    } else {
+      await new Promise((r) => setTimeout(r, 5_000))
     }
 
     return {
