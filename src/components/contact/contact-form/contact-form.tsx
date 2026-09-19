@@ -1,11 +1,12 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { FaAt, FaGithub, FaLinkedin, FaPaperPlane, FaPencilAlt, FaWhatsapp } from 'react-icons/fa'
+import { FaAt, FaPaperPlane, FaPencilAlt } from 'react-icons/fa'
 import { Button, Divider, Fieldset } from 'rsc-daisyui'
 import { useContactForm } from '@/hooks'
 import { FormInput } from './form-input'
 import { FormTextbox } from './form-textbox'
+import { SocialLinks } from './social-links'
 
 export function ContactForm() {
   const t = useTranslations('ContactForm')
@@ -61,33 +62,7 @@ export function ContactForm() {
         </Button>
 
         <Divider className='my-0' />
-
-        <div className='flex justify-center gap-1.5'>
-          <Button
-            className='border-black bg-black text-white hover:opacity-75 dark:border-white'
-            shape='square'
-            size='lg'
-            type='button'
-          >
-            <FaGithub className='size-[75%]' />
-          </Button>
-          <Button
-            className='border-[#00b544] bg-[#03C755] text-white hover:opacity-75 dark:border-white'
-            shape='square'
-            size='lg'
-            type='button'
-          >
-            <FaWhatsapp className='size-[75%]' />
-          </Button>
-          <Button
-            className='border-[#0059b3] bg-[#0967C2] text-white hover:opacity-75 dark:border-white'
-            shape='square'
-            size='lg'
-            type='button'
-          >
-            <FaLinkedin className='size-[75%]' />
-          </Button>
-        </div>
+        <SocialLinks />
       </Fieldset>
     </form>
   )
