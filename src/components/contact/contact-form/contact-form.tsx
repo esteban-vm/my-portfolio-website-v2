@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import { FaAt, FaPaperPlane, FaPencilAlt } from 'react-icons/fa'
-import { Button, Divider, Fieldset } from 'rsc-daisyui'
+import { Button, Divider, Fieldset, Loading } from 'rsc-daisyui'
 import { useContactForm } from '@/hooks'
 import { FormInput } from './form-input'
 import { FormTextbox } from './form-textbox'
@@ -15,13 +15,13 @@ export function ContactForm() {
     handleSubmitWithAction,
     form: {
       control,
-      formState: { isSubmitting, isValid },
+      formState: { isValid, isSubmitting, isSubmitSuccessful },
     },
   } = useContactForm()
 
   return (
     <form className='my-3 w-full max-w-lg lg:max-w-3xl' noValidate onSubmit={handleSubmitWithAction}>
-      <Fieldset disabled={isSubmitting}>
+      <Fieldset disabled={isSubmitting || isSubmitSuccessful}>
         <Fieldset.Legend className='fl-text-3xl/4xl'>{t('legend')}</Fieldset.Legend>
 
         <FormInput
@@ -57,8 +57,8 @@ export function ContactForm() {
         />
 
         <Button className='mt-1.5' color='primary' disabled={!isValid} type='submit'>
-          Send message&nbsp;
-          <FaPaperPlane />
+          {isSubmitting ? t('button.sending') : t('button.idle')}&nbsp;
+          {isSubmitting ? <Loading /> : <FaPaperPlane />}
         </Button>
 
         <Divider className='my-0' />
