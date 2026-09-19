@@ -53,7 +53,7 @@
     },
     "placeholders": {
       "name": "Tu nombre…",
-      "email": "tu_correo@ejemplo.com",
+      "email": "tu-correo@ejemplo.com",
       "message": "Tu mensaje…"
     },
     "button": "Enviar mensaje"
