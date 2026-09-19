@@ -39,14 +39,6 @@ export function useContactForm() {
           message: '',
         },
       },
-      actionProps: {
-        onError(args) {
-          console.log(args.error)
-        },
-        onSuccess(args) {
-          console.log(args.data)
-        },
-      },
     }
   )
 }
