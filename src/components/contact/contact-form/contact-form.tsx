@@ -28,6 +28,7 @@ export function ContactForm() {
           <Fieldset.Legend className='fl-text-3xl/4xl'>{t('legend')}</Fieldset.Legend>
 
           <FormInput
+            autoComplete='given-name'
             control={control}
             icon={FaPencil}
             label={t('labels.name')}
@@ -40,6 +41,7 @@ export function ContactForm() {
           />
 
           <FormInput
+            autoComplete='home email'
             control={control}
             icon={FaAt}
             label={t('labels.email')}
