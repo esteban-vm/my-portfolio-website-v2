@@ -1,17 +1,15 @@
 'use client'
 
-import type { Control, FieldPath, FieldValues } from 'react-hook-form'
+import type { FieldValues } from 'react-hook-form'
 import type { IconType } from 'react-icons'
+import type { FormControlProps } from '@/types'
 import { useId } from 'react'
 import { Controller } from 'react-hook-form'
 import { Input, Label, Validator } from 'rsc-daisyui'
 
 type BaseFormInputProps = Omit<JSX.IntrinsicElements['input'], 'name' | 'color'>
 
-interface FormInputProps<T extends FieldValues> extends BaseFormInputProps {
-  control: Control<T>
-  name: FieldPath<T>
-  label: string
+interface FormInputProps<T extends FieldValues> extends FormControlProps<T>, BaseFormInputProps {
   icon: IconType
 }
 

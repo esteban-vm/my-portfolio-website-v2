@@ -1,6 +1,7 @@
 'use client'
 
-import type { Control, FieldPath, FieldValues } from 'react-hook-form'
+import type { FieldValues } from 'react-hook-form'
+import type { FormControlProps } from '@/types'
 import { useTranslations } from 'next-intl'
 import { useId } from 'react'
 import { Controller } from 'react-hook-form'
@@ -8,11 +9,7 @@ import { Kbd, Label, Textarea, Validator } from 'rsc-daisyui'
 
 type BaseFormTextboxProps = Omit<JSX.IntrinsicElements['textarea'], 'name' | 'color'>
 
-interface FormTextboxProps<T extends FieldValues> extends BaseFormTextboxProps {
-  control: Control<T>
-  name: FieldPath<T>
-  label: string
-}
+interface FormTextboxProps<T extends FieldValues> extends FormControlProps<T>, BaseFormTextboxProps {}
 
 export function FormTextbox<T extends FieldValues>({ control, name, label, ...rest }: FormTextboxProps<T>) {
   const t = useTranslations('ContactForm')

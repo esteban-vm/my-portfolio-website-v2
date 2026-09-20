@@ -1,12 +1,12 @@
 'use client'
 
-import type { Control, FieldValues } from 'react-hook-form'
+import type { FieldValues } from 'react-hook-form'
+import type { BaseFormControlProps } from '@/types'
 import { useFormState } from 'react-hook-form'
 import { FaCircleCheck, FaCircleXmark } from 'react-icons/fa6'
 import { Alert, Toast } from 'rsc-daisyui'
 
-interface ToastAlertProps<T extends FieldValues> {
-  control: Control<T>
+interface ToastAlertProps<T extends FieldValues> extends BaseFormControlProps<T> {
   success?: string
   error?: string
 }
