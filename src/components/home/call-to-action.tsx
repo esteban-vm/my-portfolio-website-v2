@@ -2,9 +2,9 @@ import { Button } from 'rsc-daisyui'
 
 export function CallToAction() {
   return (
-    <div>
+    <div className='text-center md:text-left'>
       <h1 className='fl-text-3xl/5xl font-bold font-montserrat'>Box Office News!</h1>
-      <p className='py-6'>
+      <p className='py-4'>
         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti
         eaque aut repudiandae et a id nisi.
       </p>
