@@ -36,12 +36,7 @@ export function ContactForm() {
 
   return (
     <>
-      <form
-        className='my-3 h-full w-full max-w-lg lg:max-w-3xl'
-        noValidate
-        onSubmit={handleSubmitWithAction}
-        ref={formRef}
-      >
+      <form className='my-3 w-full max-w-lg lg:max-w-3xl' noValidate onSubmit={handleSubmitWithAction} ref={formRef}>
         <Fieldset disabled={isSubmitting || isSubmitSuccessful}>
           <Fieldset.Legend className='fl-text-3xl/4xl'>{t('legend')}</Fieldset.Legend>
 

@@ -40,7 +40,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
 
   return (
     <html
-      className={`${Montserrat.variable} ${Geist.variable} antialiased`}
+      className={`${Montserrat.variable} ${Geist.variable} h-full antialiased`}
       dir='ltr'
       lang={locale}
       suppressHydrationWarning
@@ -49,7 +49,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
         {/* biome-ignore lint/security/noDangerouslySetInnerHtml: anti-FOUC */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body>
+      <body className='h-full'>
         <ThemeProvider
           cookieOptions={{ name: THEME_COOKIE }}
           disableTransitionOnChange
@@ -58,7 +58,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
           value={THEME_MAP}
         >
           <NextIntlClientProvider>
-            <div className='flex size-full min-h-screen flex-col items-center'>
+            <div className='flex size-full min-h-192 flex-col items-center'>
               {children}
               <Suspense fallback={null}>
                 <RootFab />
