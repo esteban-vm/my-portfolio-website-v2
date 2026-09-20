@@ -15,6 +15,9 @@ export function ContactForm() {
 
   const {
     handleSubmitWithAction,
+    action: {
+      result: { data, serverError },
+    },
     form: {
       control,
       formState: { isSubmitting, isSubmitSuccessful },
@@ -67,7 +70,7 @@ export function ContactForm() {
         </Fieldset>
       </form>
 
-      <ToastAlert control={control} />
+      <ToastAlert control={control} error={serverError} success={data?.success} />
     </>
   )
 }
