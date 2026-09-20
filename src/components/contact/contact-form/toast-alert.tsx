@@ -12,9 +12,9 @@ interface ToastAlertProps<T extends FieldValues> {
 }
 
 export function ToastAlert<T extends FieldValues>({ control, success, error }: ToastAlertProps<T>) {
-  const { isSubmitted } = useFormState({ control })
+  const { isSubmitSuccessful } = useFormState({ control })
 
-  if (!isSubmitted) return null
+  if (!isSubmitSuccessful) return null
 
   return (
     <Toast className='absolute' horizontal='center'>
