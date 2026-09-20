@@ -1,6 +1,8 @@
 'use client'
 
+import type { KeyboardEventHandler } from 'react'
 import { useTranslations } from 'next-intl'
+import { useRef } from 'react'
 import { FaAt, FaPencil } from 'react-icons/fa6'
 import { Divider, Fieldset } from 'rsc-daisyui'
 import { useContactForm } from '@/hooks'
@@ -12,6 +14,7 @@ import { ToastAlert } from './toast-alert'
 
 export function ContactForm() {
   const t = useTranslations('ContactForm')
+  const formRef = useRef<HTMLFormElement>(null!)
 
   const {
     handleSubmitWithAction,
@@ -24,9 +27,21 @@ export function ContactForm() {
     },
   } = useContactForm()
 
+  const onKeyDown: KeyboardEventHandler<HTMLTextAreaElement> = (event) => {
+    if (event.shiftKey && event.key === 'Enter') {
+      event.preventDefault()
+      formRef.current.requestSubmit()
+    }
+  }
+
   return (
     <>
-      <form className='my-3 h-full w-full max-w-lg lg:max-w-3xl' noValidate onSubmit={handleSubmitWithAction}>
+      <form
+        className='my-3 h-full w-full max-w-lg lg:max-w-3xl'
+        noValidate
+        onSubmit={handleSubmitWithAction}
+        ref={formRef}
+      >
         <Fieldset disabled={isSubmitting || isSubmitSuccessful}>
           <Fieldset.Legend className='fl-text-3xl/4xl'>{t('legend')}</Fieldset.Legend>
 
@@ -60,6 +75,7 @@ export function ContactForm() {
             maxLength={255}
             minLength={5}
             name='message'
+            onKeyDown={onKeyDown}
             placeholder={t('placeholders.message')}
             required
           />
