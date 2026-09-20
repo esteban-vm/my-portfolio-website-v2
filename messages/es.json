@@ -64,6 +64,7 @@
     "toasts": {
       "success": "Mensaje enviado correctamente",
       "error": "Ha ocurrido un error"
-    }
+    },
+    "tip": "Consejo: para enviar, presiona"
   }
 }
