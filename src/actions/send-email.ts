@@ -30,18 +30,25 @@ export const sendEmail = safeClient
         }),
     })
   })
+  .outputSchema(z.object({ success: z.string() }))
   .action(async ({ parsedInput }) => {
     if (process.env.NODE_ENV !== 'production') {
       await new Promise((r) => setTimeout(r, 5_000))
-      return
+
+      if (parsedInput.message === 'error') {
+        throw new Error('Failed')
+      }
+    } else {
+      const { name, email, message } = parsedInput
+
+      await emailjs.send(
+        SERVICE_ID!,
+        TEMPLATE_ID!,
+        { from_name: name, to_name: TO_NAME, from_email: email, to_email: TO_EMAIL, message },
+        { publicKey: PUBLIC_KEY, privateKey: PRIVATE_KEY }
+      )
     }
 
-    const { name, email, message } = parsedInput
-
-    await emailjs.send(
-      SERVICE_ID!,
-      TEMPLATE_ID!,
-      { from_name: name, to_name: TO_NAME, from_email: email, to_email: TO_EMAIL, message },
-      { publicKey: PUBLIC_KEY, privateKey: PRIVATE_KEY }
-    )
+    const t = await getTranslations('ContactForm.toasts')
+    return { success: t('success') }
   })
