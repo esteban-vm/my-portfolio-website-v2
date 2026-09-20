@@ -1,9 +1,10 @@
 'use client'
 
 import type { Control, FieldPath, FieldValues } from 'react-hook-form'
+import { useTranslations } from 'next-intl'
 import { useId } from 'react'
 import { Controller } from 'react-hook-form'
-import { Label, Textarea, Validator } from 'rsc-daisyui'
+import { Kbd, Label, Textarea, Validator } from 'rsc-daisyui'
 
 export type BaseFormTextboxProps = Omit<JSX.IntrinsicElements['textarea'], 'name' | 'color'>
 
@@ -14,6 +15,7 @@ export interface FormTextboxProps<T extends FieldValues> extends BaseFormTextbox
 }
 
 export function FormTextbox<T extends FieldValues>({ control, name, label, ...rest }: FormTextboxProps<T>) {
+  const t = useTranslations('ContactForm')
   const fieldId = useId()
   const errorId = useId()
 
@@ -26,6 +28,10 @@ export function FormTextbox<T extends FieldValues>({ control, name, label, ...re
           <div>
             <Label as='label' className='mb-1.5 cursor-pointer font-semibold text-sm' htmlFor={fieldId}>
               {label}:
+              <small className='flex items-center justify-center font-normal'>
+                <span>{t('tip')}:&nbsp;</span>
+                <Kbd size='xs'>shift</Kbd> + <Kbd size='xs'>control</Kbd>
+              </small>
             </Label>
             <Textarea
               {...rest}
