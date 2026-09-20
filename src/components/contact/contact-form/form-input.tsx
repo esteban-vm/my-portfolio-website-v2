@@ -6,9 +6,9 @@ import { useId } from 'react'
 import { Controller } from 'react-hook-form'
 import { Input, Label, Validator } from 'rsc-daisyui'
 
-export type BaseFormInputProps = Omit<JSX.IntrinsicElements['input'], 'name' | 'color'>
+type BaseFormInputProps = Omit<JSX.IntrinsicElements['input'], 'name' | 'color'>
 
-export interface FormInputProps<T extends FieldValues> extends BaseFormInputProps {
+interface FormInputProps<T extends FieldValues> extends BaseFormInputProps {
   control: Control<T>
   name: FieldPath<T>
   label: string

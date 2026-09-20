@@ -6,9 +6,9 @@ import { useId } from 'react'
 import { Controller } from 'react-hook-form'
 import { Kbd, Label, Textarea, Validator } from 'rsc-daisyui'
 
-export type BaseFormTextboxProps = Omit<JSX.IntrinsicElements['textarea'], 'name' | 'color'>
+type BaseFormTextboxProps = Omit<JSX.IntrinsicElements['textarea'], 'name' | 'color'>
 
-export interface FormTextboxProps<T extends FieldValues> extends BaseFormTextboxProps {
+interface FormTextboxProps<T extends FieldValues> extends BaseFormTextboxProps {
   control: Control<T>
   name: FieldPath<T>
   label: string
