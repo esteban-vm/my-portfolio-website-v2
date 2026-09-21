@@ -6,6 +6,7 @@ import { useRef } from 'react'
 import { FaAt, FaPencil } from 'react-icons/fa6'
 import { Divider, Fieldset } from 'rsc-daisyui'
 import { useContactForm } from '@/hooks'
+import { Confetti } from './confetti'
 import { FormInput } from './form-input'
 import { FormTextbox } from './form-textbox'
 import { SocialLinks } from './social-links'
@@ -14,11 +15,12 @@ import { ToastAlert } from './toast-alert'
 
 export function ContactForm() {
   const t = useTranslations('ContactForm')
-  const formRef = useRef<HTMLFormElement>(null!)
+  const formRef = useRef<HTMLFormElement>(null)
 
   const {
     handleSubmitWithAction,
     action: {
+      hasSucceeded,
       result: { data, serverError },
     },
     form: {
@@ -30,7 +32,7 @@ export function ContactForm() {
   const onKeyDown: KeyboardEventHandler<HTMLTextAreaElement> = (event) => {
     if (event.shiftKey && event.key === 'Enter') {
       event.preventDefault()
-      formRef.current.requestSubmit()
+      formRef.current?.requestSubmit()
     }
   }
 
@@ -82,6 +84,7 @@ export function ContactForm() {
       </form>
 
       <ToastAlert control={control} error={serverError} success={data?.message} />
+      <Confetti numberOfPieces={150} recycle={false} run={hasSucceeded} width={formRef.current?.clientWidth} />
     </>
   )
 }
