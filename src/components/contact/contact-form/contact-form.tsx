@@ -81,7 +81,7 @@ export function ContactForm() {
         </Fieldset>
       </form>
 
-      <ToastAlert control={control} error={serverError} success={data?.success} />
+      <ToastAlert control={control} error={serverError} success={data?.message} />
     </>
   )
 }
