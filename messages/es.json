@@ -40,13 +40,11 @@
     },
     "errors": {
       "name": {
-        "nonempty": "El nombre no puede quedar vacío",
         "min": "Ingresa al menos 5 caracteres",
         "max": "Ingresa como máximo 50 caracteres"
       },
       "email": "El correo electrónico debe ser válido",
       "message": {
-        "nonempty": "El mensaje no puede quedar vacío",
         "min": "Ingresa al menos 5 caracteres",
         "max": "Ingresa como máximo 255 caracteres",
         "profane": "Por favor, no uses malas palabras"

@@ -12,12 +12,11 @@ export const sendEmail = safeClient
     const t = await getTranslations('ContactForm.errors')
 
     return z.object({
-      name: z.string().trim().nonempty(t('name.nonempty')).min(5, t('name.min')).max(50, t('name.max')),
+      name: z.string().trim().min(5, t('name.min')).max(50, t('name.max')),
       email: z.email(t('email')).trim().lowercase(),
       message: z
         .string()
         .trim()
-        .nonempty(t('message.nonempty'))
         .min(5, t('message.min'))
         .max(255, t('message.max'))
         .superRefine((value, ctx) => {
