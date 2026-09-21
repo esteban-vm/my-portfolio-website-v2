@@ -40,13 +40,13 @@
     },
     "errors": {
       "name": {
-        "min": "Enter at least 5 characters",
-        "max": "Enter at most 50 characters"
+        "min": "Name must have at least {chars} characters",
+        "max": "Name must have at most {chars} characters"
       },
       "email": "Email must be valid",
       "message": {
-        "min": "Enter at least 5 characters",
-        "max": "Enter at most 255 characters",
+        "min": "Message must have at least {chars} characters",
+        "max": "Message must have at most {chars} characters",
         "profane": "Please, don't use bad words"
       }
     },

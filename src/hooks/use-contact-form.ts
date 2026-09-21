@@ -12,7 +12,11 @@ export function useContactForm() {
     sendEmail,
     zodResolver(
       z.object({
-        name: z.string().trim().min(5, t('name.min')).max(50, t('name.max')),
+        name: z
+          .string()
+          .trim()
+          .min(5, t('name.min', { chars: 5 }))
+          .max(50, t('name.max', { chars: 50 })),
         email: z
           .string()
           .trim()
@@ -20,8 +24,8 @@ export function useContactForm() {
         message: z
           .string()
           .trim()
-          .min(5, t('message.min'))
-          .max(255, t('message.max'))
+          .min(5, t('message.min', { chars: 5 }))
+          .max(255, t('message.max', { chars: 255 }))
           .superRefine((value, ctx) => {
             if (isProfane(value)) {
               ctx.addIssue({
