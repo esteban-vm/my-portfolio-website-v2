@@ -3,6 +3,7 @@ import { useHookFormAction } from '@next-safe-action/adapter-react-hook-form/hoo
 import { useTranslations } from 'next-intl'
 import { z } from 'zod'
 import { sendEmail } from '@/actions'
+import { INPUT_LENGTHS } from '@/lib/constants'
 import { isProfane } from '@/lib/helpers'
 
 export function useContactForm() {
@@ -15,8 +16,8 @@ export function useContactForm() {
         name: z
           .string()
           .trim()
-          .min(5, t('name.min', { chars: 5 }))
-          .max(50, t('name.max', { chars: 50 })),
+          .min(INPUT_LENGTHS.nameMin, t('name.min', { chars: INPUT_LENGTHS.nameMin }))
+          .max(INPUT_LENGTHS.nameMax, t('name.max', { chars: INPUT_LENGTHS.nameMax })),
         email: z
           .string()
           .trim()
@@ -24,8 +25,8 @@ export function useContactForm() {
         message: z
           .string()
           .trim()
-          .min(5, t('message.min', { chars: 5 }))
-          .max(255, t('message.max', { chars: 255 }))
+          .min(INPUT_LENGTHS.messageMin, t('message.min', { chars: INPUT_LENGTHS.messageMin }))
+          .max(INPUT_LENGTHS.messageMax, t('message.max', { chars: INPUT_LENGTHS.messageMax }))
           .superRefine((value, ctx) => {
             if (isProfane(value)) {
               ctx.addIssue({

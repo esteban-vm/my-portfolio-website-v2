@@ -22,3 +22,10 @@ export const {
   EMAILJS_PUBLIC_KEY: PUBLIC_KEY,
   EMAILJS_PRIVATE_KEY: PRIVATE_KEY,
 } = process.env
+
+export const INPUT_LENGTHS = {
+  nameMin: 5,
+  nameMax: 50,
+  messageMin: 5,
+  messageMax: 255,
+} as const

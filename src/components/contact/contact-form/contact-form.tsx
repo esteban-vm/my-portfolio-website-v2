@@ -6,6 +6,7 @@ import { useRef } from 'react'
 import { FaAt, FaPencil } from 'react-icons/fa6'
 import { Divider, Fieldset } from 'rsc-daisyui'
 import { useContactForm } from '@/hooks'
+import { INPUT_LENGTHS } from '@/lib/constants'
 import { Confetti } from './confetti'
 import { FormInput } from './form-input'
 import { FormTextbox } from './form-textbox'
@@ -47,8 +48,8 @@ export function ContactForm() {
             control={control}
             icon={FaPencil}
             label={t('labels.name')}
-            maxLength={50}
-            minLength={5}
+            maxLength={INPUT_LENGTHS.nameMax}
+            minLength={INPUT_LENGTHS.nameMin}
             name='name'
             placeholder={t('placeholders.name')}
             required
@@ -69,8 +70,8 @@ export function ContactForm() {
           <FormTextbox
             control={control}
             label={t('labels.message')}
-            maxLength={255}
-            minLength={5}
+            maxLength={INPUT_LENGTHS.messageMax}
+            minLength={INPUT_LENGTHS.messageMin}
             name='message'
             onKeyDown={onKeyDown}
             placeholder={t('placeholders.message')}
