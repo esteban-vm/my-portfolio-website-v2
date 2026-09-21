@@ -17,8 +17,8 @@ export function ToastAlert<T extends FieldValues>({ control, success, error }: T
   if (!isSubmitSuccessful) return null
 
   return (
-    <Toast className='absolute' horizontal='center'>
-      <Alert className='font-semibold [&_svg]:size-4' color={success ? 'success' : 'error'}>
+    <Toast className='slide-in-from-bottom absolute motion-safe:animate-in' horizontal='center'>
+      <Alert className='font-semibold not-dark:text-white [&_svg]:size-4' color={success ? 'success' : 'error'}>
         {success ? <FaCircleCheck /> : <FaCircleXmark />}
         <span>{success ? success : error}</span>
       </Alert>
