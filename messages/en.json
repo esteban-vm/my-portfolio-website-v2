@@ -59,7 +59,7 @@
     },
     "button": {
       "idle": "Send message",
-      "sending": "Sending message"
+      "sending": "Sending message…"
     },
     "toasts": {
       "success": "Message sent successfully",

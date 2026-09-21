@@ -59,7 +59,7 @@
     },
     "button": {
       "idle": "Enviar mensaje",
-      "sending": "Enviando mensaje"
+      "sending": "Enviando mensaje…"
     },
     "toasts": {
       "success": "Mensaje enviado correctamente",
