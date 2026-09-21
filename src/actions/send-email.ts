@@ -30,7 +30,7 @@ export const sendEmail = safeClient
         }),
     })
   })
-  .outputSchema(z.object({ success: z.string() }))
+  .outputSchema(z.object({ message: z.string() }))
   .action(async ({ parsedInput }) => {
     if (process.env.NODE_ENV !== 'production') {
       await new Promise((r) => setTimeout(r, 5_000))
@@ -50,5 +50,5 @@ export const sendEmail = safeClient
     }
 
     const t = await getTranslations('ContactForm.toasts')
-    return { success: t('success') }
+    return { message: t('success') }
   })
