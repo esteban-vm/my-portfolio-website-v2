@@ -27,7 +27,7 @@ export function FormTextbox<T extends FieldValues>({ control, name, label, ...re
               {label}:
               <small className='flex items-center justify-center font-normal'>
                 <span>{t('tip')}:&nbsp;</span>
-                <Kbd size='xs'>shift</Kbd> + <Kbd size='xs'>control</Kbd>
+                <Kbd size='xs'>shift</Kbd> + <Kbd size='xs'>enter</Kbd>
               </small>
             </Label>
             <Textarea
