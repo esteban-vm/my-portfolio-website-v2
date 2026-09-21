@@ -13,7 +13,10 @@ export const sendEmail = safeClient
 
     return z.object({
       name: z.string().trim().min(5, t('name.min')).max(50, t('name.max')),
-      email: z.email(t('email')).trim().lowercase(),
+      email: z
+        .string()
+        .trim()
+        .pipe(z.email(t('email')).toLowerCase()),
       message: z
         .string()
         .trim()
