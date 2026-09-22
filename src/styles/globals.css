@@ -16,6 +16,7 @@
 @theme {
   --font-geist: var(--geist-variable);
   --font-montserrat: var(--montserrat-alternates);
+  --animate-float-up: float-up 18s linear infinite;
 }
 
 @layer base {
@@ -31,5 +32,90 @@
   button,
   img {
     @apply select-none;
+  }
+
+  .float-icon {
+    @apply absolute -bottom-9 size-8 opacity-30 brightness-90 animate-float-up motion-reduce:animate-none;
+
+    &:nth-of-type(1) {
+      left: 10%;
+      animation-duration: 26s;
+    }
+
+    &:nth-of-type(2) {
+      left: 20%;
+      animation-duration: 23s;
+    }
+
+    &:nth-of-type(3) {
+      left: 30%;
+      animation-duration: 25s;
+    }
+
+    &:nth-of-type(4) {
+      left: 45%;
+      animation-duration: 19s;
+    }
+
+    &:nth-of-type(5) {
+      left: 58%;
+      animation-duration: 27s;
+    }
+
+    &:nth-of-type(6) {
+      left: 72%;
+      animation-duration: 22s;
+    }
+
+    &:nth-of-type(7) {
+      left: 88%;
+      animation-duration: 28s;
+    }
+
+    &:nth-of-type(8) {
+      left: 50%;
+      animation-duration: 30s;
+    }
+
+    &:nth-of-type(9) {
+      left: 15%;
+      animation-duration: 24s;
+    }
+
+    &:nth-of-type(10) {
+      left: 28%;
+      animation-duration: 21s;
+    }
+
+    &:nth-of-type(11) {
+      left: 52%;
+      animation-duration: 29s;
+    }
+
+    &:nth-of-type(12) {
+      left: 67%;
+      animation-duration: 18s;
+    }
+
+    &:nth-of-type(13) {
+      left: 80%;
+      animation-duration: 26s;
+    }
+  }
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0);
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
   }
 }
