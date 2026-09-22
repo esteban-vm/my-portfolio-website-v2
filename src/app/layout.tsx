@@ -58,7 +58,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
           value={THEME_MAP}
         >
           <NextIntlClientProvider>
-            <div className='relative flex size-full flex-col items-center'>
+            <div className='relative flex h-fit min-h-full w-full flex-col items-center'>
               {children}
               <Suspense fallback={null}>
                 <RootFab />
