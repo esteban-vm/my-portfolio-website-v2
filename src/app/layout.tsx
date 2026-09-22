@@ -40,7 +40,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
 
   return (
     <html
-      className={`${Montserrat.variable} ${Geist.variable} h-full antialiased`}
+      className={`${Montserrat.variable} ${Geist.variable} h-full min-h-192 antialiased`}
       dir='ltr'
       lang={locale}
       suppressHydrationWarning
@@ -58,7 +58,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
           value={THEME_MAP}
         >
           <NextIntlClientProvider>
-            <div className='relative flex size-full min-h-192 flex-col items-center'>
+            <div className='relative flex size-full flex-col items-center'>
               {children}
               <Suspense fallback={null}>
                 <RootFab />
