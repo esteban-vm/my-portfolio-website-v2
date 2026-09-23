@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { FaArrowRight, FaDownload } from 'react-icons/fa'
 import { Button } from 'rsc-daisyui'
 
 export function CallToAction() {
@@ -11,9 +12,11 @@ export function CallToAction() {
       </p>
       <div className='space-x-2'>
         <Button as={Link} color='primary' href='/projects'>
+          <FaArrowRight />
           View Projects
         </Button>
         <Button color='accent' outline>
+          <FaDownload />
           Download CV
         </Button>
       </div>
