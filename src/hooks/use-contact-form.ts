@@ -46,6 +46,11 @@ export function useContactForm() {
           message: '',
         },
       },
+      actionProps: {
+        onSuccess() {
+          navigator.vibrate(500)
+        },
+      },
     }
   )
 }
