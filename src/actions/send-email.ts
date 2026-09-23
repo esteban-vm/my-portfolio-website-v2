@@ -55,6 +55,6 @@ export const sendEmail = safeClient
       )
     }
 
-    const t = await getTranslations('contact_page.form.toasts')
+    const t = await getTranslations('contact_page.form.action')
     return { message: t('success') }
   })

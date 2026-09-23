@@ -57,11 +57,11 @@
         "idle": "Send message",
         "sending": "Sending message…"
       },
-      "toasts": {
+      "tip": "Tip: to send, press",
+      "action": {
         "success": "Message sent successfully",
         "error": "An error has occurred"
-      },
-      "tip": "Tip: to send, press"
+      }
     }
   },
   "projects_page": {
