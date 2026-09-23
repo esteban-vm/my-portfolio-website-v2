@@ -29,8 +29,10 @@
   }
 
   a,
+  img,
+  label,
   button,
-  img {
+  ::placeholder {
     @apply select-none;
   }
 
