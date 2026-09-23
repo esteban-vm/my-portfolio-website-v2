@@ -20,22 +20,22 @@ export function RootDock() {
 
   const items: DockItem[] = [
     {
-      label: t('HomePage.title'),
+      label: t('home_page.title'),
       href: '/',
       Icon: LuHouse,
     },
     {
-      label: t('AboutPage.title'),
+      label: t('about_page.title'),
       href: '/about',
       Icon: LuInfo,
     },
     {
-      label: t('ProjectsPage.title'),
+      label: t('projects_page.title'),
       href: '/projects',
       Icon: LuFolderOpenDot,
     },
     {
-      label: t('ContactPage.title'),
+      label: t('contact_page.title'),
       href: '/contact',
       Icon: LuMail,
     },

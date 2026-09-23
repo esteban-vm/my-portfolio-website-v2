@@ -1,68 +1,70 @@
 {
-  "RootLayout": {
-    "title": {
-      "default": "Mi portafolio | Inicio",
-      "template": "Mi portafolio | %s"
-    },
-    "description": "Mi portafolio web",
-    "keywords": {
-      "1": "Desarrollador Front-End",
-      "2": "Diseño Web",
-      "3": "Next.js",
-      "4": "React"
-    }
-  },
-  "HomePage": {
-    "title": "Inicio"
-  },
-  "AboutPage": {
-    "title": "Sobre mí"
-  },
-  "ContactPage": {
-    "title": "Contacto"
-  },
-  "ProjectsPage": {
-    "title": "Proyectos"
-  },
-  "FabPage": {
-    "LanguageButton": "Cambiar a inglés",
-    "ThemeButton": {
-      "dark": "Cambiar a tema oscuro",
-      "light": "Cambiar a tema claro"
-    }
-  },
-  "ContactForm": {
-    "legend": "Contactemos",
-    "labels": {
-      "name": "Nombre",
-      "email": "Correo electrónico",
-      "message": "Mensaje"
-    },
-    "errors": {
-      "name": {
-        "min": "El nombre debe tener al menos {chars} caracteres",
-        "max": "El nombre debe tener como máximo {chars} caracteres"
+  "root_layout": {
+    "metadata": {
+      "title": {
+        "default": "Mi portafolio | Inicio",
+        "template": "Mi portafolio | %s"
       },
-      "email": "El correo electrónico debe ser válido",
-      "message": {
-        "min": "El mensaje debe tener al menos {chars} caracteres",
-        "max": "El mensaje debe tener como máximo {chars} caracteres",
-        "profane": "Por favor, no uses malas palabras"
+      "description": "Mi portafolio web",
+      "keywords": {
+        "1": "Desarrollador Front-End",
+        "2": "Diseño Web",
+        "3": "Next.js",
+        "4": "React"
       }
     },
-    "placeholders": {
-      "name": "Tu nombre…",
-      "email": "tu-correo@ejemplo.com",
-      "message": "Tu mensaje…"
-    },
-    "button": {
-      "idle": "Enviar mensaje",
-      "sending": "Enviando mensaje…"
-    },
-    "toasts": {
-      "success": "Mensaje enviado correctamente",
-      "error": "Ha ocurrido un error"
-    },
-    "tip": "Consejo: para enviar, presiona"
+    "fab": {
+      "language_button": "Cambiar a inglés",
+      "theme_button": {
+        "dark": "Cambiar a tema oscuro",
+        "light": "Cambiar a tema claro"
+      }
+    }
+  },
+  "home_page": {
+    "title": "Inicio"
+  },
+  "about_page": {
+    "title": "Sobre mí"
+  },
+  "contact_page": {
+    "title": "Contacto",
+    "form": {
+      "legend": "Contactemos",
+      "labels": {
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "message": "Mensaje"
+      },
+      "errors": {
+        "name": {
+          "min": "El nombre debe tener al menos {chars} caracteres",
+          "max": "El nombre debe tener como máximo {chars} caracteres"
+        },
+        "email": "El correo electrónico debe ser válido",
+        "message": {
+          "min": "El mensaje debe tener al menos {chars} caracteres",
+          "max": "El mensaje debe tener como máximo {chars} caracteres",
+          "profane": "Por favor, no uses malas palabras"
+        }
+      },
+      "placeholders": {
+        "name": "Tu nombre…",
+        "email": "tu-correo@ejemplo.com",
+        "message": "Tu mensaje…"
+      },
+      "button": {
+        "idle": "Enviar mensaje",
+        "sending": "Enviando mensaje…"
+      },
+      "toasts": {
+        "success": "Mensaje enviado correctamente",
+        "error": "Ha ocurrido un error"
+      },
+      "tip": "Consejo: para enviar, presiona"
+    }
+  },
+  "projects_page": {
+    "title": "Proyectos"
   }
 }

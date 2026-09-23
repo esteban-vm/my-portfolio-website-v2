@@ -7,7 +7,7 @@ import { INPUT_LENGTHS } from '@/lib/constants'
 import { isProfane } from '@/lib/helpers'
 
 export function useContactForm() {
-  const t = useTranslations('ContactForm.errors')
+  const t = useTranslations('contact_page.form.errors')
 
   return useHookFormAction(
     sendEmail,

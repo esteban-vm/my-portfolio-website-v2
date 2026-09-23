@@ -10,7 +10,7 @@ import { Geist, Montserrat } from '@/lib/fonts'
 import '@/styles/globals.css'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('RootLayout')
+  const t = await getTranslations('root_layout.metadata')
 
   return {
     title: {

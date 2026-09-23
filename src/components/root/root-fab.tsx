@@ -13,7 +13,7 @@ export function RootFab() {
   use(browser())
 
   const locale = useLocale()
-  const t = useTranslations('FabPage')
+  const t = useTranslations('root_layout.fab')
   const { theme, setTheme } = useTheme()
   const [isPending, startTransition] = useTransition()
 
@@ -31,7 +31,7 @@ export function RootFab() {
     })
   }
 
-  const themeMsg = theme === 'dark' ? t('ThemeButton.light') : t('ThemeButton.dark')
+  const themeMsg = theme === 'dark' ? t('theme_button.light') : t('theme_button.dark')
 
   return (
     <Wrapper>
@@ -43,10 +43,10 @@ export function RootFab() {
         <LuX />
       </Button>
 
-      <Tooltip className='pointer-fine:tooltip' color='info' disabled position='left' tip={t('LanguageButton')}>
+      <Tooltip className='pointer-fine:tooltip' color='info' disabled position='left' tip={t('language_button')}>
         <div>
           <Badge className='mr-1 pointer-fine:hidden' color='info'>
-            {t('LanguageButton')}&nbsp;
+            {t('language_button')}&nbsp;
           </Badge>
           <Button disabled={isPending} onClick={onLanguageChange} shape='circle' size='lg' type='button'>
             <LuLanguages />

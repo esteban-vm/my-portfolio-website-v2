@@ -8,7 +8,7 @@ import { FaPaperPlane } from 'react-icons/fa6'
 import { Button, Loading } from 'rsc-daisyui'
 
 export function SubmitButton<T extends FieldValues>({ control }: BaseFormControlProps<T>) {
-  const t = useTranslations('ContactForm.button')
+  const t = useTranslations('contact_page.form.button')
   const { isValid, isSubmitting } = useFormState({ control })
 
   return (

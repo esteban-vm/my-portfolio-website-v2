@@ -15,7 +15,7 @@ import { SubmitButton } from './submit-button'
 import { ToastAlert } from './toast-alert'
 
 export function ContactForm() {
-  const t = useTranslations('ContactForm')
+  const t = useTranslations('contact_page.form')
   const formRef = useRef<HTMLFormElement>(null)
 
   const {

@@ -12,7 +12,7 @@ type BaseFormTextboxProps = Omit<JSX.IntrinsicElements['textarea'], 'name' | 'co
 interface FormTextboxProps<T extends FieldValues> extends FormControlProps<T>, BaseFormTextboxProps {}
 
 export function FormTextbox<T extends FieldValues>({ control, name, label, ...rest }: FormTextboxProps<T>) {
-  const t = useTranslations('ContactForm')
+  const t = useTranslations('contact_page.form')
   const fieldId = useId()
   const errorId = useId()
 

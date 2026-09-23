@@ -9,7 +9,7 @@ import { safeClient } from '@/lib/safe-action'
 
 export const sendEmail = safeClient
   .inputSchema(async () => {
-    const t = await getTranslations('ContactForm.errors')
+    const t = await getTranslations('contact_page.form.errors')
 
     return z.object({
       name: z
@@ -55,6 +55,6 @@ export const sendEmail = safeClient
       )
     }
 
-    const t = await getTranslations('ContactForm.toasts')
+    const t = await getTranslations('contact_page.form.toasts')
     return { message: t('success') }
   })

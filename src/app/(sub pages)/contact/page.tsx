@@ -3,7 +3,7 @@ import { getLocale, getTranslations } from 'next-intl/server'
 import { ContactForm } from '@/components/contact'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('ContactPage')
+  const t = await getTranslations('contact_page')
 
   return {
     title: t('title'),

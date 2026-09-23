@@ -1,68 +1,70 @@
 {
-  "RootLayout": {
-    "title": {
-      "default": "My portfolio | Home",
-      "template": "My portfolio | %s"
-    },
-    "description": "My portfolio website",
-    "keywords": {
-      "1": "Front-End Developer",
-      "2": "Web Design",
-      "3": "Next.js",
-      "4": "React"
-    }
-  },
-  "HomePage": {
-    "title": "Home"
-  },
-  "AboutPage": {
-    "title": "About me"
-  },
-  "ContactPage": {
-    "title": "Contact"
-  },
-  "ProjectsPage": {
-    "title": "Projects"
-  },
-  "FabPage": {
-    "LanguageButton": "Switch to Spanish",
-    "ThemeButton": {
-      "dark": "Switch to dark theme",
-      "light": "Switch to light theme"
-    }
-  },
-  "ContactForm": {
-    "legend": "Get in touch",
-    "labels": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message"
-    },
-    "errors": {
-      "name": {
-        "min": "Name must have at least {chars} characters",
-        "max": "Name must have at most {chars} characters"
+  "root_layout": {
+    "metadata": {
+      "title": {
+        "default": "My portfolio | Home",
+        "template": "My portfolio | %s"
       },
-      "email": "Email must be valid",
-      "message": {
-        "min": "Message must have at least {chars} characters",
-        "max": "Message must have at most {chars} characters",
-        "profane": "Please, don't use bad words"
+      "description": "My portfolio website",
+      "keywords": {
+        "1": "Front-End Developer",
+        "2": "Web Design",
+        "3": "Next.js",
+        "4": "React"
       }
     },
-    "placeholders": {
-      "name": "Your name…",
-      "email": "your-email@example.com",
-      "message": "Your message…"
-    },
-    "button": {
-      "idle": "Send message",
-      "sending": "Sending message…"
-    },
-    "toasts": {
-      "success": "Message sent successfully",
-      "error": "An error has occurred"
-    },
-    "tip": "Tip: to send, press"
+    "fab": {
+      "language_button": "Switch to Spanish",
+      "theme_button": {
+        "dark": "Switch to dark theme",
+        "light": "Switch to light theme"
+      }
+    }
+  },
+  "home_page": {
+    "title": "Home"
+  },
+  "about_page": {
+    "title": "About me"
+  },
+  "contact_page": {
+    "title": "Contact",
+    "form": {
+      "legend": "Get in touch",
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message"
+      },
+      "errors": {
+        "name": {
+          "min": "Name must have at least {chars} characters",
+          "max": "Name must have at most {chars} characters"
+        },
+        "email": "Email must be valid",
+        "message": {
+          "min": "Message must have at least {chars} characters",
+          "max": "Message must have at most {chars} characters",
+          "profane": "Please, don't use bad words"
+        }
+      },
+      "placeholders": {
+        "name": "Your name…",
+        "email": "your-email@example.com",
+        "message": "Your message…"
+      },
+      "button": {
+        "idle": "Send message",
+        "sending": "Sending message…"
+      },
+      "toasts": {
+        "success": "Message sent successfully",
+        "error": "An error has occurred"
+      },
+      "tip": "Tip: to send, press"
+    }
+  },
+  "projects_page": {
+    "title": "Projects"
   }
 }

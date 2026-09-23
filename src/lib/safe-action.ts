@@ -5,7 +5,7 @@ export const safeClient = createSafeActionClient({
   async handleServerError(error) {
     console.log({ error: error.message })
 
-    const t = await getTranslations('ContactForm.toasts')
+    const t = await getTranslations('contact_page.form.toasts')
     return t('error')
   },
 })
