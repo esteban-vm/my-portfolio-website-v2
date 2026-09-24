@@ -6,7 +6,7 @@ import { getLocale, getTranslations } from 'next-intl/server'
 import { Suspense } from 'react'
 import { RootDock, RootFab } from '@/components/root'
 import { THEME_COOKIE, THEME_MAP, THEMES } from '@/lib/constants'
-import { Geist, GoodTimes } from '@/lib/fonts'
+import { Axis, Geist, GoodTimes } from '@/lib/fonts'
 import '@/styles/globals.css'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -40,7 +40,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
 
   return (
     <html
-      className={`${Geist.variable} ${GoodTimes.variable} h-full min-h-192 antialiased`}
+      className={`${Axis.variable} ${Geist.variable} ${GoodTimes.variable} h-full min-h-192 antialiased`}
       dir='ltr'
       lang={locale}
       suppressHydrationWarning

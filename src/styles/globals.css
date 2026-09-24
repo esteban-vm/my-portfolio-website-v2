@@ -16,6 +16,7 @@
 @theme {
   --font-geist: var(--geist-variable);
   --font-good-times: var(--good-times);
+  --font-axis: var(--axis);
   --animate-float-up: float-up 18s linear infinite;
 }
 
