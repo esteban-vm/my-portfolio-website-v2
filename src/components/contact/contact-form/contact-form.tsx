@@ -85,7 +85,14 @@ export function ContactForm() {
       </form>
 
       <ToastAlert control={control} error={serverError} success={data?.message} />
-      <Confetti numberOfPieces={150} recycle={false} run={hasSucceeded} width={formRef.current?.clientWidth} />
+
+      <Confetti
+        gravity={0.5}
+        numberOfPieces={150}
+        recycle={false}
+        run={hasSucceeded}
+        width={formRef.current?.clientWidth}
+      />
     </>
   )
 }
