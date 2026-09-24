@@ -1,7 +1,7 @@
 import type { IconType } from 'react-icons'
 import { FaCode, FaCss3, FaGit, FaGithub, FaHtml5, FaJs, FaReact } from 'react-icons/fa6'
 import { GoCopilot } from 'react-icons/go'
-import { SiNextdotjs, SiTailwindcss, SiTypescript } from 'react-icons/si'
+import { SiNextdotjs, SiPrisma, SiTailwindcss, SiTypescript } from 'react-icons/si'
 import { VscJson, VscVscode } from 'react-icons/vsc'
 
 const floatingIcons: IconType[] = [
@@ -18,6 +18,7 @@ const floatingIcons: IconType[] = [
   SiTypescript,
   GoCopilot,
   VscJson,
+  SiPrisma,
 ]
 
 export function FloatingIcons() {
