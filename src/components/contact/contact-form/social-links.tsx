@@ -1,6 +1,6 @@
 import type { IconType } from 'react-icons'
 import { FaExternalLinkAlt, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
-import { Button, Indicator } from 'rsc-daisyui'
+import { Button, Tooltip } from 'rsc-daisyui'
 import { cn } from '@/lib/ui'
 
 interface SocialLink {
@@ -33,15 +33,17 @@ const socialLinks: SocialLink[] = [
 
 export function SocialLinks() {
   return (
-    <div className='flex justify-center gap-3.5'>
+    <div className='flex justify-center gap-3'>
       {socialLinks.map((link) => {
         const { title, href, Icon, className } = link
 
         return (
-          <Indicator key={href}>
-            <Indicator.Badge className='rounded-none' color='primary' ghost size='xs'>
+          <Tooltip key={href} position='bottom' tip=''>
+            <Tooltip.Content className='flex items-center justify-center gap-1'>
               <FaExternalLinkAlt />
-            </Indicator.Badge>
+              <span>{title}</span>
+            </Tooltip.Content>
+
             <Button
               as='a'
               className={cn('text-white hover:opacity-75 dark:border-white', className)}
@@ -49,11 +51,10 @@ export function SocialLinks() {
               shape='square'
               size='lg'
               target='_blank'
-              title={title}
             >
               <Icon className='size-[75%]' />
             </Button>
-          </Indicator>
+          </Tooltip>
         )
       })}
     </div>
