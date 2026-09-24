@@ -10,12 +10,12 @@ export function CallToAction() {
         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti
         eaque aut repudiandae et a id nisi.
       </p>
-      <div className='space-x-2'>
-        <Button as={Link} className='md:btn-md' color='primary' href='/projects' size='sm'>
+      <div className='flex flex-wrap items-center justify-center gap-2 md:justify-start'>
+        <Button as={Link} color='primary' href='/projects'>
           <FaArrowRight />
           View Projects
         </Button>
-        <Button className='md:btn-md' color='accent' outline size='sm'>
+        <Button color='accent' outline>
           <FaDownload />
           Download CV
         </Button>
