@@ -41,7 +41,7 @@ export function ContactForm() {
     <>
       <form className='my-3 w-full max-w-lg lg:max-w-3xl' noValidate onSubmit={handleSubmitWithAction} ref={formRef}>
         <Fieldset disabled={isSubmitting || isSubmitSuccessful}>
-          <Fieldset.Legend className='fl-text-3xl/4xl'>{t('legend')}</Fieldset.Legend>
+          <Fieldset.Legend className='fl-text-2xl/3xl font-good-times'>{t('legend')}</Fieldset.Legend>
 
           <FormInput
             autoComplete='given-name'

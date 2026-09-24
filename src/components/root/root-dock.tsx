@@ -50,7 +50,12 @@ export function RootDock() {
           const onNavigate = () => router.push(href)
 
           return (
-            <Dock.Item active={isACtive} key={href} label={label} onClick={onNavigate}>
+            <Dock.Item
+              active={isACtive}
+              key={href}
+              label={<span className='line-clamp-1 font-axis'>{label}</span>}
+              onClick={onNavigate}
+            >
               <Icon className='size-5.5' />
             </Dock.Item>
           )

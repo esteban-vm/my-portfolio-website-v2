@@ -6,7 +6,7 @@ export function CallToAction() {
   return (
     <div className='space-y-4 text-balance text-center md:text-left'>
       <h1 className='fl-text-3xl/5xl font-bold font-good-times'>Welcome To My Portfolio Website</h1>
-      <p className=''>
+      <p>
         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti
         eaque aut repudiandae et a id nisi.
       </p>
