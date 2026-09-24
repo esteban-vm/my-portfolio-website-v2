@@ -37,7 +37,7 @@
   }
 
   .floating-icon {
-    @apply absolute -bottom-9 size-8 opacity-30 brightness-90 animate-float-up motion-reduce:animate-none;
+    @apply absolute -bottom-9 size-8 opacity-30 brightness-90 animate-float-up md:size-12 motion-reduce:animate-none;
 
     &:nth-of-type(1) {
       left: 10%;
@@ -90,8 +90,8 @@
     }
 
     &:nth-of-type(11) {
-      left: 52%;
-      animation-duration: 29s;
+      left: 55%;
+      animation-duration: 25s;
     }
 
     &:nth-of-type(12) {
@@ -102,6 +102,11 @@
     &:nth-of-type(13) {
       left: 80%;
       animation-duration: 26s;
+    }
+
+    &:nth-of-type(14) {
+      left: 92%;
+      animation-duration: 23s;
     }
   }
 }
