@@ -12,7 +12,7 @@ export function SubmitButton<T extends FieldValues>({ control }: BaseFormControl
   const { isValid, isSubmitting } = useFormState({ control })
 
   return (
-    <Button className='mt-1.5' color='primary' disabled={!isValid} type='submit'>
+    <Button className='md:btn-md mt-1.5' color='primary' disabled={!isValid} size='sm' type='submit'>
       {isSubmitting ? t('sending') : t('idle')}&nbsp;
       {isSubmitting ? <Loading /> : <FaPaperPlane />}
     </Button>

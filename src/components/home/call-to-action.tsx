@@ -11,11 +11,11 @@ export function CallToAction() {
         eaque aut repudiandae et a id nisi.
       </p>
       <div className='space-x-2'>
-        <Button as={Link} color='primary' href='/projects'>
+        <Button as={Link} className='md:btn-md' color='primary' href='/projects' size='sm'>
           <FaArrowRight />
           View Projects
         </Button>
-        <Button color='accent' outline>
+        <Button className='md:btn-md' color='accent' outline size='sm'>
           <FaDownload />
           Download CV
         </Button>
