@@ -38,13 +38,13 @@
       },
       "errors": {
         "name": {
-          "min": "El nombre debe tener al menos {chars} caracteres",
-          "max": "El nombre debe tener como máximo {chars} caracteres"
+          "min": "Ingresa al menos {chars} caracteres",
+          "max": "Ingresa como máximo {chars} caracteres"
         },
-        "email": "El correo electrónico debe ser válido",
+        "email": "Tu correo electrónico debe ser válido",
         "message": {
-          "min": "El mensaje debe tener al menos {chars} caracteres",
-          "max": "El mensaje debe tener como máximo {chars} caracteres",
+          "min": "Ingresa al menos {chars} caracteres",
+          "max": "Ingresa como máximo {chars} caracteres",
           "profane": "Por favor, no uses malas palabras"
         }
       },
