@@ -15,7 +15,7 @@
 
 @theme {
   --font-geist: var(--geist-variable);
-  --font-montserrat: var(--montserrat-alternates);
+  --font-good-times: var(--good-times);
   --animate-float-up: float-up 18s linear infinite;
 }
 
