@@ -40,7 +40,7 @@
     @apply absolute -bottom-9 size-8 opacity-30 brightness-90 animate-float-up md:size-12 motion-reduce:animate-none;
 
     &:nth-of-type(1) {
-      left: 10%;
+      left: 7%;
       animation-duration: 26s;
     }
 
