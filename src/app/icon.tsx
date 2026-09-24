@@ -1,8 +1,9 @@
 import { ImageResponse } from 'next/og'
+import { FaCode } from 'react-icons/fa'
 
 export const size = {
-  width: 48,
-  height: 48,
+  width: 64,
+  height: 64,
 }
 
 export const contentType = 'image/png'
@@ -11,20 +12,16 @@ export default function Icon() {
   return new ImageResponse(
     <div
       style={{
-        fontSize: 34,
-        background: 'black',
+        fontSize: 64,
         width: '100%',
         height: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         color: 'white',
-        borderWidth: '4px',
-        borderRadius: '900px',
-        borderColor: 'black',
       }}
     >
-      E
+      <FaCode />
     </div>,
     { ...size }
   )
