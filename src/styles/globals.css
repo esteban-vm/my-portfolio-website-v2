@@ -14,7 +14,7 @@
 @custom-variant dark (&:where([data-theme="synthwave"], [data-theme="synthwave"] *, .synthwave, .synthwave *));
 
 @theme {
-  --font-geist: var(--geist-variable);
+  --font-geist: var(--geist);
   --font-good-times: var(--good-times);
   --font-axis: var(--axis);
   --animate-float-up: float-up 18s linear infinite;
