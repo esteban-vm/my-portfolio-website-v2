@@ -1,13 +1,14 @@
 import type { IconType } from 'react-icons'
 import { FaCode, FaCss3, FaGit, FaGithub, FaHtml5, FaJs, FaReact } from 'react-icons/fa6'
 import { GoCopilot } from 'react-icons/go'
-import { SiNextdotjs, SiPrisma, SiTailwindcss, SiTypescript } from 'react-icons/si'
+import { SiDaisyui, SiNextdotjs, SiPrisma, SiTailwindcss, SiTypescript } from 'react-icons/si'
 import { VscJson, VscVscode } from 'react-icons/vsc'
 
 const floatingIcons: IconType[] = [
   FaGithub,
   FaCss3,
   FaHtml5,
+  SiDaisyui,
   FaJs,
   FaGit,
   FaReact,
