@@ -49,7 +49,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
         {/* biome-ignore lint/security/noDangerouslySetInnerHtml: anti-FOUC */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className='relative flex h-full min-h-192 flex-col items-center justify-center bg-blue-500'>
+      <body className='relative flex h-full min-h-192 flex-col items-center justify-center'>
         <ThemeProvider
           cookieOptions={{ name: THEME_COOKIE }}
           disableTransitionOnChange
@@ -58,7 +58,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
           value={THEME_MAP}
         >
           <NextIntlClientProvider>
-            <div className='relative flex size-full flex-col items-center bg-amber-500'>{children}</div>
+            <div className='relative flex min-h-full w-full flex-col items-center'>{children}</div>
             <Suspense fallback={null}>
               <RootFab />
             </Suspense>
