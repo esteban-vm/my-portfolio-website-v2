@@ -43,7 +43,7 @@ export function RootDock() {
 
   return (
     <footer className='w-full shrink-0 grow-0'>
-      <Dock as='nav' className='relative rounded-2xl rounded-b border border-base-300'>
+      <Dock as='nav' className='rounded-2xl rounded-b border border-base-300'>
         {items.map((item) => {
           const { label, href, Icon } = item
           const isACtive = pathname === href
