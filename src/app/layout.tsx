@@ -30,7 +30,7 @@ export const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
   viewportFit: 'cover',
-  interactiveWidget: 'overlays-content',
+  // interactiveWidget: 'overlays-content',
 }
 
 export default async function RootLayout({ children }: LayoutProps<'/'>) {
@@ -40,7 +40,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
 
   return (
     <html
-      className={`${Axis.variable} ${Geist.variable} ${GoodTimes.variable} h-full min-h-192 antialiased`}
+      className={`${Axis.variable} ${Geist.variable} ${GoodTimes.variable} h-full antialiased`}
       dir='ltr'
       lang={locale}
       suppressHydrationWarning
@@ -49,7 +49,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
         {/* biome-ignore lint/security/noDangerouslySetInnerHtml: anti-FOUC */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className='flex h-full min-h-screen flex-col items-center justify-center'>
+      <body className='relative flex h-full min-h-192 flex-col items-center justify-center bg-blue-500'>
         <ThemeProvider
           cookieOptions={{ name: THEME_COOKIE }}
           disableTransitionOnChange
@@ -58,13 +58,11 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
           value={THEME_MAP}
         >
           <NextIntlClientProvider>
-            <div className='relative flex w-full grow flex-col items-center'>
-              {children}
-              <Suspense fallback={null}>
-                <RootFab />
-              </Suspense>
-              <RootDock />
-            </div>
+            <div className='relative flex size-full flex-col items-center bg-amber-500'>{children}</div>
+            <Suspense fallback={null}>
+              <RootFab />
+            </Suspense>
+            <RootDock />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
