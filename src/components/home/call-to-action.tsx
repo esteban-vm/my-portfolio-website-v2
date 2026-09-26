@@ -1,23 +1,23 @@
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import { FaArrowRight, FaDownload } from 'react-icons/fa'
 import { Button } from 'rsc-daisyui'
 
-export function CallToAction() {
+export async function CallToAction() {
+  const t = await getTranslations('home_page.hero')
+
   return (
     <div className='space-y-4 text-balance text-center md:text-left'>
-      <h1 className='fl-text-3xl/5xl font-bold font-good-times'>Welcome To My Portfolio Website</h1>
-      <p>
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti
-        eaque aut repudiandae et a id nisi.
-      </p>
+      <h1 className='fl-text-3xl/5xl font-bold font-good-times'>{t('title')}</h1>
+      <p className='first-letter:font-bold'>{t('call_to_action')}</p>
       <div className='flex flex-wrap items-center justify-center gap-2 md:justify-start'>
         <Button as={Link} color='primary' href='/projects'>
           <FaArrowRight />
-          View Projects
+          {t('projects_link')}
         </Button>
         <Button color='accent' outline>
           <FaDownload />
-          Download CV
+          {t('cv_link')}
         </Button>
       </div>
     </div>
