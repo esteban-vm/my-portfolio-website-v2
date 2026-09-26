@@ -9,7 +9,7 @@ export async function CallToAction() {
   return (
     <div className='space-y-4 text-balance text-center md:text-left'>
       <h1 className='fl-text-3xl/5xl font-bold font-good-times'>{t('title')}</h1>
-      <p className='first-letter:font-bold'>{t('call_to_action')}</p>
+      <p className='leading-5 first-letter:font-bold'>{t('call_to_action')}</p>
       <div className='flex flex-wrap items-center justify-center gap-2 md:justify-start'>
         <Button as={Link} color='primary' href='/projects'>
           <FaArrowRight />
