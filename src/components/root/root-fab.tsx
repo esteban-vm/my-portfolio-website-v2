@@ -68,4 +68,4 @@ export function RootFab() {
   )
 }
 
-const Wrapper = tw.div`fab pointer-fine:fab-flower absolute -translate-y-1/3 pointer-fine:translate-y-[calc(-100%-(--spacing(4)))] [&_svg]:size-5.5`
+const Wrapper = tw.div`fab pointer-fine:fab-flower bottom-20 [&_svg]:size-5.5`

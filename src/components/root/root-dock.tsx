@@ -42,25 +42,23 @@ export function RootDock() {
   ]
 
   return (
-    <footer className='w-full shrink-0 grow-0'>
-      <Dock as='nav' className='rounded-2xl rounded-b border border-base-300'>
-        {items.map((item) => {
-          const { label, href, Icon } = item
-          const isACtive = pathname === href
-          const onNavigate = () => router.push(href)
+    <Dock as='nav' className='fixed rounded-2xl rounded-b border border-base-300'>
+      {items.map((item) => {
+        const { label, href, Icon } = item
+        const isACtive = pathname === href
+        const onNavigate = () => router.push(href)
 
-          return (
-            <Dock.Item
-              active={isACtive}
-              key={href}
-              label={<span className='line-clamp-1 font-axis'>{label}</span>}
-              onClick={onNavigate}
-            >
-              <Icon className='size-5.5' />
-            </Dock.Item>
-          )
-        })}
-      </Dock>
-    </footer>
+        return (
+          <Dock.Item
+            active={isACtive}
+            key={href}
+            label={<span className='line-clamp-1 font-axis'>{label}</span>}
+            onClick={onNavigate}
+          >
+            <Icon className='size-5.5' />
+          </Dock.Item>
+        )
+      })}
+    </Dock>
   )
 }

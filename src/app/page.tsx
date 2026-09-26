@@ -3,9 +3,9 @@ import { CallToAction, FloatingIcons, HeroImage } from '@/components/home'
 
 export default function HomePage() {
   return (
-    <Hero as='main' className='relative grow rounded'>
+    <Hero as='main' className='grow'>
       <FloatingIcons />
-      <Hero.Content className='flex-col gap-8 md:flex-row-reverse'>
+      <Hero.Content className='flex-col gap-8 py-20 md:flex-row-reverse md:py-0'>
         <HeroImage />
         <CallToAction />
       </Hero.Content>
