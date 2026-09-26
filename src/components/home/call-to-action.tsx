@@ -7,7 +7,7 @@ export async function CallToAction() {
   const t = await getTranslations('home_page.hero')
 
   return (
-    <div className='space-y-4 text-balance text-center md:text-left'>
+    <div className='space-y-2 text-balance text-center md:text-left lg:space-y-4'>
       <h1 className='fl-text-3xl/5xl font-bold font-good-times'>{t('title')}</h1>
       <p className='leading-5 first-letter:font-bold'>{t('call_to_action')}</p>
       <div className='flex flex-wrap items-center justify-center gap-2 md:justify-start'>
