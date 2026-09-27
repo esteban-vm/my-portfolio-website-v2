@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <Hero as='main' className='grow'>
       <FloatingIcons />
-      <Hero.Content className='flex-col gap-8 pb-20 md:flex-row-reverse md:pb-0'>
+      <Hero.Content className='flex-col gap-8 py-20 md:flex-row-reverse md:py-0'>
         <HeroImage />
         <CallToAction />
       </Hero.Content>
