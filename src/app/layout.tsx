@@ -30,7 +30,6 @@ export const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
   viewportFit: 'cover',
-  // interactiveWidget: 'overlays-content',
 }
 
 export default async function RootLayout({ children }: LayoutProps<'/'>) {
@@ -58,7 +57,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
           value={THEME_MAP}
         >
           <NextIntlClientProvider>
-            <div className='relative flex min-h-full w-full flex-col items-center'>{children}</div>
+            <div className='relative mb-20 flex min-h-full w-full flex-col items-center'>{children}</div>
             <Suspense fallback={null}>
               <RootFab />
             </Suspense>
