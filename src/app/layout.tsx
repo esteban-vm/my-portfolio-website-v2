@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: t('description'),
     keywords: [t('keywords.1'), t('keywords.2'), t('keywords.3'), t('keywords.4')],
-    authors: { name: TO_NAME, url: 'https://github.com/esteban-vm', },
+    authors: { name: TO_NAME, url: 'https://github.com/esteban-vm' },
     generator: 'Next.js',
   }
 }
