@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { Suspense } from 'react'
 import { RootDock, RootFab } from '@/components/root'
-import { THEME_COOKIE, THEME_MAP, THEMES } from '@/lib/constants'
+import { THEME_COOKIE, THEME_MAP, THEMES, TO_NAME } from '@/lib/constants'
 import { Axis, Geist, GoodTimes } from '@/lib/fonts'
 import '@/styles/globals.css'
 
@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: t('description'),
     keywords: [t('keywords.1'), t('keywords.2'), t('keywords.3'), t('keywords.4')],
-    authors: { name: 'Esteban V.M.', url: 'https://github.com/esteban-vm' },
+    authors: { name: TO_NAME, url: 'https://github.com/esteban-vm', },
     generator: 'Next.js',
   }
 }
