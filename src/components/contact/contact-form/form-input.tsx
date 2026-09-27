@@ -6,6 +6,7 @@ import type { FormControlProps } from '@/types'
 import { useId } from 'react'
 import { Controller } from 'react-hook-form'
 import { Input, Label, Validator } from 'rsc-daisyui'
+import { cn } from '@/lib/ui'
 
 type BaseFormInputProps = Omit<JSX.IntrinsicElements['input'], 'name' | 'color'>
 
@@ -21,14 +22,19 @@ export function FormInput<T extends FieldValues>({ control, name, label, icon: I
     <Controller
       control={control}
       name={name}
-      render={({ field, fieldState: { error, invalid } }) => {
+      render={({ field, fieldState: { error, invalid, isDirty } }) => {
         return (
           <div>
             <Label as='label' className='mb-1.5 cursor-pointer font-semibold text-sm' htmlFor={fieldId}>
               {label}:
             </Label>
             <Input as='label' className='w-full' validator>
-              <Icon className='cursor-pointer opacity-30' />
+              <Icon
+                className={cn(
+                  'cursor-pointer opacity-30',
+                  invalid ? 'text-error' : !invalid && isDirty ? 'text-success' : 'text-current'
+                )}
+              />
               <input {...rest} aria-errormessage={errorId} aria-invalid={invalid} id={fieldId} {...field} />
             </Input>
             <Validator.Hint as='small' className='empty:hidden' id={errorId} role='alert'>
