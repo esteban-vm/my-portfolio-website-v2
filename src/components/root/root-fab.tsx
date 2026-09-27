@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { use, useTransition } from 'react'
 import { browser } from 'react-dom'
 import { LuLanguages, LuMoonStar, LuSettings, LuSun, LuX } from 'react-icons/lu'
-import { Badge, Button, Tooltip } from 'rsc-daisyui'
+import { Button, Tooltip } from 'rsc-daisyui'
 import tw from 'tailwind-styled-components'
 import { changeLanguage } from '@/actions'
 
@@ -31,8 +31,6 @@ export function RootFab() {
     })
   }
 
-  const themeMsg = theme === 'dark' ? t('theme_button.light') : t('theme_button.dark')
-
   return (
     <Wrapper>
       <Button as='div' color='primary' shape='circle' size='lg' tabIndex={0}>
@@ -43,26 +41,21 @@ export function RootFab() {
         <LuX />
       </Button>
 
-      <Tooltip className='pointer-fine:tooltip' color='info' disabled position='left' tip={t('language_button')}>
-        <div>
-          <Badge className='mr-1 pointer-fine:hidden' color='info'>
-            {t('language_button')}&nbsp;
-          </Badge>
-          <Button disabled={isPending} onClick={onLanguageChange} shape='circle' size='lg' type='button'>
-            <LuLanguages />
-          </Button>
-        </div>
+      <Tooltip className='pointer-coarse:tooltip-open' color='info' position='left' tip={t('language_button')}>
+        <Button disabled={isPending} onClick={onLanguageChange} shape='circle' size='lg' type='button'>
+          <LuLanguages />
+        </Button>
       </Tooltip>
 
-      <Tooltip className='pointer-fine:tooltip' color='info' disabled position='left' tip={themeMsg}>
-        <div>
-          <Badge className='mr-1 pointer-fine:hidden' color='info'>
-            {themeMsg}&nbsp;
-          </Badge>
-          <Button onClick={onThemeChange} shape='circle' size='lg' type='button'>
-            {theme === 'dark' ? <LuSun /> : <LuMoonStar />}
-          </Button>
-        </div>
+      <Tooltip
+        className='pointer-coarse:tooltip-open'
+        color='info'
+        position='left'
+        tip={theme === 'dark' ? t('theme_button.light') : t('theme_button.dark')}
+      >
+        <Button onClick={onThemeChange} shape='circle' size='lg' type='button'>
+          {theme === 'dark' ? <LuSun /> : <LuMoonStar />}
+        </Button>
       </Tooltip>
     </Wrapper>
   )
