@@ -27,7 +27,17 @@
       "title": "Welcome to my portfolio website",
       "call_to_action": "Hello👋, I'm Esteban and I am a web developer who enjoys bringing ideas to life through code. I am driven by creativity, curiosity, and a constant desire to learn. I believe in digital experiences that connect, tell a story, and make technology feel closer and more human. My goal is to combine aesthetics and functionality to create projects that truly stand out.",
       "projects_link": "View projects",
-      "cv_link": "Download CV"
+      "cv_link": "Download CV",
+      "stats": {
+        "1": {
+          "title": "Total projects",
+          "subtitle": "Projects in portfolio"
+        },
+        "2": {
+          "title": "Certificates",
+          "subtitle": "Verified training"
+        }
+      }
     }
   },
   "about_page": {
