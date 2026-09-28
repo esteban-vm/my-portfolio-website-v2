@@ -3,7 +3,7 @@
 import emailjs from '@emailjs/nodejs'
 import { getTranslations } from 'next-intl/server'
 import { z } from 'zod'
-import { INPUT_LENGTHS, PRIVATE_KEY, PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID, TO_EMAIL, TO_NAME } from '@/lib/constants'
+import { EMAIL, INPUT_LENGTHS, NAME, PRIVATE_KEY, PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '@/lib/constants'
 import { isProfane } from '@/lib/helpers'
 import { safeClient } from '@/lib/safe-action'
 
@@ -50,7 +50,7 @@ export const sendEmail = safeClient
       await emailjs.send(
         SERVICE_ID!,
         TEMPLATE_ID!,
-        { from_name: name, to_name: TO_NAME, from_email: email, to_email: TO_EMAIL, message },
+        { from_name: name, to_name: NAME, from_email: email, to_email: EMAIL, message },
         { publicKey: PUBLIC_KEY, privateKey: PRIVATE_KEY }
       )
     }
