@@ -11,7 +11,7 @@ export async function CallToAction() {
     <div className='space-y-2 text-balance text-center md:text-left lg:space-y-4'>
       <h1 className='fl-text-3xl/5xl font-bold font-good-times'>{t('title')}</h1>
       <p className='leading-5'>{t('call_to_action', { name: NAME! })}</p>
-      <Stats className='md:stats-horizontal' vanilla vertical>
+      <Stats className='md:stats-horizontal' vertical>
         <Stats.Stat className='px-3 py-2' desc={t('stats.1.subtitle')} title={t('stats.1.title')} value='13' />
         <Stats.Stat className='px-3 py-2' desc={t('stats.2.subtitle')} title={t('stats.2.title')} value='6' />
       </Stats>
