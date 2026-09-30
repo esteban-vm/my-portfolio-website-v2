@@ -119,6 +119,14 @@
       animation-duration: 20s;
     }
   }
+
+  .collapse-content {
+    @apply flex items-center justify-around flex-wrap gap-3;
+
+    @supports (flex-wrap: wrap balance) {
+      flex-wrap: wrap balance;
+    }
+  }
 }
 
 @keyframes float-up {
