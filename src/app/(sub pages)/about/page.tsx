@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { TbCertificate, TbStack2 } from 'react-icons/tb'
 import { Collapse, Tabs } from 'rsc-daisyui'
+import { getPlaceholder } from '@/actions'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('about_page')
@@ -83,11 +84,20 @@ interface TechCardProps {
   img: string
 }
 
-function TechCard({ tech, img }: TechCardProps) {
+async function TechCard({ tech, img }: TechCardProps) {
+  const imageSrc = `/images/icons/${img}.png`
+
   return (
     <div className='relative aspect-square basis-20 md:basis-24'>
-      {/* rounded-2xl border-4 border-transparent shadow-md shadow-primary */}
-      <Image alt={tech} className='object-cover object-center' fill src={`/images/icons/${img}.png`} title={tech} />
+      <Image
+        alt={tech}
+        blurDataURL={await getPlaceholder(imageSrc)}
+        className='object-cover object-center'
+        fill
+        placeholder='blur'
+        src={imageSrc}
+        title={tech}
+      />
     </div>
   )
 }
