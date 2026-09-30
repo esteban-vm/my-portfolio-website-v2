@@ -32,92 +32,62 @@ export default function AboutPage() {
       <Tabs.Content className='border-base-300 bg-base-100 p-3'>
         <Collapse className='mb-3 border border-base-300' icon='arrow'>
           <Collapse.Title>Front-End</Collapse.Title>
-
           <Collapse.Content>
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='HTML5' className='object-cover object-center' fill src='/images/icons/html5.png' />
-            </div>
-
-            {/* rounded-2xl border-4 border-transparent shadow-md shadow-primary */}
-
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='CSS3' className='object-cover object-center' fill src='/images/icons/css3.png' />
-            </div>
-
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='TailwindCSS' className='object-cover object-center' fill src='/images/icons/tailwind.png' />
-            </div>
-
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='JavaScript' className='object-cover object-center' fill src='/images/icons/javascript.png' />
-            </div>
-
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='TypeScript' className='object-cover object-center' fill src='/images/icons/typescript.png' />
-            </div>
-
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='ReactJS' className='object-cover object-center' fill src='/images/icons/react.png' />
-            </div>
+            <TechCard img='html5' tech='HTML5' />
+            <TechCard img='css3' tech='CSS3' />
+            <TechCard img='tailwind' tech='TailwindCSS' />
+            <TechCard img='javascript' tech='JavaScript' />
+            <TechCard img='typescript' tech='TypeScript' />
+            <TechCard img='react' tech='ReactJS' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse className='mb-3 border border-base-300' icon='arrow'>
           <Collapse.Title>Back-End</Collapse.Title>
-
           <Collapse.Content>
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='Prisma' className='object-cover object-center' fill src='/images/icons/prisma.png' />
-            </div>
-
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='NodeJS' className='object-cover object-center' fill src='/images/icons/node.png' />
-            </div>
+            <TechCard img='prisma' tech='Prisma' />
+            <TechCard img='node' tech='NodeJS' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse className='mb-3 border border-base-300' icon='arrow'>
           <Collapse.Title>Databases</Collapse.Title>
-
           <Collapse.Content>
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='PostgreSQL' className='object-cover object-center' fill src='/images/icons/postgresql.png' />
-            </div>
+            <TechCard img='postgresql' tech='PostgreSQL' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse className='mb-3 border border-base-300' icon='arrow'>
           <Collapse.Title>Full-Stack</Collapse.Title>
-
           <Collapse.Content>
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='Next.js' className='object-cover object-center' fill src='/images/icons/next.png' />
-            </div>
+            <TechCard img='next' tech='Next.js' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse className='border border-base-300' icon='arrow'>
           <Collapse.Title>Tools</Collapse.Title>
-
           <Collapse.Content>
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='VSCode' className='object-cover object-center' fill src='/images/icons/vscode.png' />
-            </div>
-
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='Git' className='object-cover object-center' fill src='/images/icons/git.png' />
-            </div>
-
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='GitHub' className='object-cover object-center' fill src='/images/icons/github.png' />
-            </div>
-
-            <div className='relative aspect-square basis-20 md:basis-24'>
-              <Image alt='Docker' className='object-cover object-center' fill src='/images/icons/docker.png' />
-            </div>
+            <TechCard img='vscode' tech='VSCode' />
+            <TechCard img='git' tech='Git' />
+            <TechCard img='github' tech='GitHub' />
+            <TechCard img='docker' tech='Docker' />
           </Collapse.Content>
         </Collapse>
       </Tabs.Content>
     </Tabs>
+  )
+}
+
+interface TechCardProps {
+  tech: string
+  img: string
+}
+
+function TechCard({ tech, img }: TechCardProps) {
+  return (
+    <div className='relative aspect-square basis-20 md:basis-24'>
+      {/* rounded-2xl border-4 border-transparent shadow-md shadow-primary */}
+      <Image alt={tech} className='object-cover object-center' fill src={`/images/icons/${img}.png`} title={tech} />
+    </div>
   )
 }
