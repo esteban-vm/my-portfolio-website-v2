@@ -120,6 +120,10 @@
     }
   }
 
+  .collapse {
+    @apply mb-3 border border-base-300 last:mb-0;
+  }
+
   .collapse-content {
     @apply flex items-center justify-around flex-wrap gap-3;
 
