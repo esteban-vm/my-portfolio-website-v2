@@ -1,6 +1,12 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
+import { BiLogoPostgresql } from 'react-icons/bi'
+import { FaCss3Alt, FaDocker, FaGitAlt, FaGithub, FaHtml5, FaJava, FaNodeJs, FaReact } from 'react-icons/fa'
+import { GoCopilot } from 'react-icons/go'
+import { GrMysql } from 'react-icons/gr'
+import { SiJavascript, SiNextdotjs, SiPrisma, SiSpringboot, SiTailwindcss, SiTypescript } from 'react-icons/si'
 import { TbCertificate, TbStack2 } from 'react-icons/tb'
+import { VscVscode } from 'react-icons/vsc'
 import { Collapse, Tabs } from 'rsc-daisyui'
 import { TechCard } from '@/components/about'
 
@@ -35,44 +41,48 @@ export default async function AboutPage() {
         <Collapse icon='arrow'>
           <Collapse.Title>{t('2.front')}</Collapse.Title>
           <Collapse.Content>
-            <TechCard img='html5' tech='HTML5' />
-            <TechCard img='css3' tech='CSS3' />
-            <TechCard img='tailwind' tech='TailwindCSS' />
-            <TechCard img='javascript' tech='JavaScript' />
-            <TechCard img='typescript' tech='TypeScript' />
-            <TechCard img='react' tech='ReactJS' />
+            <TechCard color='#ef652a' icon={FaHtml5} tech='HTML5' />
+            <TechCard color='#2965f1' icon={FaCss3Alt} tech='CSS3' />
+            <TechCard color='#38bdf8' icon={SiTailwindcss} tech='TailwindCSS' />
+            <TechCard color='#f0db4f' icon={SiJavascript} tech='JavaScript' />
+            <TechCard color='#007acc' icon={SiTypescript} tech='TypeScript' />
+            <TechCard color='#00d8ff' icon={FaReact} tech='React' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse icon='arrow'>
           <Collapse.Title>{t('2.back')}</Collapse.Title>
           <Collapse.Content>
-            <TechCard img='prisma' tech='Prisma' />
-            <TechCard img='node' tech='NodeJS' />
+            <TechCard color='#00bfa5' icon={SiPrisma} tech='Prisma' />
+            <TechCard color='#83cd29' icon={FaNodeJs} tech='NodeJS' />
+            <TechCard color='#6db33f' icon={SiSpringboot} tech='Spring Boot' />
+            <TechCard color='#f44336' icon={FaJava} tech='Java' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse icon='arrow'>
           <Collapse.Title>{t('2.full')}</Collapse.Title>
           <Collapse.Content>
-            <TechCard img='next' tech='Next.js' />
+            <TechCard icon={SiNextdotjs} tech='Next.js' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse icon='arrow'>
           <Collapse.Title>{t('2.db')}</Collapse.Title>
           <Collapse.Content>
-            <TechCard img='postgresql' tech='PostgreSQL' />
+            <TechCard color='#336791' icon={BiLogoPostgresql} tech='PostgreSQL' />
+            <TechCard color='#00618a' icon={GrMysql} tech='MySQL' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse icon='arrow'>
           <Collapse.Title>{t('2.tools')}</Collapse.Title>
           <Collapse.Content>
-            <TechCard img='vscode' tech='VSCode' />
-            <TechCard img='git' tech='Git' />
-            <TechCard img='github' tech='GitHub' />
-            <TechCard img='docker' tech='Docker' />
+            <TechCard color='#2196f3' icon={VscVscode} tech='VSCode' />
+            <TechCard color='#f34f29' icon={FaGitAlt} tech='Git' />
+            <TechCard icon={FaGithub} tech='GitHub' />
+            <TechCard icon={GoCopilot} tech='GitHub Copilot' />
+            <TechCard color='#0288d1' icon={FaDocker} tech='Docker' />
           </Collapse.Content>
         </Collapse>
       </Tabs.Content>
