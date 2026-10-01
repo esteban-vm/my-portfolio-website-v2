@@ -12,26 +12,28 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const t = await getTranslations('about_page.tabs')
+
   return (
     <Tabs className='my-30 w-full self-start justify-self-start lg:mx-10' decorate='lift'>
       <Tabs.Tab as='label' className='font-semibold'>
         <input defaultChecked name='my_tabs' type='radio' />
         <TbCertificate />
-        &nbsp;Certificates
+        &nbsp;{t('1.title')}
       </Tabs.Tab>
 
-      <Tabs.Content className='border-base-300 bg-base-100 p-3'>My certificates</Tabs.Content>
+      <Tabs.Content className='border-base-300 bg-base-100 p-3'>Coming soon</Tabs.Content>
 
       <Tabs.Tab as='label' className='font-semibold'>
         <input name='my_tabs' type='radio' />
         <TbStack2 />
-        &nbsp;Tech Stack
+        &nbsp;{t('2.title')}
       </Tabs.Tab>
 
       <Tabs.Content className='border-base-300 bg-base-100 p-3'>
         <Collapse icon='arrow'>
-          <Collapse.Title>Front-End</Collapse.Title>
+          <Collapse.Title>{t('2.front')}</Collapse.Title>
           <Collapse.Content>
             <TechCard img='html5' tech='HTML5' />
             <TechCard img='css3' tech='CSS3' />
@@ -43,7 +45,7 @@ export default function AboutPage() {
         </Collapse>
 
         <Collapse icon='arrow'>
-          <Collapse.Title>Back-End</Collapse.Title>
+          <Collapse.Title>{t('2.back')}</Collapse.Title>
           <Collapse.Content>
             <TechCard img='prisma' tech='Prisma' />
             <TechCard img='node' tech='NodeJS' />
@@ -51,21 +53,21 @@ export default function AboutPage() {
         </Collapse>
 
         <Collapse icon='arrow'>
-          <Collapse.Title>Full-Stack</Collapse.Title>
+          <Collapse.Title>{t('2.full')}</Collapse.Title>
           <Collapse.Content>
             <TechCard img='next' tech='Next.js' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse icon='arrow'>
-          <Collapse.Title>Databases</Collapse.Title>
+          <Collapse.Title>{t('2.db')}</Collapse.Title>
           <Collapse.Content>
             <TechCard img='postgresql' tech='PostgreSQL' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse icon='arrow'>
-          <Collapse.Title>Tools</Collapse.Title>
+          <Collapse.Title>{t('2.tools')}</Collapse.Title>
           <Collapse.Content>
             <TechCard img='vscode' tech='VSCode' />
             <TechCard img='git' tech='Git' />

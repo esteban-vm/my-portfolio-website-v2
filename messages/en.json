@@ -41,7 +41,20 @@
     }
   },
   "about_page": {
-    "title": "About me"
+    "title": "About me",
+    "tabs": {
+      "1": {
+        "title": "Certificates"
+      },
+      "2": {
+        "title": "Tech Stack",
+        "front": "Front-End",
+        "back": "Back-End",
+        "full": "Full-Stack",
+        "db": "Databases",
+        "tools": "Tools"
+      }
+    }
   },
   "contact_page": {
     "title": "Contact",

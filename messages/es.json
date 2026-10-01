@@ -41,7 +41,20 @@
     }
   },
   "about_page": {
-    "title": "Sobre mí"
+    "title": "Sobre mí",
+    "tabs": {
+      "1": {
+        "title": "Certificados"
+      },
+      "2": {
+        "title": "Tecnologías",
+        "front": "Front-End",
+        "back": "Back-End",
+        "full": "Full-Stack",
+        "db": "Bases de datos",
+        "tools": "Herramientas"
+      }
+    }
   },
   "contact_page": {
     "title": "Contacto",
