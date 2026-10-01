@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { TbCertificate, TbStack2 } from 'react-icons/tb'
 import { Collapse, Tabs } from 'rsc-daisyui'
-import { getPlaceholder } from '@/actions'
+import { TechCard } from '@/components/about'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('about_page')
@@ -76,28 +75,5 @@ export default function AboutPage() {
         </Collapse>
       </Tabs.Content>
     </Tabs>
-  )
-}
-
-interface TechCardProps {
-  tech: string
-  img: string
-}
-
-async function TechCard({ tech, img }: TechCardProps) {
-  const imageSrc = `/images/icons/${img}.png`
-
-  return (
-    <div className='glass relative aspect-square basis-20 rounded-2xl md:basis-24'>
-      <Image
-        alt={tech}
-        blurDataURL={await getPlaceholder(imageSrc)}
-        className='scale-85 object-cover object-center contrast-125'
-        fill
-        placeholder='blur'
-        src={imageSrc}
-        title={tech}
-      />
-    </div>
   )
 }
