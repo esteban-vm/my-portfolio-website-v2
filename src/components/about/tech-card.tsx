@@ -1,25 +1,15 @@
-import Image from 'next/image'
-import { getPlaceholder } from '@/actions'
+import type { IconType } from 'react-icons'
 
 interface TechCardProps {
   tech: string
-  img: string
+  icon: IconType
+  color?: `#${string}`
 }
 
-export async function TechCard({ tech, img }: TechCardProps) {
-  const imageSrc = `/images/icons/${img}.png`
-
+export function TechCard({ tech, icon: Icon, color }: TechCardProps) {
   return (
-    <div className='glass relative aspect-square basis-20 rounded-2xl md:basis-24'>
-      <Image
-        alt={tech}
-        blurDataURL={await getPlaceholder(imageSrc)}
-        className='scale-85 object-cover object-center contrast-125'
-        fill
-        placeholder='blur'
-        src={imageSrc}
-        title={tech}
-      />
+    <div className='glass flex aspect-square basis-20 items-center justify-center rounded-2xl md:basis-24' title={tech}>
+      <Icon className='size-[75%]' fill={color ?? 'currentColor'} />
     </div>
   )
 }
