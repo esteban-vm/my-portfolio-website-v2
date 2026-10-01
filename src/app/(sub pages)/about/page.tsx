@@ -88,11 +88,11 @@ async function TechCard({ tech, img }: TechCardProps) {
   const imageSrc = `/images/icons/${img}.png`
 
   return (
-    <div className='relative aspect-square basis-20 md:basis-24'>
+    <div className='glass relative aspect-square basis-20 rounded-2xl md:basis-24'>
       <Image
         alt={tech}
         blurDataURL={await getPlaceholder(imageSrc)}
-        className='object-cover object-center'
+        className='scale-85 object-cover object-center contrast-125'
         fill
         placeholder='blur'
         src={imageSrc}
