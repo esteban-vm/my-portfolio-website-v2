@@ -31,7 +31,7 @@ export default function AboutPage() {
       </Tabs.Tab>
 
       <Tabs.Content className='border-base-300 bg-base-100 p-3'>
-        <Collapse className='mb-3 border border-base-300' icon='arrow'>
+        <Collapse icon='arrow'>
           <Collapse.Title>Front-End</Collapse.Title>
           <Collapse.Content>
             <TechCard img='html5' tech='HTML5' />
@@ -43,7 +43,7 @@ export default function AboutPage() {
           </Collapse.Content>
         </Collapse>
 
-        <Collapse className='mb-3 border border-base-300' icon='arrow'>
+        <Collapse icon='arrow'>
           <Collapse.Title>Back-End</Collapse.Title>
           <Collapse.Content>
             <TechCard img='prisma' tech='Prisma' />
@@ -51,21 +51,21 @@ export default function AboutPage() {
           </Collapse.Content>
         </Collapse>
 
-        <Collapse className='mb-3 border border-base-300' icon='arrow'>
+        <Collapse icon='arrow'>
           <Collapse.Title>Full-Stack</Collapse.Title>
           <Collapse.Content>
             <TechCard img='next' tech='Next.js' />
           </Collapse.Content>
         </Collapse>
 
-        <Collapse className='mb-3 border border-base-300' icon='arrow'>
+        <Collapse icon='arrow'>
           <Collapse.Title>Databases</Collapse.Title>
           <Collapse.Content>
             <TechCard img='postgresql' tech='PostgreSQL' />
           </Collapse.Content>
         </Collapse>
 
-        <Collapse className='border border-base-300' icon='arrow'>
+        <Collapse icon='arrow'>
           <Collapse.Title>Tools</Collapse.Title>
           <Collapse.Content>
             <TechCard img='vscode' tech='VSCode' />
