@@ -52,16 +52,16 @@ export default function AboutPage() {
         </Collapse>
 
         <Collapse className='mb-3 border border-base-300' icon='arrow'>
-          <Collapse.Title>Databases</Collapse.Title>
+          <Collapse.Title>Full-Stack</Collapse.Title>
           <Collapse.Content>
-            <TechCard img='postgresql' tech='PostgreSQL' />
+            <TechCard img='next' tech='Next.js' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse className='mb-3 border border-base-300' icon='arrow'>
-          <Collapse.Title>Full-Stack</Collapse.Title>
+          <Collapse.Title>Databases</Collapse.Title>
           <Collapse.Content>
-            <TechCard img='next' tech='Next.js' />
+            <TechCard img='postgresql' tech='PostgreSQL' />
           </Collapse.Content>
         </Collapse>
 
