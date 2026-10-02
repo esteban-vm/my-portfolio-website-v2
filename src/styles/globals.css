@@ -125,7 +125,7 @@
   }
 
   .collapse-content {
-    @apply flex items-center justify-around flex-wrap gap-3;
+    @apply flex items-center justify-around flex-wrap gap-6;
 
     @supports (flex-wrap: wrap balance) {
       flex-wrap: wrap balance;
