@@ -4,7 +4,16 @@ import { BiLogoPostgresql } from 'react-icons/bi'
 import { FaCss3Alt, FaDocker, FaGitAlt, FaGithub, FaHtml5, FaJava, FaNodeJs, FaReact } from 'react-icons/fa'
 import { GoCopilot } from 'react-icons/go'
 import { GrMysql } from 'react-icons/gr'
-import { SiJavascript, SiNextdotjs, SiPrisma, SiSpringboot, SiTailwindcss, SiTypescript } from 'react-icons/si'
+import {
+  SiJavascript,
+  SiNextdotjs,
+  SiPnpm,
+  SiPrisma,
+  SiSpringboot,
+  SiTailwindcss,
+  SiTypescript,
+  SiVite,
+} from 'react-icons/si'
 import { TbCertificate, TbStack2 } from 'react-icons/tb'
 import { VscVscode } from 'react-icons/vsc'
 import { Collapse, Tabs } from 'rsc-daisyui'
@@ -47,6 +56,7 @@ export default async function AboutPage() {
             <TechCard color='#f0db4f' icon={SiJavascript} tech='JavaScript' />
             <TechCard color='#007acc' icon={SiTypescript} tech='TypeScript' />
             <TechCard color='#00d8ff' icon={FaReact} tech='React' />
+            <TechCard color='#a0f' icon={SiVite} tech='Vite' />
           </Collapse.Content>
         </Collapse>
 
@@ -83,6 +93,7 @@ export default async function AboutPage() {
             <TechCard icon={FaGithub} tech='GitHub' />
             <TechCard icon={GoCopilot} tech='GitHub Copilot' />
             <TechCard color='#0288d1' icon={FaDocker} tech='Docker' />
+            <TechCard color='#f9ad00' icon={SiPnpm} tech='PNPM' />
           </Collapse.Content>
         </Collapse>
       </Tabs.Content>
