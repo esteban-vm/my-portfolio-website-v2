@@ -29,20 +29,15 @@ export default async function AboutPage() {
         &nbsp;{t('1.title')}
       </Tabs.Tab>
 
-      <Tabs.Content className='border-base-300 bg-base-100 p-3 '>
-       
-<div   className='size full   flex items-center justify-around flex-wrap gap-6'>
-  <CertificateCard/>
-  <CertificateCard/>
-  <CertificateCard/>
-  {/* <CertificateCard/> */}
-  {/* <CertificateCard/> */}
-  {/* <CertificateCard/> */}
-
-</div>
-
-
-
+      <Tabs.Content className='border-base-300 bg-base-100 p-3'>
+        <div className='size full flex flex-wrap items-center justify-around gap-6'>
+          <CertificateCard />
+          <CertificateCard />
+          <CertificateCard />
+          {/* <CertificateCard/> */}
+          {/* <CertificateCard/> */}
+          {/* <CertificateCard/> */}
+        </div>
       </Tabs.Content>
 
       <Tabs.Tab as='label' className='font-semibold'>
@@ -105,4 +100,3 @@ export default async function AboutPage() {
     </Tabs>
   )
 }
-   
