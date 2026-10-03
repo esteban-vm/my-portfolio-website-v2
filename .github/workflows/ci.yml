@@ -1,0 +1,16 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Run Biome
+        uses: biomejs/setup-biome@v2
+        with:
+          version: latest
+      
+      - name: Verify code style and linter
+        run: biome ci .
