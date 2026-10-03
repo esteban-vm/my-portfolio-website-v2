@@ -1,19 +1,10 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { BiLogoPostgresql } from 'react-icons/bi'
-import { FaCss3Alt, FaDocker, FaGitAlt, FaGithub, FaHtml5, FaJava, FaNodeJs, FaReact } from 'react-icons/fa'
+import * as fa from 'react-icons/fa'
 import { GoCopilot } from 'react-icons/go'
 import { GrMysql } from 'react-icons/gr'
-import {
-  SiJavascript,
-  SiNextdotjs,
-  SiPnpm,
-  SiPrisma,
-  SiSpringboot,
-  SiTailwindcss,
-  SiTypescript,
-  SiVite,
-} from 'react-icons/si'
+import * as si from 'react-icons/si'
 import { TbCertificate, TbStack2 } from 'react-icons/tb'
 import { VscVscode } from 'react-icons/vsc'
 import { Collapse, Tabs } from 'rsc-daisyui'
@@ -50,30 +41,30 @@ export default async function AboutPage() {
         <Collapse icon='arrow'>
           <Collapse.Title>{t('2.front')}</Collapse.Title>
           <Collapse.Content>
-            <TechCard color='#ef652a' icon={FaHtml5} tech='HTML5' />
-            <TechCard color='#2965f1' icon={FaCss3Alt} tech='CSS3' />
-            <TechCard color='#38bdf8' icon={SiTailwindcss} tech='TailwindCSS' />
-            <TechCard color='#f0db4f' icon={SiJavascript} tech='JavaScript' />
-            <TechCard color='#007acc' icon={SiTypescript} tech='TypeScript' />
-            <TechCard color='#00d8ff' icon={FaReact} tech='React' />
-            <TechCard color='#a0f' icon={SiVite} tech='Vite' />
+            <TechCard color='#ef652a' icon={fa.FaHtml5} tech='HTML5' />
+            <TechCard color='#2965f1' icon={fa.FaCss3Alt} tech='CSS3' />
+            <TechCard color='#38bdf8' icon={si.SiTailwindcss} tech='TailwindCSS' />
+            <TechCard color='#f0db4f' icon={si.SiJavascript} tech='JavaScript' />
+            <TechCard color='#007acc' icon={si.SiTypescript} tech='TypeScript' />
+            <TechCard color='#00d8ff' icon={fa.FaReact} tech='React' />
+            <TechCard color='#a0f' icon={si.SiVite} tech='Vite' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse icon='arrow'>
           <Collapse.Title>{t('2.back')}</Collapse.Title>
           <Collapse.Content>
-            <TechCard color='#00bfa5' icon={SiPrisma} tech='Prisma' />
-            <TechCard color='#83cd29' icon={FaNodeJs} tech='NodeJS' />
-            <TechCard color='#6db33f' icon={SiSpringboot} tech='Spring Boot' />
-            <TechCard color='#f44336' icon={FaJava} tech='Java' />
+            <TechCard color='#00bfa5' icon={si.SiPrisma} tech='Prisma' />
+            <TechCard color='#83cd29' icon={fa.FaNodeJs} tech='NodeJS' />
+            <TechCard color='#6db33f' icon={si.SiSpringboot} tech='Spring Boot' />
+            <TechCard color='#f44336' icon={fa.FaJava} tech='Java' />
           </Collapse.Content>
         </Collapse>
 
         <Collapse icon='arrow'>
           <Collapse.Title>{t('2.full')}</Collapse.Title>
           <Collapse.Content>
-            <TechCard icon={SiNextdotjs} tech='Next.js' />
+            <TechCard icon={si.SiNextdotjs} tech='Next.js' />
           </Collapse.Content>
         </Collapse>
 
@@ -89,11 +80,11 @@ export default async function AboutPage() {
           <Collapse.Title>{t('2.tools')}</Collapse.Title>
           <Collapse.Content>
             <TechCard color='#2196f3' icon={VscVscode} tech='VSCode' />
-            <TechCard color='#f34f29' icon={FaGitAlt} tech='Git' />
-            <TechCard icon={FaGithub} tech='GitHub' />
+            <TechCard color='#f34f29' icon={fa.FaGitAlt} tech='Git' />
+            <TechCard icon={fa.FaGithub} tech='GitHub' />
             <TechCard icon={GoCopilot} tech='GitHub Copilot' />
-            <TechCard color='#0288d1' icon={FaDocker} tech='Docker' />
-            <TechCard color='#f9ad00' icon={SiPnpm} tech='PNPM' />
+            <TechCard color='#0288d1' icon={fa.FaDocker} tech='Docker' />
+            <TechCard color='#f9ad00' icon={si.SiPnpm} tech='PNPM' />
           </Collapse.Content>
         </Collapse>
       </Tabs.Content>
