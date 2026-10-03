@@ -1,13 +1,25 @@
 import Image from 'next/image'
 import { Badge, Card } from 'rsc-daisyui'
+import { getPlaceholder } from '@/actions'
 
-export function CertificateCard() {
+interface CertificateCardProps {
+  imageSrc: string
+}
+
+export async function CertificateCard({ imageSrc }: CertificateCardProps) {
   return (
     <Card border className='w-full max-w-88 px-3 py-4.5 shadow-sm'>
       <figure className='relative aspect-video w-full overflow-hidden rounded-2xl'>
-        <Image alt='' className='object-cover object-fit' fill quality={100} src='/images/cert-example.webp' />
+        <Image
+          alt=''
+          blurDataURL={await getPlaceholder(imageSrc)}
+          className='object-cover object-fit'
+          fill
+          placeholder='blur'
+          quality={100}
+          src={imageSrc}
+        />
       </figure>
-
       <Card.Body className='p-3 pb-0'>
         <Card.Title>
           Name

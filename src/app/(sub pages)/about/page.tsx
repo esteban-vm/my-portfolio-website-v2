@@ -31,9 +31,9 @@ export default async function AboutPage() {
 
       <Tabs.Content className='border-base-300 bg-base-100 p-3'>
         <div className='size full flex flex-wrap items-center justify-around gap-6'>
-          <CertificateCard />
-          <CertificateCard />
-          <CertificateCard />
+          <CertificateCard imageSrc='/images/cert-example.webp' />
+          <CertificateCard imageSrc='/images/cert-example.webp' />
+          <CertificateCard imageSrc='/images/cert-example.webp' />
           {/* <CertificateCard/> */}
           {/* <CertificateCard/> */}
           {/* <CertificateCard/> */}
