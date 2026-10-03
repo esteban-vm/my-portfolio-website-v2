@@ -8,7 +8,7 @@ import * as si from 'react-icons/si'
 import { TbCertificate, TbStack2 } from 'react-icons/tb'
 import { VscVscode } from 'react-icons/vsc'
 import { Collapse, Tabs } from 'rsc-daisyui'
-import { TechCard } from '@/components/about'
+import { CertificateCard, TechCard } from '@/components/about'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('about_page')
@@ -29,7 +29,21 @@ export default async function AboutPage() {
         &nbsp;{t('1.title')}
       </Tabs.Tab>
 
-      <Tabs.Content className='border-base-300 bg-base-100 p-3'>Coming soon</Tabs.Content>
+      <Tabs.Content className='border-base-300 bg-base-100 p-3 '>
+       
+<div   className='size full   flex items-center justify-around flex-wrap gap-6'>
+  <CertificateCard/>
+  <CertificateCard/>
+  <CertificateCard/>
+  {/* <CertificateCard/> */}
+  {/* <CertificateCard/> */}
+  {/* <CertificateCard/> */}
+
+</div>
+
+
+
+      </Tabs.Content>
 
       <Tabs.Tab as='label' className='font-semibold'>
         <input name='my_tabs' type='radio' />
@@ -91,3 +105,4 @@ export default async function AboutPage() {
     </Tabs>
   )
 }
+   
