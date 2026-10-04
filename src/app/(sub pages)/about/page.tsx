@@ -9,6 +9,7 @@ import { TbCertificate, TbStack2 } from 'react-icons/tb'
 import { VscVscode } from 'react-icons/vsc'
 import { Collapse, Tabs } from 'rsc-daisyui'
 import { CertificateCard, TechCard } from '@/components/about'
+import { CERTIFICATES } from '@/lib/constants'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('about_page')
@@ -31,12 +32,9 @@ export default async function AboutPage() {
 
       <Tabs.Content className='border-base-300 bg-base-100 p-3'>
         <div className='size full flex flex-wrap items-center justify-around gap-6'>
-          <CertificateCard imageSrc='/images/cert-example.webp' />
-          <CertificateCard imageSrc='/images/cert-example.webp' />
-          <CertificateCard imageSrc='/images/cert-example.webp' />
-          {/* <CertificateCard/> */}
-          {/* <CertificateCard/> */}
-          {/* <CertificateCard/> */}
+          {CERTIFICATES.map((certificate) => (
+            <CertificateCard key={certificate.imageSrc} {...certificate} />
+          ))}
         </div>
       </Tabs.Content>
 
