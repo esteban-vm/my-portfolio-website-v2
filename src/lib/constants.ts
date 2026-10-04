@@ -1,4 +1,5 @@
 import type { ThemeTypeWithDefault as Theme } from 'rsc-daisyui'
+import type { CertificateCardProps } from '@/components/about'
 
 // i18n
 export const LOCALES = ['en', 'es'] as const
@@ -29,3 +30,13 @@ export const INPUT_LENGTHS = {
   messageMin: 5,
   messageMax: 255,
 } as const
+
+export const CERTIFICATES: CertificateCardProps[] = [
+  {
+    entity: 'Udemy',
+    imageSrc: '/images/UC-c79ef04a-fec5-45b3-aac6-36cc432a958b.webp',
+    link: 'https://ude.my/UC-c79ef04a-fec5-45b3-aac6-36cc432a958b',
+    tags: ['Next.js', 'TypeScript', 'React'],
+    title: 'Next.js: El framework de React para producción',
+  },
+]
