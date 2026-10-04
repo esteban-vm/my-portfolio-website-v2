@@ -44,7 +44,8 @@
     "title": "About me",
     "tabs": {
       "1": {
-        "title": "Certificates"
+        "title": "Certificates",
+        "link": "View details"
       },
       "2": {
         "title": "Tech Stack",
