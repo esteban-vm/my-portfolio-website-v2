@@ -39,4 +39,11 @@ export const CERTIFICATES: CertificateCardProps[] = [
     tags: ['Next.js', 'TypeScript', 'React'],
     title: 'Next.js: El framework de React para producción',
   },
+  {
+    entity: 'Udemy',
+    imageSrc: '/images/UC-7f066a38-9094-4fa9-a518-36c4bbe55c87.webp',
+    link: 'https://ude.my/UC-7f066a38-9094-4fa9-a518-36c4bbe55c87',
+    tags: ['Next.js', 'TypeScript', 'React'],
+    title: 'Next JS Course: Build a Complete YouTube Clone Web Project',
+  },
 ]
