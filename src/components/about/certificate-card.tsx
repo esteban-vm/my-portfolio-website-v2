@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
 import { LuArrowUpRight } from 'react-icons/lu'
 import { Badge, Button, Card } from 'rsc-daisyui'
 import { getPlaceholder } from '@/actions'
@@ -12,6 +13,8 @@ export interface CertificateCardProps {
 }
 
 export async function CertificateCard({ title, entity, imageSrc, tags, link }: CertificateCardProps) {
+  const t = await getTranslations('about_page.tabs.1')
+
   return (
     <Card border className='w-full max-w-88 px-3 py-4.5 shadow-sm'>
       <figure className='relative aspect-video w-full overflow-hidden rounded-2xl'>
@@ -35,7 +38,7 @@ export async function CertificateCard({ title, entity, imageSrc, tags, link }: C
             </Badge>
           ))}
           <Button as='a' className='mx-auto' color='info' href={link} outline size='xs' target='_blank' wide>
-            Ver PDF
+            {t('link')}
             <LuArrowUpRight />
           </Button>
         </Card.Actions>
