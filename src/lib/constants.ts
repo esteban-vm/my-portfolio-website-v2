@@ -46,4 +46,11 @@ export const CERTIFICATES: CertificateCardProps[] = [
     tags: ['Next.js', 'TypeScript', 'React'],
     title: 'Next JS Course: Build a Complete YouTube Clone Web Project',
   },
+  {
+    entity: 'Udemy',
+    imageSrc: '/images/UC-48c39688-58a9-4c8d-b386-991a915ce283.webp',
+    link: 'https://ude.my/UC-48c39688-58a9-4c8d-b386-991a915ce283',
+    tags: ['TailwindCSS', 'TypeScript', 'React'],
+    title: 'Build Instagram clone - React TailwindCSS Firebase',
+  },
 ]
