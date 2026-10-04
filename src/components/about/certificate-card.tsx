@@ -1,12 +1,17 @@
 import Image from 'next/image'
-import { Badge, Card } from 'rsc-daisyui'
+import { LuArrowUpRight } from 'react-icons/lu'
+import { Badge, Button, Card } from 'rsc-daisyui'
 import { getPlaceholder } from '@/actions'
 
-interface CertificateCardProps {
+export interface CertificateCardProps {
+  title: string
+  entity: string
   imageSrc: string
+  tags: string[]
+  link: string
 }
 
-export async function CertificateCard({ imageSrc }: CertificateCardProps) {
+export async function CertificateCard({ title, entity, imageSrc, tags, link }: CertificateCardProps) {
   return (
     <Card border className='w-full max-w-88 px-3 py-4.5 shadow-sm'>
       <figure className='relative aspect-video w-full overflow-hidden rounded-2xl'>
@@ -21,16 +26,18 @@ export async function CertificateCard({ imageSrc }: CertificateCardProps) {
         />
       </figure>
       <Card.Body className='p-3 pb-0'>
-        <Card.Title>
-          Name
-          <Badge color='secondary' size='sm'>
-            NEW
-          </Badge>
-        </Card.Title>
-        <p>An example of a certificate.</p>
+        <Card.Title>{title}</Card.Title>
+        <p>{entity}</p>
         <Card.Actions>
-          <Badge outline>Tag1</Badge>
-          <Badge outline>Tag2</Badge>
+          {tags.map((tag) => (
+            <Badge color='info' key={tag} size='sm' soft>
+              {tag}
+            </Badge>
+          ))}
+          <Button as='a' className='mx-auto' color='info' href={link} outline size='xs' target='_blank' wide>
+            Ver PDF
+            <LuArrowUpRight />
+          </Button>
         </Card.Actions>
       </Card.Body>
     </Card>
