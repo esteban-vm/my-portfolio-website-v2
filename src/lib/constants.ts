@@ -75,6 +75,13 @@ export const CERTIFICATES: CertificateCardProps[] = [
     title: 'Mastering JavaScript Arrays',
   },
   {
+    entity: 'Udemy',
+    imageSrc: '/images/UC-c55f56d2-f16b-4eb5-b3a5-059d92985975.webp',
+    link: 'https://ude.my/UC-c55f56d2-f16b-4eb5-b3a5-059d92985975',
+    tags: ['IA', 'MidJourney', 'Dalle E'],
+    title: 'AI Art Mastery: Advanced Techniques for MidJourney, Dalle E',
+  },
+  {
     entity: 'Alura Latam',
     imageSrc: '/images/9533f12a-4475-455c-b7b4-86c7f507b578.webp',
     link: 'https://app.aluracursos.com/degree/certificate/9533f12a-4475-455c-b7b4-86c7f507b578?lang',
@@ -115,5 +122,12 @@ export const CERTIFICATES: CertificateCardProps[] = [
     link: 'https://app.aluracursos.com/degree/certificate/b1be1caa-197e-4ce2-82a0-b2f48c65d357?lang',
     tags: ['Docker'],
     title: 'Formación Nivelación Docker - Alura Boost',
+  },
+  {
+    entity: 'Alura Latam',
+    imageSrc: '/images/dc002673-5cec-4833-bb61-1afde71ed235.webp',
+    link: 'https://app.aluracursos.com/degree/certificate/dc002673-5cec-4833-bb61-1afde71ed235?lang',
+    tags: ['IA', 'ChatGPT'],
+    title: 'Formación IA Generativa - ONE',
   },
 ]
