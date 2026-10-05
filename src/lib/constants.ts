@@ -61,6 +61,20 @@ export const CERTIFICATES: CertificateCardProps[] = [
     title: 'Master Frontend Next JS 14 I Clon de Netflix desde cero',
   },
   {
+    entity: 'Udemy',
+    imageSrc: '/images/UC-9fefd8e6-64f7-43b3-b694-172a18fbcb3f.webp',
+    link: 'https://ude.my/UC-9fefd8e6-64f7-43b3-b694-172a18fbcb3f',
+    tags: ['JavaScript'],
+    title: 'Asynchronous JavaScript Deep Dive',
+  },
+  {
+    entity: 'Udemy',
+    imageSrc: '/images/UC-83128fec-ffe2-4a1d-9b82-f794e1bce79f.webp',
+    link: 'https://ude.my/UC-83128fec-ffe2-4a1d-9b82-f794e1bce79f',
+    tags: ['JavaScript'],
+    title: 'Mastering JavaScript Arrays',
+  },
+  {
     entity: 'Alura Latam',
     imageSrc: '/images/9533f12a-4475-455c-b7b4-86c7f507b578.webp',
     link: 'https://app.aluracursos.com/degree/certificate/9533f12a-4475-455c-b7b4-86c7f507b578?lang',
