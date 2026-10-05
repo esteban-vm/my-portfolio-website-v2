@@ -23,7 +23,7 @@ export default async function AboutPage() {
   const t = await getTranslations('about_page.tabs')
 
   return (
-    <Tabs className='my-30 w-full self-start justify-self-start lg:mx-10' decorate='lift'>
+    <Tabs className='my-20 w-full self-start justify-self-start lg:mx-10' decorate='lift'>
       <Tabs.Tab as='label' className='font-semibold'>
         <input defaultChecked name='my_tabs' type='radio' />
         <TbCertificate />
