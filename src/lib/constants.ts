@@ -60,4 +60,32 @@ export const CERTIFICATES: CertificateCardProps[] = [
     tags: ['TailwindCSS', 'TypeScript', 'Next.js'],
     title: 'Master Frontend Next JS 14 I Clon de Netflix desde cero',
   },
+  {
+    entity: 'Alura Latam',
+    imageSrc: '/images/9533f12a-4475-455c-b7b4-86c7f507b578.webp',
+    link: 'https://app.aluracursos.com/degree/certificate/9533f12a-4475-455c-b7b4-86c7f507b578?lang',
+    tags: ['Java', 'Spring Boot'],
+    title: 'Formación Java Web: crea aplicaciones utilizando Spring Boot',
+  },
+  {
+    entity: 'Alura Latam',
+    imageSrc: '/images/fe5f8f4d-6552-4eee-b33c-2239dc138ffd.webp',
+    link: 'https://app.aluracursos.com/degree/certificate/fe5f8f4d-6552-4eee-b33c-2239dc138ffd?lang',
+    tags: ['Java', 'Spring Boot'],
+    title: 'Formación Java y Spring Boot',
+  },
+  {
+    entity: 'Alura Latam',
+    imageSrc: '/images/3b5e233a-648c-4d3e-a1ad-6c39639fa332.webp',
+    link: 'https://app.aluracursos.com/degree/certificate/3b5e233a-648c-4d3e-a1ad-6c39639fa332?lang',
+    tags: ['Java', 'POO'],
+    title: 'Formación Java Orientado a Objetos G8 - ONE',
+  },
+  {
+    entity: 'Alura Latam',
+    imageSrc: '/images/05c435ac-4f80-42a4-8dc8-51bded3c74b3.webp',
+    link: 'https://app.aluracursos.com/degree/certificate/05c435ac-4f80-42a4-8dc8-51bded3c74b3?lang',
+    tags: ['Java', 'Spring Boot', 'IA'],
+    title: 'Formación Inteligencia Artificial y Java G8 - ONE',
+  },
 ]
