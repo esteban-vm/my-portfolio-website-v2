@@ -16,7 +16,7 @@ export async function CertificateCard({ title, entity, imageSrc, tags, link }: C
   const t = await getTranslations('about_page.tabs.1')
 
   return (
-    <Card border className='w-full max-w-88 px-3 py-4.5 shadow-sm'>
+    <Card border className='w-full max-w-[20rem] px-3 py-4.5 shadow-sm'>
       <figure className='relative aspect-video w-full overflow-hidden rounded-2xl'>
         <Image
           alt=''
