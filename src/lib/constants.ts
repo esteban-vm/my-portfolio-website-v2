@@ -88,4 +88,18 @@ export const CERTIFICATES: CertificateCardProps[] = [
     tags: ['Java', 'Spring Boot', 'IA'],
     title: 'Formación Inteligencia Artificial y Java G8 - ONE',
   },
+  {
+    entity: 'Alura Latam',
+    imageSrc: '/images/af88a810-9c0b-48bf-a9c1-ac8574f71017.webp',
+    link: 'https://app.aluracursos.com/certificate/af88a810-9c0b-48bf-a9c1-ac8574f71017?lang',
+    tags: ['Git', 'GitHub'],
+    title: 'Git y GitHub: repositorio, commit y versiones',
+  },
+  {
+    entity: 'Alura Latam',
+    imageSrc: '/images/b1be1caa-197e-4ce2-82a0-b2f48c65d357.webp',
+    link: 'https://app.aluracursos.com/degree/certificate/b1be1caa-197e-4ce2-82a0-b2f48c65d357?lang',
+    tags: ['Docker'],
+    title: 'Formación Nivelación Docker - Alura Boost',
+  },
 ]
