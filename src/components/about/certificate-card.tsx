@@ -19,7 +19,7 @@ export async function CertificateCard({ title, entity, imageSrc, tags, link }: C
     <Card border className='px-3 py-4.5 shadow-sm'>
       <figure className='relative aspect-video w-full overflow-hidden rounded-2xl'>
         <Image
-          alt=''
+          alt={title}
           blurDataURL={await getPlaceholder(imageSrc)}
           className='object-cover object-fit'
           fill
@@ -29,7 +29,9 @@ export async function CertificateCard({ title, entity, imageSrc, tags, link }: C
         />
       </figure>
       <Card.Body className='p-3 pb-0'>
-        <Card.Title className='line-clamp-2 leading-5'>{title}</Card.Title>
+        <Card.Title className='line-clamp-2 leading-5' title={title}>
+          {title}
+        </Card.Title>
         <p>{entity}</p>
         <Card.Actions>
           {tags.map((tag) => (
