@@ -53,4 +53,11 @@ export const CERTIFICATES: CertificateCardProps[] = [
     tags: ['TailwindCSS', 'TypeScript', 'React'],
     title: 'Build Instagram clone - React TailwindCSS Firebase',
   },
+  {
+    entity: 'Udemy',
+    imageSrc: '/images/UC-9f8f405b-f8cd-4f76-9dc4-c2bb102a2e88.webp',
+    link: 'https://ude.my/UC-9f8f405b-f8cd-4f76-9dc4-c2bb102a2e88',
+    tags: ['TailwindCSS', 'TypeScript', 'React'],
+    title: 'Master Frontend Next JS 14 I Clon de Netflix desde cero',
+  },
 ]
