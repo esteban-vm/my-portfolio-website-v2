@@ -31,7 +31,7 @@ export default async function AboutPage() {
       </Tabs.Tab>
 
       <Tabs.Content className='border-base-300 bg-base-100 p-3'>
-        <div className='size full flex flex-wrap items-center justify-around gap-6'>
+        <div className='grid size-full gap-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
           {CERTIFICATES.map((certificate) => (
             <CertificateCard key={certificate.imageSrc} {...certificate} />
           ))}
