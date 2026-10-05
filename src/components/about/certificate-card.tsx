@@ -29,15 +29,15 @@ export async function CertificateCard({ title, entity, imageSrc, tags, link }: C
         />
       </figure>
       <Card.Body className='p-3 pb-0'>
-        <Card.Title>{title}</Card.Title>
+        <Card.Title className='leading-5'>{title}</Card.Title>
         <p>{entity}</p>
         <Card.Actions>
           {tags.map((tag) => (
-            <Badge color='info' key={tag} size='sm' soft>
+            <Badge color='accent' key={tag} size='sm' soft>
               {tag}
             </Badge>
           ))}
-          <Button as='a' className='mx-auto' color='info' href={link} outline size='xs' target='_blank' wide>
+          <Button as='a' className='mx-auto mt-1' color='info' href={link} outline size='sm' target='_blank' wide>
             {t('link')}
             <LuArrowUpRight />
           </Button>
