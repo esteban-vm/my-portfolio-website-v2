@@ -134,14 +134,14 @@ export const CERTIFICATES: CertificateCardProps[] = [
     entity: 'freeCodeCamp',
     imageSrc: '/images/estebanvm-rwd.webp',
     link: 'https://freecodecamp.org/certification/estebanvm/responsive-web-design',
-    tags: ['HTML', 'CSS', 'Responsive Design'],
+    tags: ['HTML', 'CSS'],
     title: 'Legacy Responsive Web Design V8',
   },
   {
     entity: 'freeCodeCamp',
     imageSrc: '/images/estebanvm-fedl.webp',
     link: 'https://freecodecamp.org/certification/estebanvm/front-end-development-libraries',
-    tags: ['React', 'Bootstrap', 'jQuery', 'Redux'],
+    tags: ['React', 'JavaScript'],
     title: 'Frontend Development Libraries V8',
   },
   {
@@ -155,7 +155,7 @@ export const CERTIFICATES: CertificateCardProps[] = [
     entity: 'freeCodeCamp',
     imageSrc: '/images/estebanvm-bedaa.webp',
     link: 'https://freecodecamp.org/certification/estebanvm/back-end-development-and-apis',
-    tags: ['Node.js', 'Express.js', 'MongoDB'],
+    tags: ['Node.js', 'Express.js'],
     title: 'Backend Development and APIs V8',
   },
   {
