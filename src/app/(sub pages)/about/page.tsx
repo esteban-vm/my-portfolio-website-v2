@@ -1,3 +1,5 @@
+export const revalidate = 604_800
+
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { BiLogoPostgresql } from 'react-icons/bi'
