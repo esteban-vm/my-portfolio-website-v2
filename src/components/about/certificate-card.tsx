@@ -7,12 +7,12 @@ import { getPlaceholder } from '@/actions'
 export interface CertificateCardProps {
   title: string
   entity: string
-  imageSrc: string
+  image: string
   tags: string[]
   link: string
 }
 
-export async function CertificateCard({ title, entity, imageSrc, tags, link }: CertificateCardProps) {
+export async function CertificateCard({ title, entity, image, tags, link }: CertificateCardProps) {
   const t = await getTranslations('about_page.tabs.1')
 
   return (
@@ -20,12 +20,12 @@ export async function CertificateCard({ title, entity, imageSrc, tags, link }: C
       <figure className='relative inset-shadow-sm/15 aspect-video w-full overflow-hidden rounded-2xl'>
         <Image
           alt={title}
-          blurDataURL={await getPlaceholder(imageSrc)}
+          blurDataURL={await getPlaceholder(image)}
           className='scale-95 object-contain object-center'
           fill
           placeholder='blur'
           quality={100}
-          src={imageSrc}
+          src={image}
         />
       </figure>
       <Card.Body className='p-3 pb-0'>
