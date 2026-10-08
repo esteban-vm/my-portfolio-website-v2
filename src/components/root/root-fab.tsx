@@ -45,7 +45,7 @@ export function RootFab() {
         <LuX />
       </Button>
 
-      <Tooltip className='pointer-coarse:tooltip-open' color='info' position='left' tip='Volver arriba'>
+      <Tooltip className='pointer-coarse:tooltip-open' color='info' position='left' tip={t('scroll_button')}>
         <Button onClick={onScrollToTop} shape='circle' size='lg' type='button'>
           <LuArrowUp />
         </Button>

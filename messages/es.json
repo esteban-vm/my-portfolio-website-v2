@@ -18,7 +18,8 @@
       "theme_button": {
         "dark": "Cambiar a tema oscuro",
         "light": "Cambiar a tema claro"
-      }
+      },
+      "scroll_button": "Volver a arriba"
     }
   },
   "home_page": {
