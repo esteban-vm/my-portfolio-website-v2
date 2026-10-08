@@ -12,5 +12,10 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function ProjectsPage() {
   const t = await getTranslations('projects_page')
 
-  return <div>{t('title')}</div>
+  return (
+    <div>
+      <p>{t('title')}</p>
+      <p>Coming soon…</p>
+    </div>
+  )
 }
