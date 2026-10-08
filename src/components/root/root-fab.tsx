@@ -4,7 +4,7 @@ import { useTheme } from '@teispace/next-themes'
 import { useLocale, useTranslations } from 'next-intl'
 import { use, useTransition } from 'react'
 import { browser } from 'react-dom'
-import { LuLanguages, LuMoonStar, LuSettings, LuSun, LuX } from 'react-icons/lu'
+import { LuArrowUp, LuLanguages, LuMoonStar, LuSettings, LuSun, LuX } from 'react-icons/lu'
 import { Button, Tooltip } from 'rsc-daisyui'
 import tw from 'tailwind-styled-components'
 import { changeLanguage } from '@/actions'
@@ -31,6 +31,10 @@ export function RootFab() {
     })
   }
 
+  const onScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <Wrapper>
       <Button as='div' color='primary' shape='circle' size='lg' tabIndex={0}>
@@ -40,6 +44,12 @@ export function RootFab() {
       <Button as='span' className='fab-close' color='error' shape='circle' size='lg'>
         <LuX />
       </Button>
+
+      <Tooltip className='pointer-coarse:tooltip-open' color='info' position='left' tip='Volver arriba'>
+        <Button onClick={onScrollToTop} shape='circle' size='lg' type='button'>
+          <LuArrowUp />
+        </Button>
+      </Tooltip>
 
       <Tooltip className='pointer-coarse:tooltip-open' color='info' position='left' tip={t('language_button')}>
         <Button disabled={isPending} onClick={onLanguageChange} shape='circle' size='lg' type='button'>
