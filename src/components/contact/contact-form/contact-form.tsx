@@ -3,6 +3,7 @@
 import type { KeyboardEventHandler } from 'react'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
+import { FaEnvelope } from 'react-icons/fa'
 import { FaAt, FaPencil } from 'react-icons/fa6'
 import { Divider, Fieldset } from 'rsc-daisyui'
 import { useContactForm } from '@/hooks'
@@ -42,6 +43,11 @@ export function ContactForm() {
       <form className='w-full max-w-lg lg:max-w-3xl' noValidate onSubmit={handleSubmitWithAction} ref={formRef}>
         <Fieldset disabled={isSubmitting || isSubmitSuccessful}>
           <Fieldset.Legend className='fl-text-2xl/3xl font-good-times'>{t('legend')}</Fieldset.Legend>
+
+          <Fieldset.Label as='span' className='fl-text-sm/base font-axis font-bold'>
+            <FaEnvelope />
+            {process.env.NEXT_PUBLIC_EMAILJS_TO_EMAIL}
+          </Fieldset.Label>
 
           <FormInput
             autoComplete='given-name'
