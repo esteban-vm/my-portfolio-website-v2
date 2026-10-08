@@ -16,12 +16,12 @@ export async function CertificateCard({ title, entity, imageSrc, tags, link }: C
   const t = await getTranslations('about_page.tabs.1')
 
   return (
-    <Card border className='px-3 py-4.5 shadow-sm'>
-      <figure className='relative aspect-video w-full overflow-hidden rounded-2xl'>
+    <Card border className='fade-in animate-in p-3 shadow-sm'>
+      <figure className='relative inset-shadow-sm/15 aspect-video w-full overflow-hidden rounded-2xl'>
         <Image
           alt={title}
           blurDataURL={await getPlaceholder(imageSrc)}
-          className='object-cover object-fit'
+          className='scale-95 object-contain object-center'
           fill
           placeholder='blur'
           quality={100}
