@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { LuArrowUpRight } from 'react-icons/lu'
 import { Badge, Button, Card } from 'rsc-daisyui'
+import tw from 'tailwind-styled-components'
 import { getPlaceholder } from '@/actions'
 
 export interface CertificateCardProps {
@@ -16,8 +17,8 @@ export async function CertificateCard({ title, entity, image, tags, link }: Cert
   const t = await getTranslations('about_page.tabs.1')
 
   return (
-    <Card border className='fade-in animate-in p-3 shadow-sm'>
-      <figure className='relative inset-shadow-sm/15 aspect-video w-full overflow-hidden rounded-2xl'>
+    <Card border className='fade-in animate-in p-3 not-dark:shadow-sm'>
+      <Figure>
         <Image
           alt={title}
           blurDataURL={await getPlaceholder(image)}
@@ -27,7 +28,7 @@ export async function CertificateCard({ title, entity, image, tags, link }: Cert
           quality={100}
           src={image}
         />
-      </figure>
+      </Figure>
       <Card.Body className='p-3 pb-0'>
         <Card.Title className='line-clamp-2 leading-5' title={title}>
           {title}
@@ -48,3 +49,5 @@ export async function CertificateCard({ title, entity, image, tags, link }: Cert
     </Card>
   )
 }
+
+const Figure = tw.figure`relative not-dark:inset-shadow-sm/15 aspect-video w-full overflow-hidden rounded-2xl bg-current/3 dark:bg-current/10`
