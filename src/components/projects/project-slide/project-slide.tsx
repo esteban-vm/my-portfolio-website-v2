@@ -20,7 +20,7 @@ export async function ProjectSlide({ title, image, slideId, slidePrev, slideNext
         <SlideButton direction='right' slideId={slideNext} />
       </div>
       <Badge
-        className='absolute top-full left-1/2 w-full max-w-2xs -translate-x-1/2 translate-y-[-120%] truncate rounded-none sm:max-w-xs md:max-w-sm'
+        className='absolute top-full left-1/2 w-full max-w-[90%] -translate-x-1/2 translate-y-[-120%] truncate rounded-none sm:max-w-xs md:max-w-sm'
         color='accent'
         size='lg'
       >
