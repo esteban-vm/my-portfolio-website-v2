@@ -1,5 +1,6 @@
 import type { SlideButtonProps, SlideId } from './slide-button'
 import Image from 'next/image'
+import { Badge } from 'rsc-daisyui'
 import { getPlaceholder } from '@/actions'
 import { SlideButton } from './slide-button'
 
@@ -18,6 +19,13 @@ export async function ProjectSlide({ title, image, slideId, slidePrev, slideNext
         <SlideButton direction='left' slideId={slidePrev} />
         <SlideButton direction='right' slideId={slideNext} />
       </div>
+      <Badge
+        className='absolute top-full left-1/2 w-full max-w-2xs -translate-x-1/2 translate-y-[-120%] truncate rounded-none sm:max-w-xs md:max-w-sm'
+        color='accent'
+        size='lg'
+      >
+        <span className='truncate'>{title}</span>
+      </Badge>
     </div>
   )
 }
