@@ -13,7 +13,7 @@ interface ProjectSlideProps extends Omit<SlideButtonProps, 'direction'> {
 
 export async function ProjectSlide({ title, image, slideId, slidePrev, slideNext }: ProjectSlideProps) {
   return (
-    <div className='carousel-item relative w-full overflow-hidden rounded-box' id={slideId}>
+    <div className='carousel-item relative w-full overflow-hidden rounded-xl' id={slideId}>
       <Image alt={title} blurDataURL={await getPlaceholder(image)} fill placeholder='blur' quality={100} src={image} />
       <div className='absolute inset-x-5 top-1/2 flex -translate-y-1/2 transform justify-between'>
         <SlideButton direction='left' slideId={slidePrev} />
