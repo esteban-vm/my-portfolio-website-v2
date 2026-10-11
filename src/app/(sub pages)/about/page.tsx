@@ -26,7 +26,7 @@ export default async function AboutPage() {
 
   return (
     <Tabs className='my-20 w-full self-start justify-self-start lg:mx-10' decorate='lift'>
-      <Tabs.Tab as='label' className='font-semibold'>
+      <Tabs.Tab as='label' className='px-4 font-semibold lg:text-base'>
         <input defaultChecked name='my_tabs' type='radio' />
         <TbCertificate />
         &nbsp;{t('1.title')}
@@ -40,7 +40,7 @@ export default async function AboutPage() {
         </div>
       </Tabs.Content>
 
-      <Tabs.Tab as='label' className='font-semibold'>
+      <Tabs.Tab as='label' className='px-4 font-semibold lg:text-base'>
         <input name='my_tabs' type='radio' />
         <TbStack2 />
         &nbsp;{t('2.title')}
