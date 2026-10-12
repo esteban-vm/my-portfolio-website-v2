@@ -10,8 +10,8 @@ export async function CallToAction() {
 
   return (
     <div className='space-y-2 text-balance text-center md:text-left lg:space-y-4'>
-      <Title style={{ WebkitTextStroke: '1px black' }}>{t('title')}</Title>
-      <div className='fl-text-lg/2xl text-rotate duration-30000'>
+      <Title>{t('title')}</Title>
+      <div className='fl-text-lg/xl text-rotate duration-30000'>
         <span className='not-md:justify-items-center font-good-times'>
           <span>{t('position')}</span>
           <span>✔️ React</span>
@@ -43,4 +43,4 @@ export async function CallToAction() {
   )
 }
 
-const Title = tw.h1`fl-text-3xl/5xl bg-linear-to-b from-sky-500 via-white to-fuchsia-500 bg-clip-text font-bold font-good-times text-transparent`
+const Title = tw.h1`fl-text-3xl/5xl bg-linear-to-b from-sky-500 to-fuchsia-500 bg-clip-text font-bold font-good-times text-transparent dark:via-white`
