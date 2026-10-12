@@ -23,6 +23,10 @@
 @layer base {
   * {
     scrollbar-width: thin;
+
+    &::selection {
+      @apply bg-success text-success-content;
+    }
   }
 
   html {
