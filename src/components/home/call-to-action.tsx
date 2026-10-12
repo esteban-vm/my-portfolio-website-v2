@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { FaArrowRight, FaDownload } from 'react-icons/fa'
 import { Button, Stats } from 'rsc-daisyui'
+import tw from 'tailwind-styled-components'
 import { CERTIFICATES, NAME } from '@/lib/constants'
 
 export async function CallToAction() {
@@ -9,7 +10,15 @@ export async function CallToAction() {
 
   return (
     <div className='space-y-2 text-balance text-center md:text-left lg:space-y-4'>
-      <h1 className='fl-text-3xl/5xl font-bold font-good-times'>{t('title')}</h1>
+      <Title style={{ WebkitTextStroke: '1px black' }}>{t('title')}</Title>
+      <div className='fl-text-lg/2xl text-rotate duration-30000'>
+        <span className='not-md:justify-items-center font-good-times'>
+          <span>{t('position')}</span>
+          <span>✔️ React</span>
+          <span>✔️ TypeScript</span>
+          <span>✔️ Next.js</span>
+        </span>
+      </div>
       <p className='leading-5'>{t('call_to_action', { name: NAME! })}</p>
       <Stats className='md:stats-horizontal' vertical>
         <Stats.Stat className='px-3 py-2' desc={t('stats.1.subtitle')} title={t('stats.1.title')} value='13' />
@@ -33,3 +42,5 @@ export async function CallToAction() {
     </div>
   )
 }
+
+const Title = tw.h1`fl-text-3xl/5xl bg-linear-to-b from-sky-500 via-white to-fuchsia-500 bg-clip-text font-bold font-good-times text-transparent`
