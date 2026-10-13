@@ -46,13 +46,20 @@ export function RootFab() {
       </Button>
 
       <Tooltip className='pointer-coarse:tooltip-open' color='info' position='left' tip={t('scroll_button')}>
-        <Button onClick={onScrollToTop} shape='circle' size='lg' type='button'>
+        <Button className='dark:border-base-content' onClick={onScrollToTop} shape='circle' size='lg' type='button'>
           <LuArrowUp />
         </Button>
       </Tooltip>
 
       <Tooltip className='pointer-coarse:tooltip-open' color='info' position='left' tip={t('language_button')}>
-        <Button disabled={isPending} onClick={onLanguageChange} shape='circle' size='lg' type='button'>
+        <Button
+          className='dark:border-base-content'
+          disabled={isPending}
+          onClick={onLanguageChange}
+          shape='circle'
+          size='lg'
+          type='button'
+        >
           <LuLanguages />
         </Button>
       </Tooltip>
@@ -63,7 +70,7 @@ export function RootFab() {
         position='left'
         tip={theme === 'dark' ? t('theme_button.light') : t('theme_button.dark')}
       >
-        <Button onClick={onThemeChange} shape='circle' size='lg' type='button'>
+        <Button className='dark:border-base-content' onClick={onThemeChange} shape='circle' size='lg' type='button'>
           {theme === 'dark' ? <LuSun /> : <LuMoonStar />}
         </Button>
       </Tooltip>
