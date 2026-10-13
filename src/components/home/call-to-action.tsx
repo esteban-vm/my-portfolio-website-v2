@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { FaArrowRight, FaDownload } from 'react-icons/fa'
+import { TbAward } from 'react-icons/tb'
 import { Button, Stats } from 'rsc-daisyui'
 import tw from 'tailwind-styled-components'
 import { CERTIFICATES, NAME } from '@/lib/constants'
@@ -11,12 +12,18 @@ export async function CallToAction() {
   return (
     <div className='space-y-2 text-balance text-center md:text-left lg:space-y-4'>
       <Title>{t('title')}</Title>
-      <div className='fl-text-lg/xl text-rotate duration-30000'>
+      <div className='fl-text-base/xl not-md:w-full not-md:max-w-xs text-rotate duration-30000'>
         <span className='not-md:justify-items-center font-good-times'>
-          <span>{t('position')}</span>
-          <span>✔️ React</span>
-          <span>✔️ TypeScript</span>
-          <span>✔️ Next.js</span>
+          <span className='w-full truncate'>{t('position')}</span>
+          <span className='truncate'>
+            <TbAward className='inline fill-amber-200 stroke-amber-500' /> React
+          </span>
+          <span className='truncate'>
+            <TbAward className='inline fill-amber-200 stroke-amber-500' /> TypeScript
+          </span>
+          <span className='truncate'>
+            <TbAward className='inline fill-amber-200 stroke-amber-500' /> Next.js
+          </span>
         </span>
       </div>
       <p className='leading-5'>{t('call_to_action', { name: NAME! })}</p>
