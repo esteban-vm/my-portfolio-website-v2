@@ -2,7 +2,7 @@
 
 import { useTheme } from '@teispace/next-themes'
 import { useLocale, useTranslations } from 'next-intl'
-import { use, useTransition } from 'react'
+import { use, useEffect, useState, useTransition } from 'react'
 import { browser } from 'react-dom'
 import { LuArrowUp, LuLanguages, LuMoonStar, LuSettings, LuSun, LuX } from 'react-icons/lu'
 import { Button, Tooltip } from 'rsc-daisyui'
@@ -13,9 +13,17 @@ export function RootFab() {
   use(browser())
 
   const locale = useLocale()
-  const t = useTranslations('root_layout.fab')
+  const [scroll, setScroll] = useState(0)
   const { theme, setTheme } = useTheme()
+  const t = useTranslations('root_layout.fab')
   const [isPending, startTransition] = useTransition()
+
+  useEffect(() => {
+    const onScroll = () => setScroll(window.scrollY)
+
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const onThemeChange = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
@@ -45,11 +53,13 @@ export function RootFab() {
         <LuX />
       </Button>
 
-      <Tooltip className='pointer-coarse:tooltip-open' color='info' position='left' tip={t('scroll_button')}>
-        <Button className='dark:border-base-content' onClick={onScrollToTop} shape='circle' size='lg' type='button'>
-          <LuArrowUp />
-        </Button>
-      </Tooltip>
+      {scroll + window.innerHeight - 200 > window.innerHeight && (
+        <Tooltip className='pointer-coarse:tooltip-open' color='info' position='left' tip={t('scroll_button')}>
+          <Button className='dark:border-base-content' onClick={onScrollToTop} shape='circle' size='lg' type='button'>
+            <LuArrowUp />
+          </Button>
+        </Tooltip>
+      )}
 
       <Tooltip className='pointer-coarse:tooltip-open' color='info' position='left' tip={t('language_button')}>
         <Button
