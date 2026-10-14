@@ -14,15 +14,9 @@ export const THEME_MAP = {
   dark: 'synthwave',
 } as const satisfies Record<(typeof THEMES)[number], Theme>
 
-// EmailJS
-export const {
-  EMAILJS_SERVICE_ID: SERVICE_ID,
-  EMAILJS_TEMPLATE_ID: TEMPLATE_ID,
-  EMAILJS_TO_NAME: NAME,
-  NEXT_PUBLIC_EMAILJS_TO_EMAIL: EMAIL,
-  EMAILJS_PUBLIC_KEY: PUBLIC_KEY,
-  EMAILJS_PRIVATE_KEY: PRIVATE_KEY,
-} = process.env
+// EmailJS (credentials are read only inside the `sendEmail` server action)
+export const NAME = process.env.EMAILJS_TO_NAME
+export const EMAIL = process.env.NEXT_PUBLIC_EMAILJS_TO_EMAIL
 
 export const INPUT_LENGTHS = {
   nameMin: 5,
