@@ -49,77 +49,77 @@
     @apply absolute -bottom-9 size-8 opacity-30 brightness-90 animate-float-up md:size-12 motion-reduce:animate-none;
 
     &:nth-of-type(1) {
-      left: 7%;
+      left: 6%;
       animation-duration: 26s;
     }
 
     &:nth-of-type(2) {
-      left: 20%;
+      left: 12%;
       animation-duration: 23s;
     }
 
     &:nth-of-type(3) {
-      left: 30%;
+      left: 18%;
       animation-duration: 25s;
     }
 
     &:nth-of-type(4) {
-      left: 37%;
+      left: 24%;
       animation-duration: 19s;
     }
 
     &:nth-of-type(5) {
-      left: 45%;
+      left: 30%;
       animation-duration: 27s;
     }
 
     &:nth-of-type(6) {
-      left: 58%;
+      left: 36%;
       animation-duration: 22s;
     }
 
     &:nth-of-type(7) {
-      left: 72%;
+      left: 42%;
       animation-duration: 28s;
     }
 
     &:nth-of-type(8) {
-      left: 88%;
+      left: 48%;
       animation-duration: 30s;
     }
 
     &:nth-of-type(9) {
-      left: 50%;
+      left: 54%;
       animation-duration: 24s;
     }
 
     &:nth-of-type(10) {
-      left: 15%;
+      left: 60%;
       animation-duration: 21s;
     }
 
     &:nth-of-type(11) {
-      left: 28%;
+      left: 66%;
       animation-duration: 25s;
     }
 
     &:nth-of-type(12) {
-      left: 55%;
+      left: 72%;
       animation-duration: 18s;
     }
 
     &:nth-of-type(13) {
-      left: 67%;
+      left: 78%;
       animation-duration: 26s;
     }
 
     &:nth-of-type(14) {
-      left: 80%;
+      left: 84%;
       animation-duration: 23s;
     }
 
     &:nth-of-type(15) {
-      left: 92%;
+      left: 90%;
       animation-duration: 20s;
     }
   }
