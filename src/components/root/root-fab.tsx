@@ -37,7 +37,7 @@ export function RootFab() {
 
   return (
     <Wrapper>
-      <Button as='div' color='primary' shape='circle' size='lg' tabIndex={0}>
+      <Button as='div' color='primary' role='button' shape='circle' size='lg' tabIndex={0}>
         <LuSettings />
       </Button>
 
