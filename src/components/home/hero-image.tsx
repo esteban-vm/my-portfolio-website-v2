@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { getPlaceholder } from '@/actions'
 
-const imageSrc = '/images/hero-image.jpg'
+const imageSrc = '/images/hero-image.webp'
 
 export async function HeroImage() {
   return (
