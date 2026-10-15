@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 import { z } from 'zod'
 import { sendEmail } from '@/actions'
 import { INPUT_LENGTHS } from '@/lib/constants'
-import { isProfane } from '@/lib/helpers'
+import { isProfane } from '@/lib/strings'
 
 export function useContactForm() {
   const t = useTranslations('contact_page.form.errors')
