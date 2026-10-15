@@ -14,7 +14,12 @@ export async function getPlaceholder(src: string) {
       input = path.join(process.cwd(), 'public', src)
     }
 
-    const buffer = await sharp(input).resize({ height: 10, width: 10, fit: 'contain' }).blur().toFormat('webp').toBuffer()
+    const buffer = await sharp(input)
+      .resize({ height: 10, width: 10, fit: 'contain' })
+      .blur()
+      .toFormat('webp')
+      .toBuffer()
+
     return `data:image/webp;base64,${buffer.toString('base64')}`
   } catch {
     return 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
