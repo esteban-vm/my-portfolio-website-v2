@@ -14,16 +14,7 @@ export const THEME_MAP = {
   dark: 'synthwave',
 } as const satisfies Record<(typeof THEMES)[number], Theme>
 
-// EmailJS
-export const {
-  EMAILJS_SERVICE_ID: SERVICE_ID,
-  EMAILJS_TEMPLATE_ID: TEMPLATE_ID,
-  EMAILJS_TO_NAME: NAME,
-  NEXT_PUBLIC_EMAILJS_TO_EMAIL: EMAIL,
-  EMAILJS_PUBLIC_KEY: PUBLIC_KEY,
-  EMAILJS_PRIVATE_KEY: PRIVATE_KEY,
-} = process.env
-
+// UI
 export const INPUT_LENGTHS = {
   nameMin: 5,
   nameMax: 50,

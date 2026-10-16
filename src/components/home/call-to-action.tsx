@@ -4,7 +4,7 @@ import { FaArrowRight, FaDownload } from 'react-icons/fa'
 import { TbAward } from 'react-icons/tb'
 import { Button, Stats } from 'rsc-daisyui'
 import tw from 'tailwind-styled-components'
-import { CERTIFICATES, NAME } from '@/lib/constants'
+import { CERTIFICATES } from '@/lib/constants'
 import { InfoStats } from './info-stats'
 
 export async function CallToAction() {
@@ -27,7 +27,7 @@ export async function CallToAction() {
           </span>
         </span>
       </div>
-      <p className='leading-5'>{t('call_to_action', { name: NAME! })}</p>
+      <p className='leading-5'>{t('call_to_action', { name: process.env.EMAILJS_TO_NAME! })}</p>
       <div className='not-md:mx-auto flex w-fit flex-col-reverse gap-2 md:flex-row'>
         <Stats className='md:stats-horizontal' vertical>
           <Stats.Stat
