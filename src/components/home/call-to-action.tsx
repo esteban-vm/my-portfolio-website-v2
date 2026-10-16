@@ -5,6 +5,7 @@ import { TbAward } from 'react-icons/tb'
 import { Button, Stats } from 'rsc-daisyui'
 import tw from 'tailwind-styled-components'
 import { CERTIFICATES, NAME } from '@/lib/constants'
+import { InfoStats } from './info-stats'
 
 export async function CallToAction() {
   const t = await getTranslations('home_page.hero')
@@ -27,15 +28,23 @@ export async function CallToAction() {
         </span>
       </div>
       <p className='leading-5'>{t('call_to_action', { name: NAME! })}</p>
-      <Stats className='md:stats-horizontal' vertical>
-        <Stats.Stat className='px-3 py-2' desc={t('stats.1.subtitle')} title={t('stats.1.title')} value='13' />
-        <Stats.Stat
-          className='px-3 py-2'
-          desc={t('stats.2.subtitle')}
-          title={t('stats.2.title')}
-          value={CERTIFICATES.length}
-        />
-      </Stats>
+      <div className='not-md:mx-auto flex w-fit flex-col-reverse gap-2 md:flex-row'>
+        <Stats className='md:stats-horizontal' vertical>
+          <Stats.Stat
+            className='px-3 py-2'
+            desc={t('stats.1.subtitle')}
+            title={t('stats.1.title')}
+            value={<span className='font-semibold'>13</span>}
+          />
+          <Stats.Stat
+            className='px-3 py-2'
+            desc={t('stats.2.subtitle')}
+            title={t('stats.2.title')}
+            value={<span className='font-semibold'>{CERTIFICATES.length}</span>}
+          />
+        </Stats>
+        <InfoStats />
+      </div>
       <div className='flex flex-wrap items-center justify-center gap-2 md:justify-start'>
         <Button as={Link} className='not-md:btn-wide' color='primary' href='/projects'>
           <FaArrowRight />
