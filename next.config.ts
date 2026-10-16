@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   experimental: {
     typedEnv: true,
-    useOffline: true,
   },
   images: {
     unoptimized: true,
