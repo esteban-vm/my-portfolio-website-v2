@@ -5,7 +5,7 @@ import { useLocale } from 'next-intl'
 import { useAction } from 'next-safe-action/hooks'
 import { useEffect, useState } from 'react'
 import { Stats } from 'rsc-daisyui'
-import { getWeather } from '@/actions/get-weather'
+import { getWeather } from '@/actions'
 
 export function InfoStats() {
   const locale = useLocale()
