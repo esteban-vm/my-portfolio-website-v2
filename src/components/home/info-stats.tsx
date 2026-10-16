@@ -21,7 +21,7 @@ export function InfoStats() {
   useEffect(() => {
     if (!result?.data) return
 
-    const dateTimeFormat = new Intl.DateTimeFormat('es-PY', {
+    const dateTimeFormat = new Intl.DateTimeFormat(locale, {
       timeZone: result.data.location.tz_id,
       hour: '2-digit',
       minute: '2-digit',
@@ -31,10 +31,9 @@ export function InfoStats() {
     const updateTime = () => setTime(dateTimeFormat.format(new Date()))
 
     updateTime()
-
     const interval = setInterval(updateTime, 1_000)
     return () => clearInterval(interval)
-  }, [result?.data])
+  }, [result?.data, locale])
 
   if (isOffline || isPending || !result?.data) return null
 
