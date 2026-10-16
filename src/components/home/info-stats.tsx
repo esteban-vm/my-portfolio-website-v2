@@ -1,6 +1,5 @@
 'use client'
 
-import { useOffline } from 'next/offline'
 import { useLocale } from 'next-intl'
 import { useAction } from 'next-safe-action/hooks'
 import { useEffect, useState } from 'react'
@@ -9,14 +8,12 @@ import { getWeather } from '@/actions'
 
 export function InfoStats() {
   const locale = useLocale()
-  const isOffline = useOffline()
   const [time, setTime] = useState('')
   const { execute, result, isPending } = useAction(getWeather)
 
   useEffect(() => {
-    if (isOffline) return
     execute({ lang: locale })
-  }, [execute, locale, isOffline])
+  }, [execute, locale])
 
   useEffect(() => {
     if (!result?.data) return
@@ -35,7 +32,7 @@ export function InfoStats() {
     return () => clearInterval(interval)
   }, [result?.data, locale])
 
-  if (isOffline || isPending || !result?.data) return null
+  if (isPending || !result?.data) return null
 
   const { temp_c } = result.data.current
   const { text } = result.data.current.condition
