@@ -2,7 +2,8 @@
 
 import { useTheme } from '@teispace/next-themes'
 import { useLocale, useTranslations } from 'next-intl'
-import { use, useEffect, useState, useTransition } from 'react'
+import { useAction } from 'next-safe-action/hooks'
+import { use, useEffect, useState } from 'react'
 import { browser } from 'react-dom'
 import { LuArrowUp, LuLanguages, LuMoonStar, LuSettings, LuSun, LuX } from 'react-icons/lu'
 import { Button, Tooltip } from 'rsc-daisyui'
@@ -16,11 +17,10 @@ export function RootFab() {
   const [scroll, setScroll] = useState(0)
   const { theme, setTheme } = useTheme()
   const t = useTranslations('root_layout.fab')
-  const [isPending, startTransition] = useTransition()
+  const { execute, isPending } = useAction(changeLanguage)
 
   useEffect(() => {
     const onScroll = () => setScroll(window.scrollY)
-
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -30,13 +30,7 @@ export function RootFab() {
   }
 
   const onLanguageChange = () => {
-    startTransition(async () => {
-      if (locale === 'en') {
-        await changeLanguage('es')
-      } else {
-        await changeLanguage('en')
-      }
-    })
+    execute({ lang: locale === 'en' ? 'es' : 'en' })
   }
 
   const onScrollToTop = () => {
