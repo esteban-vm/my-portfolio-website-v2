@@ -16,7 +16,7 @@ export function SlideButton({ slideId, direction }: SlideButtonProps) {
   }
 
   return (
-    <Button className='not-lg:btn-sm' onClick={handleClick} shape='circle'>
+    <Button onClick={handleClick} shape='circle' size='sm'>
       {direction === 'right' ? <FaChevronRight /> : <FaChevronLeft />}
     </Button>
   )
