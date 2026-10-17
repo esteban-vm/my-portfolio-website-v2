@@ -3,7 +3,7 @@
 import type { AxiosResponse } from 'axios'
 import type { WeatherError, WeatherResponse } from '@/types/weather'
 import { cache } from 'react'
-import z from 'zod'
+import { z } from 'zod'
 import { getInstance } from '@/lib/api'
 import { LOCALES } from '@/lib/constants'
 import { safeClient } from '@/lib/safe-action'
