@@ -42,7 +42,9 @@ export default function ProjectsPage() {
       </Carousel>
 
       <div>
-        <Link href={`/projects/1`}>Project 1</Link>
+        <Link href='/projects/1' passHref>
+          Project 1
+        </Link>
       </div>
     </div>
   )
