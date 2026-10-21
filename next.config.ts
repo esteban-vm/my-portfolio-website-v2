@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   typedRoutes: true,
   devIndicators: false,
   reactCompiler: true,
+  allowedDevOrigins: ['*.ouicu.app'],
   experimental: {
     typedEnv: true,
   },
