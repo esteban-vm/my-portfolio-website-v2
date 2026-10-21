@@ -32,7 +32,7 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 }
 
-export default async function RootLayout({ children }: LayoutProps<'/'>) {
+export default async function RootLayout({ children, modals }: LayoutProps<'/'>) {
   const locale = await getLocale()
   const initialTheme = (await getTheme()) ?? ''
   const themeScript = getThemeScript({ initialTheme })
@@ -62,8 +62,10 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
               <RootFab />
             </Suspense>
             <RootDock />
+            {modals}
           </NextIntlClientProvider>
         </ThemeProvider>
+        <div id='modal-root' />
       </body>
     </html>
   )
