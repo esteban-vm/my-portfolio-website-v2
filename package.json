@@ -16,7 +16,7 @@
     "@teispace/next-themes": "^3.0.2",
     "axios": "^1.20.0",
     "bad-words-next": "^3.2.0",
-    "next": "16.3.4",
+    "next": "16.4.2",
     "next-intl": "^4.14.2",
     "next-safe-action": "^8.7.3",
     "react": "19.2.8",
