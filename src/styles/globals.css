@@ -128,6 +128,10 @@
     @apply mb-3 border border-base-300 last:mb-0;
   }
 
+  .collapse-title {
+    @apply fl-text-xs/sm;
+  }
+
   .collapse-content {
     @apply flex items-center justify-around flex-wrap gap-6;
 
