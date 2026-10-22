@@ -17,7 +17,7 @@ export async function CertificateCard({ title, entity, image, tags, link }: Cert
   const t = await getTranslations('about_page.tabs.1')
 
   return (
-    <Card border className='fade-in animate-in p-3 not-dark:shadow-sm'>
+    <Card border className='fade-in animate-in p-3 font-geist not-dark:shadow-sm'>
       <Figure>
         <Image
           alt={title}

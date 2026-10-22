@@ -25,23 +25,9 @@ export default async function AboutPage() {
   const t = await getTranslations('about_page.tabs')
 
   return (
-    <Tabs className='my-20 w-full self-start justify-self-start lg:mx-10' decorate='lift'>
-      <Tabs.Tab as='label' className='px-4 font-semibold lg:text-base'>
+    <Tabs className='my-20 w-full self-start justify-self-start font-good-times lg:mx-10' decorate='lift'>
+      <Tabs.Tab as='label' className='fl-text-xs/sm px-4 font-semibold'>
         <input defaultChecked name='my_tabs' type='radio' />
-        <TbCertificate />
-        &nbsp;{t('1.title')}
-      </Tabs.Tab>
-
-      <Tabs.Content className='border-base-300 bg-base-100 p-3'>
-        <div className='grid size-full gap-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
-          {CERTIFICATES.map((certificate) => (
-            <CertificateCard key={certificate.image} {...certificate} />
-          ))}
-        </div>
-      </Tabs.Content>
-
-      <Tabs.Tab as='label' className='px-4 font-semibold lg:text-base'>
-        <input name='my_tabs' type='radio' />
         <TbStack2 />
         &nbsp;{t('2.title')}
       </Tabs.Tab>
@@ -96,6 +82,20 @@ export default async function AboutPage() {
             <TechCard color='#f9ad00' icon={si.SiPnpm} tech='PNPM' />
           </Collapse.Content>
         </Collapse>
+      </Tabs.Content>
+
+      <Tabs.Tab as='label' className='fl-text-xs/sm px-4 font-semibold'>
+        <input name='my_tabs' type='radio' />
+        <TbCertificate />
+        &nbsp;{t('1.title')}
+      </Tabs.Tab>
+
+      <Tabs.Content className='border-base-300 bg-base-100 p-3'>
+        <div className='grid size-full gap-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
+          {CERTIFICATES.map((certificate) => (
+            <CertificateCard key={certificate.image} {...certificate} />
+          ))}
+        </div>
       </Tabs.Content>
     </Tabs>
   )

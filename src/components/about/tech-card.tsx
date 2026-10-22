@@ -9,7 +9,7 @@ interface TechCardProps {
 
 export function TechCard({ tech, icon: Icon, color }: TechCardProps) {
   return (
-    <Indicator className='glass flex aspect-square basis-20 items-center justify-center rounded-2xl md:basis-24'>
+    <Indicator className='glass flex aspect-square basis-20 items-center justify-center rounded-2xl font-geist md:basis-24'>
       <Indicator.Badge
         className='indicator-middle md:indicator-bottom font-semibold'
         horizontal='center'
