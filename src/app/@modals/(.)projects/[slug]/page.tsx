@@ -14,5 +14,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ProjectModalPage({ params }: Props) {
   const { slug } = await params
 
-  return <ProjectModal>{slug}</ProjectModal>
+  return <ProjectModal slug={slug} />
 }
