@@ -1,13 +1,12 @@
 'use client'
 
-import type { ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
 import { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { IoClose } from 'react-icons/io5'
 import { Button, Modal } from 'rsc-daisyui'
 
-export function ProjectModal({ children }: { children: ReactNode }) {
+export function ProjectModal({ slug }: { slug: string }) {
   const router = useRouter()
   const dialogRef = useRef<HTMLDialogElement>(null)
 
@@ -28,7 +27,7 @@ export function ProjectModal({ children }: { children: ReactNode }) {
           <IoClose className='size-[80%]' />
         </Button>
         <h3 className='font-bold text-lg'>Hello!</h3>
-        {children}
+        {slug}
       </Modal.Box>
       <Modal.Backdrop
         onSubmit={(event) => {
