@@ -4,10 +4,10 @@ import { getTheme, getThemeScript } from '@teispace/next-themes/server'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { Suspense } from 'react'
-import { RootDock, RootFab } from '@/components/root'
 import { THEME_COOKIE, THEME_MAP, THEMES } from '@/lib/constants'
 import { Axis, Geist, GoodTimes } from '@/lib/fonts'
 import '@/styles/globals.css'
+import { RootDock, RootFab } from '@/components/root'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('root_layout.metadata')
@@ -57,15 +57,17 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
           value={THEME_MAP}
         >
           <NextIntlClientProvider>
-            <div className='relative mb-20 flex min-h-full w-full flex-col items-center'>{children}</div>
+            <div className='relative mb-20 flex min-h-full w-full flex-col items-center'>
+              {children}
+              {modals}
+              <div id='modal-root' />
+            </div>
             <Suspense fallback={null}>
               <RootFab />
             </Suspense>
             <RootDock />
-            {modals}
           </NextIntlClientProvider>
         </ThemeProvider>
-        <div id='modal-root' />
       </body>
     </html>
   )
