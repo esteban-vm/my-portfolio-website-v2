@@ -5,7 +5,7 @@ import { Badge, Button, Card } from 'rsc-daisyui'
 import tw from 'tailwind-styled-components'
 import { getPlaceholder } from '@/actions'
 
-export interface CertificateCardProps {
+interface CertificateCardProps {
   title: string
   entity: string
   image: string
