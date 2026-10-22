@@ -1,8 +1,8 @@
 import type { SlideButtonProps, SlideId } from './slide-button'
 import Image from 'next/image'
-import { Badge } from 'rsc-daisyui'
+import Link from 'next/link'
+import { Badge, Button } from 'rsc-daisyui'
 import { getPlaceholder } from '@/actions'
-import { DetailModal } from './detail-modal'
 import { SlideButton } from './slide-button'
 
 interface ProjectSlideProps extends Omit<SlideButtonProps, 'direction'> {
@@ -37,7 +37,11 @@ export async function ProjectSlide({ title, image, slideId, slidePrev, slideNext
           {title}
         </span>
       </Badge>
-      <DetailModal />
+      <Link href='/projects/1' passHref>
+        <Button as='span' className='absolute bottom-1.5 left-1/2 -translate-x-1/2' size='sm'>
+          Ver detalles
+        </Button>
+      </Link>
     </div>
   )
 }
