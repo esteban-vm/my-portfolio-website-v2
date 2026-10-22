@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { Carousel } from 'rsc-daisyui'
 import { ProjectSlide } from '@/components/projects'
@@ -40,12 +39,6 @@ export default function ProjectsPage() {
           title='Project 3'
         />
       </Carousel>
-
-      <div>
-        <Link href='/projects/1' passHref>
-          Project 1
-        </Link>
-      </div>
     </div>
   )
 }
