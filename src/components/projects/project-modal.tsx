@@ -11,23 +11,21 @@ export function ProjectModal({ slug }: { slug: string }) {
   const dialogRef = useRef<HTMLDialogElement>(null)
 
   useEffect(() => {
-    if (!dialogRef.current?.open) {
-      dialogRef.current?.showModal()
-    }
+    if (!dialogRef.current) return
+    const dialog = dialogRef.current
+    if (!dialog.open) dialog.showModal()
   }, [])
 
-  const onDismiss = () => {
-    router.back()
-  }
+  const onDismiss = router.back
 
   return createPortal(
     <Modal onClose={onDismiss} ref={dialogRef}>
       <Modal.Box>
-        <Button className='absolute top-2 right-2' ghost onClick={onDismiss} shape='circle' size='xs'>
+        <Button className='absolute top-2 right-2' ghost onClick={onDismiss} shape='circle' size='sm'>
           <IoClose className='size-[80%]' />
         </Button>
-        <h3 className='font-bold text-lg'>Hello!</h3>
-        {slug}
+        <h3 className='fl-text-base/lg font-semibold'>Project {slug}</h3>
+        {/* {slug} */}
       </Modal.Box>
       <Modal.Backdrop
         onSubmit={(event) => {
