@@ -1,3 +1,4 @@
+import type { Route } from 'next'
 import type { SlideButtonProps, SlideId } from './slide-button'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -5,14 +6,22 @@ import { Badge, Button } from 'rsc-daisyui'
 import { getPlaceholder } from '@/actions'
 import { SlideButton } from './slide-button'
 
-interface ProjectSlideProps extends Omit<SlideButtonProps, 'direction'> {
+interface ProjectSlideProps<T extends string> extends Omit<SlideButtonProps, 'direction'> {
   title: string
   image: string
+  href: Route<T>
   slidePrev: SlideId
   slideNext: SlideId
 }
 
-export async function ProjectSlide({ title, image, slideId, slidePrev, slideNext }: ProjectSlideProps) {
+export async function ProjectSlide<T extends string>({
+  title,
+  image,
+  href,
+  slideId,
+  slidePrev,
+  slideNext,
+}: ProjectSlideProps<T>) {
   return (
     <div className='carousel-item relative w-full overflow-hidden rounded-xl' id={slideId}>
       <Image
@@ -37,7 +46,7 @@ export async function ProjectSlide({ title, image, slideId, slidePrev, slideNext
           {title}
         </span>
       </Badge>
-      <Link href='/projects/1' passHref>
+      <Link href={href} passHref>
         <Button as='span' className='absolute bottom-1.5 left-1/2 -translate-x-1/2' size='sm'>
           Ver detalles
         </Button>
