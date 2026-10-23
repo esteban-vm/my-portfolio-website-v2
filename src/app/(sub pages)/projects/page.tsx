@@ -16,6 +16,7 @@ export default function ProjectsPage() {
     <div className='my-20 flex w-full flex-col items-center gap-3 self-start justify-self-start p-3 lg:mx-10'>
       <Carousel className='carousel-center aspect-4/3 w-full max-w-xl space-x-2 rounded-box bg-neutral/10 p-2 lg:max-w-3xl lg:space-x-3 lg:p-3'>
         <ProjectSlide
+          href='/projects/1'
           image='/images/project1.webp'
           slideId='slide1'
           slideNext='slide2'
@@ -24,6 +25,7 @@ export default function ProjectsPage() {
         />
 
         <ProjectSlide
+          href='/projects/2'
           image='/images/project2.webp'
           slideId='slide2'
           slideNext='slide3'
@@ -32,6 +34,7 @@ export default function ProjectsPage() {
         />
 
         <ProjectSlide
+          href='/projects/3'
           image='/images/project3.webp'
           slideId='slide3'
           slideNext='slide1'
