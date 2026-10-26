@@ -47,7 +47,7 @@ export async function ProjectSlide<T extends string>({
         </span>
       </Badge>
       <Link href={href} passHref>
-        <Button as='span' className='absolute bottom-1.5 left-1/2 -translate-x-1/2' size='sm'>
+        <Button as='span' className='not-lg:btn-sm absolute bottom-1.5 left-1/2 -translate-x-1/2'>
           Ver detalles
         </Button>
       </Link>

@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function ProjectsPage() {
   return (
     <div className='my-20 flex w-full not-md:flex-col not-md:items-center gap-3 self-start justify-self-start border border-primary p-3 lg:mx-10'>
-      <Carousel className='carousel-center aspect-4/3 w-full max-w-xl space-x-2 rounded-box bg-neutral/10 p-2 lg:max-w-3xl'>
+      <Carousel className='carousel-center aspect-4/3 w-full max-w-xl space-x-2.5 rounded-box bg-neutral/10 p-2 lg:max-w-3xl lg:space-x-3.5 lg:p-3'>
         <ProjectSlide
           href='/projects/1'
           image='/images/project1.webp'
