@@ -47,10 +47,10 @@ export default function ProjectsPage() {
 
       <div className='h-128 w-full overflow-scroll border border-primary'>
         <List className='relative w-full items-center' vanilla={false}>
-          <div className='fixed z-10 w-full max-w-sm border border-primary bg-base-100 p-4'>
+          {/**<div className='fixed z-10 w-full max-w-sm border border-primary bg-base-100 p-4'>
             <p className='text-xs tracking-wide'>More of my projects</p>
           </div>
-
+          **/}
           <ListItem />
           <ListItem />
           <ListItem />
