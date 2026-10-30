@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { Suspense } from 'react'
 import { RootDock, RootFab } from '@/components/root'
-import { THEME_COOKIE, THEME_MAP, THEMES } from '@/lib/constants'
+import { PROJECT_MODAL_ID, THEME_COOKIE, THEME_MAP, THEMES } from '@/lib/constants'
 import { Axis, Geist, GoodTimes } from '@/lib/fonts'
 import '@/styles/globals.css'
 
@@ -60,7 +60,7 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
             <div className='relative mb-20 flex min-h-full w-full flex-col items-center'>
               {children}
               {modals}
-              <div id='modal-root' />
+              <div id={PROJECT_MODAL_ID} />
             </div>
             <Suspense fallback={null}>
               <RootFab />
