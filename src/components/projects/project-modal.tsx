@@ -5,6 +5,7 @@ import { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { IoClose } from 'react-icons/io5'
 import { Button, Modal } from 'rsc-daisyui'
+import { PROJECT_MODAL_ID } from '@/lib/constants'
 
 export function ProjectModal({ slug }: { slug: string }) {
   const router = useRouter()
@@ -25,7 +26,7 @@ export function ProjectModal({ slug }: { slug: string }) {
           <IoClose className='size-[80%]' />
         </Button>
         <h3 className='fl-text-base/lg font-semibold'>Project {slug}</h3>
-        {/* {slug} */}
+        <p>Coming soon…</p>
       </Modal.Box>
       <Modal.Backdrop
         onSubmit={(event) => {
@@ -34,6 +35,6 @@ export function ProjectModal({ slug }: { slug: string }) {
         }}
       />
     </Modal>,
-    document.getElementById('modal-root')!
+    document.getElementById(PROJECT_MODAL_ID)!
   )
 }
