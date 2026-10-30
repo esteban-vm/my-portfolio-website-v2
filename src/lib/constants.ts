@@ -15,6 +15,8 @@ export const THEME_MAP = {
 } as const satisfies Record<(typeof THEMES)[number], Theme>
 
 // UI
+export const PROJECT_MODAL_ID = 'modal-root'
+
 export const INPUT_LENGTHS = {
   nameMin: 5,
   nameMax: 50,
